@@ -1,0 +1,54 @@
+<ion-content class="pagebackgroundimage">
+  <div class="overlay" (click)="CloseModal()"></div>
+  <!-- <div #box class="posttest" *ngIf="CheckControl" appSwipe (swipeUp)="onSwipeLeft($event)"> -->
+  <div class="posttest" *ngIf="CheckControl" (click)="onSwipeLeft()">
+    <ion-icon style="text-align: center;width: 100%;font-size: 23px;" name="reorder-two">
+    </ion-icon>
+    <div class="textconten">
+      Theo dõi phát triển
+    </div>
+    <div class="rowmain1">
+      <div class="csscdc" style="margin-left: 18%;"
+        [ngClass]="{ 'opacity05':ObjectPage != null && !ObjectPage.isEligibleForAsq }">
+        <img style="text-align: center;width:29%;" src="assets/icon/4.png" (click)="ListchildrenASQ()" class="img1">
+        <div style="font-size: 10px;">
+          Làm ASQ®-3
+        </div>
+      </div>
+      <div class="cssasq" [ngClass]="{ 'opacity05': ObjectPage != null && !ObjectPage.isEligibleForMchatr }">
+        <img style="text-align: center;width:29%;" src="assets/icon/8.png" (click)="ListchildrenMCHATR()" class="img2">
+        <div style="font-size: 10px;">
+          Làm M-CHAT-R™
+        </div>
+      </div>
+    </div>
+    <div class="rowmain1">
+      <div class="intervention" style="margin-top: 20px;" *ngIf=" ObjectPage != null && ObjectPage.isEligibleForAtec"
+        (click)="Nhatky()">
+        <img class="iven" (click)="Nhatky()" src="assets/imgs/intervention2.png">
+        <span class="textconteniven">
+          Thực hành can thiệp
+        </span>
+      </div>
+      <div class="cssatec" *ngIf=" ObjectPage != null && ObjectPage.isEligibleForQol" (click)="ListchildrenQOL()">
+        <img class="iven" src="assets/icon/3.png">
+        <span class="textconteniven">
+          Khảo sát QOL(dành cho giáo viên)
+        </span>
+      </div>
+    </div>
+    <div class="textconten" style="margin-top: 10px;" *ngIf="ObjectPage != null">
+      Thao tác
+    </div>
+    <div class="rowmain1" *ngIf="ObjectPage != null">
+      <div class="intervention" style="width: 40%;margin: 0% 2% 0% 6%;" (click)="Update()">
+        <img src="assets/icon/EditTre.png" class="iven" style="width: 24%;">
+        <span class="textconteniven" style="width: 70%;padding-top: 8px;">Cập nhập trẻ</span>
+      </div>
+      <div class="intervention" style="width: 40%;margin: 0% 2% 0% 6%; " (click)="deletechildren()">
+        <img src="assets/icon/DeleteTre.png" class="iven" style="width: 24%;">
+        <span class="textconteniven" style="width: 70%;padding-top: 8px;">Xóa trẻ</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

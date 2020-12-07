@@ -1,0 +1,52 @@
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="container">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backPage()" style="position: absolute;    left: 10px;
+  top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">
+      Xin bạn chọn trẻ làm bài ATEC
+    </div>
+    <!-- <button class="btn_openSearc" (click)="Addchilren()">
+      <ion-icon style="font-size: 25px; color: brown;" name="person-add"></ion-icon>
+    </button> -->
+  </div>
+  <div class="cssviewsearch">
+    <input class="viewButtonSearch" autocomplete="off" [(ngModel)]="query" (keyup.enter)="Searchchildren()" placeholder=" Nhập tên trẻ..." type="text">
+    <ion-icon *ngIf="txtname != ''" (click)="DeleteSearch()" style="position: absolute;right: 10px;margin-top: 10px;" name="close"></ion-icon>
+
+    <button class="btnSearch" (click)="Searchchildren()">
+      <ion-icon style="margin-top: 10%;" name="search"></ion-icon>
+    </button>
+  </div>
+
+  <div *ngFor="let data of childrenlist;">
+    <div class="btn-chat-and-notifications">
+      <div class="div-items-icons">
+        <img class="icons-50" src="{{data.imgIcon}}" />
+      </div>
+      <div style="width: 50%;float: left;">
+        <div class="div-items-text1">
+          <div>
+            <div class="csspadding2px "><span style="font-weight: bold; color:#F46262;">Trẻ: {{data.name}}</span></div>
+            <div class="csspadding2px "><span style="font-weight: bold; color:#19929b;">Mã trẻ:{{data.cid}}</span></div>
+            <div class="csspadding2px "><span> {{data.genderName}} - {{data.dob | date:'dd/MM/yyyy'}}</span></div>
+            <div class="csspadding2px {{data.diagnosticConclusion}}" *ngIf='data.diagnosticConclusion != ""'>
+              <span>{{data.diagnosticConclusionText}}</span></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="cssBtn">
+        <button class="CssBtnUpdate" (click)="ATEC(data)">
+          Làm bài </button>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll threshold="50px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content >
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

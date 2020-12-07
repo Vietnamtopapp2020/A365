@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons style="background: #ca2535" slot="start" (click)="backPage()">
+      <ion-back-button text="" icon="close-circle-outline" style="color:#ffff"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cập nhật hồ sơ trẻ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content class="contentIMG">
+
+    <ion-grid class="iongrid">
+      <ion-row justify-content-center>
+        <ion-col>
+              <div class="cardchild">
+                <div class="text">Trẻ được chuẩn đoán vào tuần thứ mấy?</div>
+                <div class="txtsignin">
+                  <ion-input class="inputView" [(ngModel)]="txtageWhenDiagnosed" type="number" min="1" tappable>
+                  </ion-input>
+                </div>
+              </div>
+
+              <div class="cardchild">
+                <div class="text">Kết quả chuẩn đoán</div>
+              
+                <ion-item class="txtsignin">
+                  <ion-label>Kết quả chuẩn đoán</ion-label>
+                  <ionic-selectable [(ngModel)]="txtdiagnosticConclusion" itemValueField="id" itemTextField="text"
+                    [items]="dc" [canSearch]="true" 
+                    (onChange)="diagnosticConclusionChanged($event)">
+                  </ionic-selectable>
+                </ion-item>
+              </div>
+             
+            
+
+              <div class="cardchild">
+                <div class="text">Nơi chuẩn đoán</div>
+             
+                <ion-item class="txtsignin">
+                  <ion-label>Nơi chuẩn đoán</ion-label>
+                  <ionic-selectable [(ngModel)]="txtdiagnosticPlace" itemValueField="id" itemTextField="text"
+                    [items]="dp" [canSearch]="true"
+                    (onChange)="diagnosticPlaceChanged($event)">
+                  </ionic-selectable>
+                </ion-item>
+              </div>
+              <div class="cardchild">
+                <div class="text">Người chuẩn đoán</div>
+              
+                <ion-item class="txtsignin">
+                  <ion-label>Người chuẩn đoán</ion-label>
+                  <ionic-selectable [(ngModel)]="txtdiagnosticStaff" itemValueField="id" itemTextField="text"
+                    [items]="ds" [canSearch]="true" 
+                    (onChange)="diagnosticStaffChanged($event)">
+                  </ionic-selectable>
+                </ion-item>
+              </div>
+
+
+
+
+              <ion-radio-group>
+
+                <div class="cardchild">
+                  <div class="text">Trẻ đã được sàng lọc tự kỷ chưa?</div>
+                  <ion-input class="inputView" [(ngModel)]="txtscreenedOnA365" type="" tappable>
+                    <div class="role">
+                      <ion-list *ngFor="let p of form1" style="margin-left: 20px;">
+                        <input type="radio" name="screenedOnA365" [value]="p.screenedOnA365"
+                          style="margin-right: 9px;zoom: 1.2;">
+                        <label style="font-size: 18px;">{{p.text}}</label><br>
+                      </ion-list>
+                    </div>
+                  </ion-input>
+                </div>
+              </ion-radio-group>
+
+            
+        
+
+
+
+          <div class="containerbt">
+            <button tappable (click)="backPage()" class="login-buttonhuy">Hủy</button>
+            <button tappable (click)="Updatestatuschildren()" class="login-buttontaomoi">Cập nhật</button>
+          </div>
+
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-content>
+</ion-content>

@@ -1,0 +1,79 @@
+<ion-content>
+  <div>
+    <div class="container">
+      <img src="assets/imgs/bgdash.jpg">
+      <img (click)="backPage()" style="position: absolute;    left: 10px;
+    top: 10px;" src="assets/icon/backicon.png">
+      <div class="ketquahead">
+        Danh sách lịch sử bài làm
+      </div>
+    </div>
+
+    <div class="cauhoiasq" (click)="historyASQ()" *ngIf="service.Role == 2 || service.Role == 3 || service.Role == 1">
+      <div class="with">
+        <div class="textmain">
+          Lịch sử bài test ASQ
+        </div>
+        <div class="iconmain">
+          <img class="iconmain1" src="../assets/icon/4.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="cauhoicdc" (click)="historyCDC()" *ngIf="service.Role == 2">
+      <div class="with">
+        <div class="textmain">
+          Lịch sử bài test CDC
+        </div>
+        <div class="iconmain">
+          <img class="iconmain1" src="../assets/icon/7.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="cauhoimchat" (click)="historyMchatR()" *ngIf="service.Role == 3 || service.Role == 1">
+      <div class="with">
+        <div class="textmain">
+          Lịch sử bài test M-Chat-R™
+        </div>
+        <div class="iconmain">
+          <img class="iconmain1" src="../assets/icon/8.png" >
+        </div>
+      </div>
+    </div>
+
+    <div class="cauhoimchatf" (click)="historyMchatRF()" *ngIf="service.Role == 2">
+      <div class="with">
+        <div class="textmain">
+          Lịch sử bài test M-Chat-R/F™
+        </div>
+        <div class="iconmain">
+          <img class="iconmain1" src="../assets/icon/8.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="cauhoiatec" (click)="historyATEC()" *ngIf="service.Role == 2 || service.Role == 3 || service.Role == 1">
+      <div class=" with">
+        <div class="textmain">
+          Lịch sử bài test ATEC
+        </div>
+        <div class="iconmain">
+          <img class="iconmain1" src="../assets/imgs/intervention2.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="cauhoiqol" (click)="historyQOL()" *ngIf="service.Role == 3 || service.Role == 1">
+      <div class="with">
+        <div class="textmain">
+          Lịch sử bài test QOl
+        </div>
+        <div class="iconmain">
+          <img class="iconmain1" src="../assets/icon/3.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

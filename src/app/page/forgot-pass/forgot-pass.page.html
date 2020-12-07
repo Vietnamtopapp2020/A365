@@ -1,0 +1,23 @@
+<ion-content class="">
+  <div class="">
+      <img src="assets/imgs/backgroudlogin.jpg">
+  </div>
+  <div class="container1">
+      <div class="loginConfig">
+          <div class="loginform">
+              <img class="center" src="assets/icon/loginsun.png">
+              <div style="text-align: center;color: #f46262;font-size: 20px;font-weight: bold;">Khôi phục mật khẩu</div>
+              <div class="ipt_email">
+                  <img class="iconMail" src="assets/icon/loginuser.png">
+                  <input type="email" [(ngModel)]="email" placeholder="Nhập địa chỉ Email của bạn" class="ipt_email1" tappable>
+              </div>
+              <div style="width: 100%;">
+                <div class="huybo" (click)="backPage()">
+                  Hủy bỏ
+                </div>
+                <button class="btn_forgot" tappable (click)="Forgotpassword()">Tiếp tục</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</ion-content>

@@ -1,0 +1,521 @@
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    outline: none;
+}
+.btn_openSearch1 {
+    width: 33px;
+    height: 33px;
+    top: 13px !important;
+    right: 2% !important;
+    text-transform: none !important;
+    border-radius: 36px !important;
+    color: #c92534;
+    background-color: #e0e0e0;
+}
+
+.container {
+    width: 100%;
+}
+.icons-40 {
+    width: 67px;
+    height: 67px;
+}
+
+.icons-50 {
+    padding: 6px;
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.texthead {
+    padding-top: 8px;
+    float: left;
+    color: black;
+    font-family: none;
+    font-size: 20px;
+}
+
+.ionicon {
+    width: 20%;
+    color: white;
+    float: left;
+}
+
+.ionicon1 {
+    position: absolute;
+    right: 0px;
+    top: 11px;
+    width: 10%;
+}
+
+select-text {
+    min-width: 0px !important;
+}
+
+.count {
+    position: absolute;
+    padding: 4px;
+    font-size: 10px;
+    background-color: gray;
+    margin-left: 47%;
+    margin-top: 71px;
+    border-radius: 10px;
+    color: white;
+}
+
+.count1 {
+    border-radius: 10px;
+    position: absolute;
+    padding: 4px;
+    font-size: 10px;
+    background-color: blue;
+    margin-left: 47%;
+    margin-top: 94px;
+    color: white;
+}
+
+.count2 {
+    position: absolute;
+    padding: 4px;
+    font-size: 10px;
+    background-color: red;
+    margin-left: 47%;
+    color: white;
+    border-radius: 15px;
+    margin-top: 117px;
+}
+
+.row {
+    width: 100%;
+    margin-top: 170px;
+    overflow: scroll;
+    margin-bottom: 120px;
+}
+
+.row01 {
+    width: 40%;
+    float: left;
+}
+
+.row02 {
+    width: 59%;
+    float: right;
+}
+
+.texttitle {
+    font-size: 16px;
+    color: white;
+    padding-top: 6px;
+}
+
+.csspadding2px {
+    padding: 2px;
+}
+
+.Header {
+    width: 22%;
+    float: right;
+    text-align: center;
+}
+
+.rowimg {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text1 {
+    font-size: 14px;
+    color: #4d6a81;
+    font-weight: 500;
+    text-align: center;
+}
+
+.row03 {
+    width: 33%;
+    float: left;
+}
+
+.rowmain {
+    width: 95%;
+    float: left;
+    margin: 0%;
+    margin-bottom: 15px;
+    margin: 0 auto;
+    /* background: #f2f2f2; */
+    padding: 5px;
+    height: 299px;
+    padding-left: 5%;
+}
+
+.cssList {
+    width: 96%;
+    float: left;
+    height: 60px !important;
+    background: #009432;
+    text-align: center;
+    margin-left: 2%;
+    padding-top: 21px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.asq {
+    padding-left: 1%;
+    padding-right: 2%;
+}
+.csscdc {
+    width: 28%;
+    float: left;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px 0px 10px 0px;
+    margin-left: 5%;
+    background: #b7f0ff;
+    margin-right: 2%;
+    height: 70px;
+}
+.cssasq {
+    background: #e0ffd4;
+    width: 28%;
+    float: left;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px 0px 10px 0px;
+    margin-left: 5%;
+    margin-right: 2%;
+    height: 70px;
+}
+.cssmchatrf {
+    width: 30%;
+    float: left;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    padding: 12px 0px 10px 0px;
+    text-align: center;
+    background: #ffcfc2;
+    height: 70px;
+}
+
+.rowmain1 {
+    width: 100%;
+}
+
+.img3 {
+    width: 48%;
+    height: 27%;
+    float: left;
+    padding-top: 5px;
+    height: 136px;
+    padding-bottom: 0px;
+    box-shadow: 5px 3px #0000004a;
+    border-radius: 10px;
+    margin-top: 4px;
+}
+
+.rowmain3 {
+    height: 27%;
+    .img1 {
+        width: 50%;
+        padding: 0.5% 1% 1% 2%;
+        height: 27%;
+    }
+    .img2 {
+        width: 50%;
+        height: 27%;
+        padding: 0.5% 2% 1% 1%;
+    }
+}
+
+.btn-chat-and-notifications {
+    width: 80%;
+    background: #ffffff;
+    padding: 2px;
+    margin: 2%;
+    height: 100px;
+    box-shadow: 3px 3px 5px 0px #e3e3e3;
+    margin-left: 15%;
+    border-radius: 12px;
+    font-family: NunitoBold;
+}
+
+.btn-chat-and-notification {
+    width: 80%;
+    border: 1px solid #d2d2d200;
+    background: #ffffff;
+    padding: 2px;
+    margin: 2%;
+    height: 85px;
+    box-shadow: 3px 3px 3px 3px #e0e0e096;
+    margin-left: 15%;
+    border-radius: 12px;
+}
+
+.cssBtn {
+    float: right;
+    width: 10%;
+}
+
+.CssBtnUpdate {
+    float: right;
+    color: white;
+    height: 26px;
+    margin: 2%;
+    right: auto;
+    margin-top: 5px;
+    border-radius: 7px;
+    box-shadow: 2px 3px #afafaf;
+    background: #168694;
+}
+
+.div-items-icons {
+    float: left;
+    border: 1px solid #80808000;
+    position: relative;
+    left: -39px;
+    top: 10px;
+    box-shadow: 2px 2px 7px 2px #e8e8e8;
+    border-radius: 11px;
+    background: white;
+}
+
+.div-items-icons1 {
+    // width: 25%;
+    float: left;
+}
+
+.csspadding3px {
+    padding: 1px;
+}
+
+.DC-1 {
+    width: 100%;
+    height: 42px;
+    padding: 2px;
+    color: brown;
+    padding-top: 14px;
+}
+
+.DC-2 {
+    height: 42px;
+    padding: 2px;
+    width: 100%;
+    color: brown;
+    padding-top: 4px;
+}
+
+.div-items-text {
+    float: left;
+    padding: 6px 0px 2px 4px;
+    height: 100%;
+    overflow: auto;
+    font-size: 14px;
+    padding-left: 8px;
+    position: relative;
+    left: -32px;
+    width: 75%;
+}
+.div-items-text1 {
+    // float: left;
+    padding: 6px 0px 2px 4px;
+    height: 100%;
+    overflow: auto;
+    font-size: 12px;
+    padding-left: 8px;
+}
+
+.DC-3 {
+    height: 42px;
+    padding: 2px;
+    width: 100%;
+    padding: 2px;
+    color: brown;
+    padding-top: 14px;
+}
+
+.DC-4 {
+    padding: 2px;
+    height: 42px;
+    padding: 2px;
+    color: brown;
+    padding-top: 14px;
+}
+
+.DC-5 {
+    height: 42px;
+    padding: 2px;
+    padding: 2px;
+    color: brown;
+    padding-top: 4px;
+}
+
+.DC-6 {
+    height: 42px;
+    padding: 2px;
+    color: brown;
+    padding: 2px;
+    border-radius: 5px;
+    padding-top: 14px;
+}
+
+.DC-7 {
+    height: 42px;
+    padding: 2px;
+    color: brown;
+    padding-top: 14px;
+}
+
+.DC-8 {
+    height: 42px;
+    padding: 2px;
+    color: brown;
+    padding: 2px;
+    border-radius: 14px;
+}
+
+.DC-9 {
+    height: 42px;
+    padding: 2px;
+    padding: 2px;
+    padding-top: 14px;
+    color: brown;
+}
+
+.zox {
+    position: absolute;
+    margin-left: 26%;
+    top: 4px;
+    background: #8080804d;
+    border-radius: 8px;
+}
+
+.posttest {
+    width: 100%;
+    background: #f2f2f2;
+    float: left;
+    border-radius: 35px 35px 0px 0px;
+    padding: 7px;
+    box-shadow: 0px -1px 6px 1px #d2d2d2;
+    position: fixed;
+    bottom: 50px;
+    font-family: "NunitoBold";
+}
+
+.post {
+    width: 46%;
+    padding: 2px;
+    box-shadow: 4px 2px #80808045;
+    float: left;
+    margin: 3px;
+    margin-bottom: 7px;
+}
+
+.textconten {
+    font-size: 17px;
+    margin-left: 2%;
+    text-align: center;
+    padding-bottom: 5px;
+    color: #935b45;
+    font-weight: 600;
+    float: left;
+    width: 100%;
+}
+
+.textconteniven {
+    font-size: 13px;
+    padding-top: 10px;
+    text-align: center;
+    width: 80%;
+    float: left;
+}
+
+.intervention {
+    width: 88%;
+    padding: 3px;
+    background-color: white;
+    border: 1px solid #d2d2d2;
+    height: auto;
+    float: left;
+    margin: 0% 6% 0% 6%;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.cssatec {
+    width: 88%;
+    padding: 3px;
+    background-color: white;
+    border: 1px solid #d2d2d2;
+    height: auto;
+    float: left;
+    margin: 0% 6% 0% 6%;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.iven {
+    width: 12%;
+    float: left;
+    margin-left: 6%;
+}
+
+.line {
+    border: 1px solid #5da83f !important;
+}
+
+.cssSearch {
+    width: 100%;
+    float: left;
+    padding-top: 15px;
+}
+
+.viewButtonSearch {
+    width: 85%;
+    height: 35px;
+    float: right;
+    font-size: 13px;
+    border-radius: 0px 20px 20px 0px;
+    color: gray;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+    border-left: 0px;
+}
+.btnSearch {
+    width: 15%;
+    height: 35px;
+    color: #7f7f7f;
+    border-radius: 20px 0px 0px 20px;
+    background: white;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+    border-left: 1px solid #d2d2d2;
+    border-right: 0px;
+}
+.icon1 {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #19929b;
+    border-radius: 10px;
+    font-size: 13px;
+    top: 85px;
+    margin-left: 26%;
+    text-align: center;
+    color: white;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px #0000006b;
+}
+.cssviewsearch {
+    position: absolute;
+    margin-left: 10%;
+    top: 85px;
+    color: gray;
+    width: 80%;
+}
+.opacity05 {
+    opacity: 0.5;
+}

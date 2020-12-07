@@ -1,0 +1,40 @@
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="container">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backPage()" style="position: absolute;    left: 10px;
+  top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">
+      Danh sách lịch sử bài sàng lọc CDC
+    </div>
+  </div>
+  <div *ngFor="let data of childrenlist;">
+    <div class="btn-chat-and-notifications">
+      <div class="div-items-icons">
+        <img class="icons-50" src="{{data.imgIcon}}" />
+      </div>
+      <div style="width: 50%;float: left;">
+        <div class="div-items-text1">
+          <div>
+            <div class="csspadding2px "><span
+                style="font-weight: bold;color: #F46262;font-size: 16px;">{{data.name}}</span></div>
+            <div class="csspadding2px "><span> {{data.createdAt}}</span></div>
+            <div class="csspadding2px  colorgreen" [ngClass]="{ 'color8b8b00' : !data.isCompleted }">
+              <span>{{data.Status}}</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cssBtn">
+        <button class="CssBtnUpdate" (click)="CDCpost(data)">
+          {{data.complete}}
+        </button>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll threshold="50px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+</ion-content>

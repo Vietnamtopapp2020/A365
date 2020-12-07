@@ -1,0 +1,94 @@
+<ion-content class="{{opacity}}">
+  <div class="container1">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backpage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">
+      <div class="textstep">
+        <span>Bảng theo dõi thực hành can thiệp</span><br />
+        <span>Trẻ {{data.name}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="hd">
+    <div *ngFor="let data of listTree">
+      <div class="cssButtonPractice {{data.slug}}">{{data.title}}
+      </div>
+      <div class="textaligncenter" *ngIf="data.InterventionData == null">
+        <p class="cssTextNotWork"> Chưa có hoạt động nào </p>
+        <div style="width: 100%;float: left;" class="">
+          <div style="width: 29%;float: left;">
+            <img style="padding-top: 30px;width: 50px;" [src]="data.imgage">
+          </div>
+          <div style="width: 68%;float: right;">
+            <button class="cssButtonAdd" (click)="OpenWork(data)">
+              <img src="assets/imgs/row4.png">
+              <div>Thêm hoạt động</div>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="textaligncenter css-{{data.order}}" *ngIf="data.InterventionData != null">
+        <p class="h{{data.id}}">{{data.InterventionData.title}}</p>
+        <div class="cssLink">
+          <div class="csxembai">
+            <button style="background: none;" class="cssxembai" (click)="PostViewActivities(data)">
+              <img style="width: 26px;" src="assets/icon/School Vector Free Icon Set (1).jpg">
+            </button>
+            <div style="font-family: NunitoBold;">Xem bài</div>
+          </div>
+          <div class="csmucdich">
+            <button class="cssmuctieu" (click)="OpenWork(data)">
+              <img style="    width: 22px;
+            border-radius: 22px;" src="assets/icon/School Vector Free Icon Set.jpg">
+            </button>
+            <div style="font-family: NunitoBold;">Đổi mục tiêu</div>
+          </div>
+        </div>
+        <div
+          style="float: left;padding-top: 5px;margin-bottom: 5px;margin-left: 20%; color: #f68686;font-family: NunitoBold;">
+          <ion-icon style="font-size: 16px; padding-left: 6px;" name="alert-circle-outline"></ion-icon>
+          Mức độ cần hỗ trợ trẻ:
+        </div>
+        <div style="width: 100%;float: left;" class="">
+          <div style="width: 30%;float: left;">
+            <img style="width: 50px;" [src]="data.imgage">
+          </div>
+          <div class="cssRadioCheck">
+            <div class="cssSelectRadio " style="color: #f68686;" *ngIf="data.interveningLevel == '1'">
+              <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 25%;">
+                <ion-icon name="radio-button-on"></ion-icon>
+              </div>
+              <div style="float: left;" for="radio-intervening-success"> Nhiều</div>
+            </div>
+            <div class="cssSelectRadio" *ngIf="data.interveningLevel != '1'" (click)="CheckinterveningLevel(data,1)">
+              <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 25%;">
+                <ion-icon name="radio-button-off"></ion-icon>
+              </div>
+              <div style="float: left;" for="radio-intervening-success"> Nhiều</div>
+            </div>
+            <div class="cssSelectRadio1" style="color: #f68686;" *ngIf="data.interveningLevel == '2'">
+              <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 25%;">
+                <ion-icon name="radio-button-on"></ion-icon>
+              </div>
+              <div style="float: left;" for="radio-intervening-warning"> Ít </div>
+            </div>
+            <div class="cssSelectRadio1 " *ngIf="data.interveningLevel != '2'" (click)="CheckinterveningLevel(data,2)">
+              <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 25%;">
+                <ion-icon name="radio-button-off"></ion-icon>
+              </div>
+              <div style="float: left;" for="radio-intervening-warning"> Ít </div>
+            </div>
+            <div class="cssSelectRadio2" (click)="CheckinterveningLevel(data,3)">
+              <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 12%;">
+                <ion-icon name="radio-button-off"></ion-icon>
+              </div>
+              <div style="float: left;" for="radio-intervening-warning"> Không cần hỗ trợ </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" aria-label="chevron back outline" style="text-align: center;">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Hướng dẫn</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+<ion-content>
+<div class="conten">
+{{title}}
+</div>
+<div class="day">
+ (Cập nhật ngày:{{createat}})
+</div>
+<div *ngIf="video !=''">
+    <iframe style="width: 100%;" allowfullscreen frameborder="0" [src]="transform(video)"></iframe>
+</div>
+ 
+<div class="deception">
+  <span [innerHTML]=conten></span>
+</div>
+</ion-content>

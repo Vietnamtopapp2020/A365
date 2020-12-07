@@ -1,0 +1,66 @@
+.viewFollowup {
+    overflow: auto;
+    padding: 10px;
+    font-family: "NunitoBold";
+}
+.viewReply {
+    width: 50%;
+    float: left;
+}
+.cssbutton {
+    float: right;
+    color: white;
+    background: #5da83f;
+    height: 30px;
+    width: 25%;
+    margin-top: 15px;
+    font-size: 15px;
+    font-family: "NunitoBold";
+    border-radius: 15px;
+}
+.container {
+    width: 100%;
+}
+.ketquahead {
+    background-color: #5da83f;
+    padding: 11px;
+    position: absolute;
+    left: 20%;
+    top: 7%;
+    color: white;
+    border-radius: 9px;
+    font-size: 17px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    text-align: center;
+    font-family: NunitoExtraBold;
+}
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    background-color: #5da83f;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}

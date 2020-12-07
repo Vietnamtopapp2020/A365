@@ -1,0 +1,76 @@
+.pagebackgroundimage {
+  --background: #ffffffd1 !important;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.content_messager {
+  padding: 7px;
+  font-size: 14px;
+  text-align: center;
+  color: #000000;
+}
+.header_title {
+  text-align: center;
+  padding-top: 15px;
+  color: #373737;
+  font-size: 15px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.header_img {
+  width: 60px;
+  margin-left: 31%;
+  padding-top: 15px;
+}
+.title_message {
+  text-align: justify;
+  font-size: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.btn_ok {
+  float: left;
+  width: 100%;
+  height: 31px;
+  position: inherit;
+  background: #5DA83F;
+  color: white;
+  bottom: 0px;
+}
+.btn_cannel {
+  margin-left: 5%;
+  margin-right: 0%;
+  width: 40%;
+  font-size: 14px;
+  height: 31px;
+  bottom: 20px;
+  position: inherit;
+  border-radius: 10px;
+  background: white;
+}
+.modalmesssc {
+  left: 20%;
+  top: 23%;
+  width: 60%;
+  height: 15rem;
+  border-radius: 8px;
+  border: 0.5px solid #dadada;
+  position: absolute;
+  background: white;
+}
+.iconBack {
+  font-size: 26px;
+  color: white;
+  position: absolute;
+  right: -15px;
+  height: 40px;
+  width: 40px;
+  background: #f46262;
+  top: -20px;
+  border-radius: 50px;
+}

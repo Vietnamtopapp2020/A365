@@ -1,0 +1,46 @@
+.conten {
+    text-align: center;
+    padding-top: 18px;
+    color: #ca2535;
+}
+ion-title {
+    color: black !important;
+}
+ion-content {
+    font-family: "Nunito";
+}
+.deception {
+    padding: 7%;
+    font-size: 15px;
+    padding-top: 10px;
+}
+.day {
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+.title-default {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #dc0000;
+}
+p {
+    br {
+        padding: 0px;
+    }
+}
+#list {
+    width: 170px;
+    margin: 30px auto;
+    font-size: 20px;
+  }
+  #list ul {
+    margin-top: 30px;
+  }
+  #list ul li {
+    text-align: left;
+    list-style: disc;
+    margin: 10px 0px;
+  }

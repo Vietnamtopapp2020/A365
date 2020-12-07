@@ -1,0 +1,101 @@
+<ion-content class="pagebackgroundimage">
+    <div class="container">
+        <div class="iconBack">
+            <ion-icon (click)="backpage()" style="padding: 7px;" name="close"></ion-icon>
+        </div>
+        <div class="cssbang">
+            <div class="imghead">
+                <img style="width: 20%;" src="assets/icon/icongoiy.png">
+            </div>
+            <div class="texthead">
+                Gợi ý cho gia đình
+            </div>
+        </div>
+        <div class="containertext">
+            <div class="cssResult" *ngIf="firstActionOption == 1">
+                Gia đình không cần phải lo lắng gì cho trẻ ở thời điểm này. Gia đình tiếp tục chơi và xây dựng các kỹ
+                năng cho trẻ để trẻ có sự phát triển tốt nhất.
+                <span *ngIf="nextQuestionnareSchedule.months > 0 || nextQuestionnareSchedule.days > 0">
+                    Gia đình nên quay lại làm câu hỏi đánh giá phát triển ASQ®-3 sau
+                    <strong class="text-danger">
+                        <span class="color"
+                            *ngIf="nextQuestionnareSchedule.months > 0">{{ nextQuestionnareSchedule.months }} tháng
+                            &nbsp;</span>
+                        <span class="color"
+                            *ngIf="nextQuestionnareSchedule.days > 0">{{ nextQuestionnareSchedule.days }} ngày</span>
+                    </strong>
+                </span>
+            </div>
+            <div class="cssResult" *ngIf="firstActionOption == 2">
+                Gia đình không nên lo lắng nhiều về sự phát triển của trẻ. Gia đình nên tập cho bé các kỹ năng như
+                <strong class="color">{{ titlefirstActionOption5.join(', ') }}</strong> trong một thời gian và theo dõi
+                xem con có làm được không. Sau 1 tháng, gia đình nên làm lại bộ câu hỏi ASQ®-3 này cho trẻ.
+            </div>
+            <div class="cssResult" *ngIf="firstActionOption == 3 && isEligibleForMchatr">
+                Vì trẻ có sự phát triển chậm hơn các trẻ khác cùng độ tuổi, gia đình nên làm thêm câu hỏi sàng lọc tự kỷ
+                M-CHAT-R™
+                <span (click)="MchartR()"
+                    style="background-color: transparent;color: var(--ion-color-primary, #3880ff);">Ấn vào đây</span>
+                để đánh giá về nguy cơ tự kỷ của trẻ
+            </div>
+            <div class="cssResult" *ngIf="firstActionOption == 4">
+                Tính theo điểm của từng lĩnh vực gia đình không cần phải lo lắng gì cho trẻ ở thời điểm này. Gia đình
+                tiếp tục chơi và xây dựng các kỹ năng cho trẻ để trẻ có sự phát triển tốt nhất.
+                <span class="color" *ngIf="nextQuestionnareSchedule.months > 0 || nextQuestionnareSchedule.days > 0">
+                    Gia đình nên quay lại làm câu hỏi đánh giá phát triển ASQ®-3 sau
+                    <strong class="text-danger">
+                        <span class="color"
+                            *ngIf="nextQuestionnareSchedule.months > 0">{{ nextQuestionnareSchedule.months }} tháng
+                            &nbsp;</span>
+                        <span class="color"
+                            *ngIf="nextQuestionnareSchedule.days > 0">{{ nextQuestionnareSchedule.days }} ngày</span>
+                    </strong>.
+                </span>
+                <br />
+                <span *ngIf="isEligibleForMchatr">
+                    Tuy nhiên, do gia đình vẫn còn lo lắng về <strong
+                        class="color">{{ titlefirstActionOption4.join(', ') }}</strong> của con, gia đình
+                    nên làm thêm
+                    câu hỏi sàng lọc tự kỷ M-CHAT-R™ để đánh giá về nguy cơ tự kỷ của trẻ bằng cách
+                    <span (click)="MchartR()"
+                        style="background-color: transparent;color: var(--ion-color-primary, #3880ff);">Ấn vào
+                        đây</span>.
+                </span>
+            </div>
+            <div class="cssResult" *ngIf="firstActionOption == 5">
+                Gia đình nên tập cho bé các kỹ năng như
+                <strong class="color">{{ titlefirstActionOption5.join(', ') }}</strong> trong một thời gian và theo dõi
+                xem con có làm được không. Sau 1 tháng, gia đình nên làm lại bộ câu hỏi ASQ®-3 này cho trẻ.
+                <br />
+                <span *ngIf="isEligibleForMchatr">
+                    Vì gia đình vẫn còn lo lắng về <strong
+                        class="color">{{ titlefirstActionOption4.join(', ') }}</strong> của con, gia đình nên làm thêm
+                    câu hỏi sàng lọc tự kỷ M-CHAT-R™ để đánh giá về nguy cơ tự kỷ của trẻ bằng cách
+                    <span (click)="MchartR()"
+                        style="background-color: transparent;color: var(--ion-color-primary, #3880ff);">Ấn vào
+                        đây</span>.
+                </span>
+            </div>
+
+
+            <div id="second-action">
+                <div class="cssResult" *ngIf="titleGoiYChuyenGia.length == 0 ">
+                    Trong trường hợp gia đình vẫn còn băn khoăn, lo lắng, gia đình có thể đưa trẻ đến các cơ sở y tế để
+                    trao đổi thêm với cán bộ chuyên môn hoặc có đánh giá chuyên sâu hơn về sự phát triển của trẻ.
+                </div>
+                <div class="cssResult" *ngIf="titleGoiYChuyenGia.length != 0 ">
+                    Gia đình nên đưa trẻ đi đến cơ sở y tế để đánh giá thêm về sự phát triển của trẻ và
+                    <strong class="color">{{ titleGoiYChuyenGia.join(', ') }}</strong>.
+                </div>
+            </div>
+            <div id="third-action">
+                <div class="cssResult">
+                    Gia đình có thể tham khảo một số trò chơi hữu ích cho sự phát triển của trẻ theo
+                    <a class="link" (click)="OpenDataGame()">
+                        đường link này
+                    </a>.
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

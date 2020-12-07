@@ -1,0 +1,59 @@
+
+<ion-content>
+
+    <div class="container">
+        <img src="assets/imgs/bgdash.jpg" >
+      <img (click)="backpage()" style="position: absolute;    left: 10px;
+      top: 10px;" src="assets/icon/backicon.png">
+          <div class="ketquahead">
+            Kết quả bài sàng lọc CDC
+              <div class="namepost">
+                ({{postname}})
+            </div>
+          </div>
+    </div>
+
+    <div class="css" (click)="opendanhgia()">
+      <img class="cssimg" [src]="imgChilder">
+      <div   class="textstep">  
+         <div class="namechil"><span>{{name}}</span></div>
+        <div class="csspadding2px ">Mã trẻ: <span style="color: #774839;padding-right: 10px;">{{childid}}</span></div>
+        <div class="csspadding2px ">Ngày sinh: <span style="color: #774839;"> {{dob}}</span></div>
+        <div class=" csspadding2px">Người trả lời: <span style="color: #774839;"> {{nameanwser}}</span></div>
+        <div class=" csspadding2px">Ngày trả lời: <span style="color: #774839;"> {{createat}}</span></div></div>
+</div>
+<div class="btn-chat-and-notifications" (click)="opendanhgia1()">
+    <div class="div-items-icons" >
+      <img class="icons-40" src="assets/icon/hoctap.png" />
+    </div> 
+    <div  class="textstep1"> Kết quả
+    </div>
+  </div>
+  
+    <div *ngIf="checkopen1" class="containerketqua">
+        <div  class="">Bé <span style="font-weight: bold;">{{name}}</span> {{anwser}}
+            <a (click)="ASQ()">{{detail}}</a> {{description}}
+        </div>
+
+
+    </div>
+
+
+    <div class="btn-chat-and-notifications"  (click)="xemlai()">
+        <div class="div-items-icons" >
+          <img class="icons-40" src="assets/icon/icondanhgia.png" />
+        </div> 
+        <div  class="textstep2"> Xem lại bài làm
+        </div>
+      </div>
+
+    <!-- <div class="containerxemlai"  >
+        <div class="textdetail">
+            © 2009 Diana Robins, Deborah Fein, & Marianne Barton Translated by Center for Creative Initiatives in Health and Population (CCIHP), June 2015 
+        </div>
+        <div class="textdetail" *ngIf="checkopen3">
+            © Bản quyền đã đăng ký bởi tác giả Diana Robins, Deborah Fein, & Marianne Barton Dịch bởi Trung tâm Sáng Kiến Sức Khỏe và Dân Số (CCIHP) và chỉnh sửa bởi Nguyễn Thị Nha Trang, tháng 6 năm 2015
+        </div>
+        <div class="xt" (click)="opendanhgia3()">Xem thêm</div>
+    </div> -->
+</ion-content>

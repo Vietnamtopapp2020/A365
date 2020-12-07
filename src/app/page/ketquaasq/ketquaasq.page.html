@@ -1,0 +1,221 @@
+<ion-content>
+    <div class="container">
+        <img src="assets/imgs/bgdash.jpg">
+        <img (click)="backpage()" style="position: absolute;    left: 10px;
+      top: 10px;" src="assets/icon/backicon.png">
+        <div class="ketquahead">
+            Kết quả bài ASQ®-3
+            <div class="namepost">
+                ({{postname}})
+            </div>
+        </div>
+    </div>
+    <div *ngIf="name != ''">
+        <div class="css" (click)="opendanhgia()">
+            <img class="cssimg" [src]="imgChilder">
+            <div class="textstep">
+                <div class="namechil"><span>{{name}}</span></div>
+                <div class="csspadding2px ">Mã trẻ: <span style="color: #774839;padding-right: 10px;">{{childid}}</span>
+                </div>
+                <div class="csspadding2px ">Giới tính: <span style="color:#66B5F1;"> {{isgender}}</span></div>
+                <div class="csspadding2px ">Ngày sinh: <span style="color: #774839;"> {{dob}}</span></div>
+                <div class=" csspadding2px">Người trả lời: <span style="color: #774839;"> {{nameanwser}}</span></div>
+                <div class=" csspadding2px">Ngày trả lời: <span style="color: #774839;"> {{createat}}</span></div>
+            </div>
+        </div>
+        <div class="containermail">
+            <div class="textdetail">
+                <p style="font-size: 12px;padding: 20px 10px 5px 10px;;">ASQ®-3 là hệ thống câu hỏi dành cho cha
+                    mẹ/người chăm sóc trẻ tự điền nhằm sàng lọc và theo dõi sự phát triển toàn diện và phát hiện sớm các
+                    rối loạn phát triển ở trẻ</p>
+                <p style="font-size: 12px;padding: 0px 10px;">ASQ®-3 sàng lọc và theo dõi 5 lĩnh vực phát triển: Giao
+                    tiếp, vận động thô, vận động tinh, giải quyết vấn đề, và cá nhân - xã hội. Mỗi lĩnh vực ở một độ
+                    tuổi nhất định có một ngưỡng giới hạn</p>
+            </div>
+            <div class="cssdiem" (click)="Bangdiem()">
+                Điểm của trẻ
+            </div>
+            <div class="containermail1">
+                <div class="cssd">
+                    <div class="cssd1">
+                        <ion-icon style="border-radius: 50%;color: #5da83f;" name="ellipse"></ion-icon>
+                    </div>
+                    <div class="csstexxt">
+                        Điểm của trẻ
+                    </div>
+                </div>
+
+                <div class="cssd">
+                    <div class="csskk1">
+                    </div>
+                    <div class="csstexxt">
+                        Vùng điểm thể hiện trẻ đang gặp khó khăn
+                    </div>
+                </div>
+
+
+                <div class="cssd">
+                    <div class="csstd1">
+
+                    </div>
+                    <div class="csstexxt">
+                        Vùng điểm thể hiện trẻ cần được theo dõi thêm và làm sàng lọc lại do một số kỹ năng chưa thành
+                        thục
+                    </div>
+                </div>
+
+                <div class="cssd">
+                    <div class="cssbt1">
+                    </div>
+                    <div class="csstexxt">
+                        Vùng điểm thể hiện trẻ có sự phát triển bình thường
+                    </div>
+                </div>
+
+
+            </div>
+            <div style="width: 96%;margin-left: 3%;">
+                <div class="cssRow" style="border-radius: 20px 17px 0px 0px;">
+                    <div class="cssTitle">
+                        <div class="cssField">Giao tiếp: <span>{{communicationscore}} điểm </span></div>
+                        <span class="cssThreshold">Ngưỡng: {{communicationThreshold}}</span>
+                    </div>
+                    <div class="cssIndex">
+                        <span class="cssWidth21">0</span>
+                        <span class="cssWidth21">15</span>
+                        <span class="cssWidth22">30</span>
+                        <span class="cssWidth22">45</span>
+                        <span>60</span>
+                    </div>
+                    <div class="cssContent">
+                        <span class="cssContentwhite"></span>
+                        <span [style.width.%]="MCommunication" class="cssContentgrey"></span>
+                        <span [style.width.%]="CCommunication" class="cssContentblack"></span>
+                        <span [style.width.%]="SCommunication" class="circle">
+                            <ion-icon class="cssIcon" name="ellipse"></ion-icon>
+                        </span>
+                    </div>
+                </div>
+                <div class="cssRow">
+                    <div class="cssTitle">
+                        <span class="cssField">Vận động thô: {{grossMotorscore}} điểm</span>
+                        <span class="cssThreshold">Ngưỡng: {{grossMotorThreshold}}</span>
+                    </div>
+                    <div class="cssIndex">
+                        <span class="cssWidth21">0</span>
+                        <span class="cssWidth21">15</span>
+                        <span class="cssWidth22">30</span>
+                        <span class="cssWidth22">45</span>
+                        <span>60</span>
+                    </div>
+                    <div class="cssContent">
+                        <span class="cssContentwhite"></span>
+                        <span [style.width.%]="MGrossMotor" class="cssContentgrey"></span>
+                        <span [style.width.%]="CGrossMotor" class="cssContentblack"></span>
+                        <span [style.width.%]="SGrossMotor" class="circle">
+                            <ion-icon class="cssIcon" name="ellipse"></ion-icon>
+                        </span>
+                    </div>
+                </div>
+                <div class="cssRow">
+                    <div class="cssTitle">
+                        <span class="cssField">Vận động tinh: {{fineMotorscore}} điểm</span>
+                        <span class="cssThreshold">Ngưỡng: {{fineMotorThreshold}}</span>
+                    </div>
+                    <div class="cssIndex">
+                        <span class="cssWidth21">0</span>
+                        <span class="cssWidth21">15</span>
+                        <span class="cssWidth22">30</span>
+                        <span class="cssWidth22">45</span>
+                        <span>60</span>
+                    </div>
+                    <div class="cssContent">
+                        <span class="cssContentwhite"></span>
+                        <span [style.width.%]="MFineMotor" class="cssContentgrey"></span>
+                        <span [style.width.%]="CFineMotor" class="cssContentblack"></span>
+                        <span [style.width.%]="SFineMotor" class="circle">
+                            <ion-icon class="cssIcon" name="ellipse"></ion-icon>
+                        </span>
+                    </div>
+                </div>
+                <div class="cssRow">
+                    <div class="cssTitle">
+                        <span class="cssField">Giải quyết vấn đề: {{problemSolvingscore}}</span>
+                        <span class="cssThreshold">Ngưỡng: {{problemSolvingThreshold}}</span>
+                    </div>
+                    <div class="cssIndex">
+                        <span class="cssWidth21">0</span>
+                        <span class="cssWidth21">15</span>
+                        <span class="cssWidth22">30</span>
+                        <span class="cssWidth22">45</span>
+                        <span>60</span>
+                    </div>
+                    <div class="cssContent">
+                        <span class="cssContentwhite"></span>
+                        <span [style.width.%]="MProblemSolving" class="cssContentgrey"></span>
+                        <span [style.width.%]="CProblemSolving" class="cssContentblack"></span>
+                        <span [style.width.%]="SProblemSolving" class="circle">
+                            <ion-icon class="cssIcon" name="ellipse"></ion-icon>
+                        </span>
+                    </div>
+                </div>
+                <div class="cssRow">
+                    <div class="cssTitle">
+                        <span class="cssField">Cá nhân xã hội: {{personalSocialscore}} điểm</span>
+                        <span class="cssThreshold">Ngưỡng: {{personalSocialThreshold}}</span>
+                    </div>
+                    <div class="cssIndex">
+                        <span class="cssWidth21">0</span>
+                        <span class="cssWidth21">15</span>
+                        <span class="cssWidth22">30</span>
+                        <span class="cssWidth22">45</span>
+                        <span>60</span>
+                    </div>
+                    <div class="cssContent">
+                        <span class="cssContentwhite"></span>
+                        <span [style.width.%]="MPersonalSocial" class="cssContentgrey"></span>
+                        <span [style.width.%]="CPersonalSocial" class="cssContentblack"></span>
+                        <span [style.width.%]="SPersonalSocial" class="circle">
+                            <ion-icon class="cssIcon" name="ellipse"></ion-icon>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="containermail2">
+            <div class="cssnx" (click)="Nhanxet()">
+                <img class="cssiconfooter" src="assets/icon/iconnhanxet.png">
+                <div>
+                    Nhận xét chung
+                </div>
+            </div>
+            <div class="cssgy" (click)="Goiy()">
+                <img class="cssiconfooter" src="assets/icon/icongoiy.png">
+                <div>
+                    Gợi ý cho gia đình
+                </div>
+            </div>
+            <div class="cssmail" (click)="sendmail()">
+                <img class="cssiconfooter" src="assets/icon/iconsendmail.png">
+                <div>
+                    Gửi về mail
+                </div>
+            </div>
+        </div>
+        <div class="containerxemlai">
+            <div class="textdetail">
+                Ages & Stages Questionnaires ® : A Parent-Completed Child Monitoring System, Third Edition (ASQ®-3),
+                Squires & Bricker. © 2009 and Vietnamese translation (pilot version 3.4) © 2014 Paul H. Brookes
+                Publishing Co., Inc. All rights reserved. With permission of the publisher.
+            </div>
+            <div class="textdetail" *ngIf="checkopen3">
+                Bảng hỏi về Độ tuổi và Giai đoạn phát triển của trẻ ®, Ấn bản lần thứ ba (ASQ®-3), Tác giả: Squires &
+                Bricker. © 2009 Bản quyền đã đăng ký và bản dịch tiếng Việt © 2014 của NXB Brookes với sự cho phép sử
+                dụng của NXB Brookes.
+            </div>
+            <div class="xt" *ngIf="!checkopen3" (click)="opendanhgia3()">Xem thêm</div>
+            <div class="xt" *ngIf="checkopen3" (click)="opendanhgia3()">Rút gọn</div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,90 @@
+<ion-content>
+
+    <div class="container">
+        <img src="assets/imgs/bgdash.jpg">
+        <img (click)="backpage()" style="position: absolute;    left: 10px;
+      top: 10px;" src="assets/icon/backicon.png">
+        <div class="ketquahead">
+            Kết quả bài khảo sát về chất lượng cuộc sống của cha mẹ (QOL)
+        </div>
+    </div>
+
+
+    <div class="css" (click)="opendanhgia()">
+        <img class="cssimg" [src]="imgChilder">
+        <div class="textstep">
+            <div class="namechil"><span>{{name}}</span></div>
+            <div class="csspadding2px ">Mã trẻ: <span style="color: #774839;padding-right: 10px;">{{cid}}</span></div>
+            <div class="csspadding2px ">Ngày sinh: <span style="color: #774839;"> {{dob}}</span></div>
+            <div class=" csspadding2px">Người trả lời: <span style="color: #774839;"> {{nameanwser}}</span></div>
+            <div class=" csspadding2px">Ngày trả lời: <span style="color: #774839;"> {{createat}}</span></div>
+        </div>
+    </div>
+
+
+
+    <div class="btn-chat-and-notifications" (click)="opendanhgia1()">
+        <div class="div-items-icons">
+            <img class="icons-40" src="assets/icon/hoctap.png" />
+        </div>
+        <div class="textstep1"> Kết quả
+        </div>
+    </div>
+
+
+    <div class="containerketqua" *ngIf="checkopen1">
+        <div class="">Tổng điểm của bạn: <span>{{score}}</span></div>
+        <div class="">Điểm trung bình về mức độ hài lòng với cuộc sống của bạn: <span
+                style="font-weight: bold;">{{averageScore}}</span></div>
+        <div class="">
+            Như vậy trong thang điểm về mức độ hài lòng với cuộc sống với mức 1 điểm là không hề hài lòng, và 5 điểm là
+            rất hài lòng với cuộc sống thì mức độ hài lòng của bạn là:
+        </div>
+        <div>
+            <div style="float: left;width: 5%;text-align: center;">1</div>
+            <div class="cssContent">
+                <span class="cssContentwhite"></span>
+                <span [style.width.%]="averageScore * 16 " class="circle">
+                    <ion-icon class="cssIcon" name="ellipse"></ion-icon>
+                </span>
+            </div>
+            <div style="float: left;width: 5%;text-align: center;">5</div>
+        </div>
+
+        <div class="">
+            Hãy tiếp tục đồng hành cùng con bạn và các thành viên khác trong gia đình. Can thiệp tích cực cho con và tìm
+            kiếm sự hỗ trợ khi cần cũng góp phần cải thiện cuộc sống của chính bạn. Chúc bạn thành công.
+        </div>
+
+
+    </div>
+
+
+    <div class="btn-chat-and-notifications" (click)="History()">
+        <div class="div-items-icons">
+            <img class="icons-40" src="assets/icon/icondanhgia.png" />
+        </div>
+        <div class="textstep2"> Xem lại bài làm
+        </div>
+    </div>
+
+
+    <div class="containermail" (click)="sendmail()">
+        <div class="mail">
+            <div class="csspadding2px ">
+                <img style="width: 59%; text-align: center;" src="/assets/icon/iconsendmail.png">
+                <div>Gửi về mail</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="containerxemlai"  >
+            <div class="textdetail">
+                © 2009 Diana Robins, Deborah Fein, & Marianne Barton Translated by Center for Creative Initiatives in Health and Population (CCIHP), June 2015 
+            </div>
+            <div class="textdetail" *ngIf="checkopen3">
+                © Bản quyền đã đăng ký bởi tác giả Diana Robins, Deborah Fein, & Marianne Barton Dịch bởi Trung tâm Sáng Kiến Sức Khỏe và Dân Số (CCIHP) và chỉnh sửa bởi Nguyễn Thị Nha Trang, tháng 6 năm 2015
+            </div>
+            <div class="xt" (click)="opendanhgia3()">Xem thêm</div>
+        </div> -->
+
+</ion-content>

@@ -1,0 +1,126 @@
+.container {
+    width: 100%;
+}
+.ketquahead {
+    background-color: #ffffff;
+    padding: 7px;
+    position: absolute;
+    left: 24%;
+    top: 6%;
+    color: black;
+    border-radius: 9px;
+    font-size: 17px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 52%;
+    text-align: center;
+    font-family: NunitoExtraBold;
+}
+.row {
+    width: 100%;
+    float: left;
+}
+.kienthuc {
+    border-radius: 12px;
+    color: #b71c1c !important;
+    padding: 3px 10px;
+    font-family: NunitoExtraBold;
+    font-size: 14px;
+    margin-top: 9px;
+    float: left;
+    width: 100%;
+}
+.iconView {
+    float: left;
+    margin-top: 2px;
+    margin-right: 8px;
+}
+.color {
+    color: #b71c1c !important;
+}
+.detailNoti {
+    font-size: 11px;
+    padding: 2px 12px 0px 25px;
+    width: 100%;
+    float: left;
+}
+.btn {
+    float: left;
+    text-align: center;
+}
+.btn-control-menu {
+    width: 30%;
+    background: #b9ddff;
+    color: black;
+    height: 91px;
+    margin: 11% 5% 5% 15%;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px #d0d0d0;
+}
+.icons-40 {
+    padding: 5px;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.text-button-control {
+    font-size: 10px;
+    margin: 0;
+    line-height: normal;
+}
+.posttest {
+    width: 100%;
+    background: white;
+    float: left;
+    border-radius: 35px 35px 0px 0px;
+    box-shadow: 0px -2px 7px 0px #d2d2d2;
+}
+.textconten {
+    font-size: 17px;
+    margin-left: 2%;
+    text-align: center;
+    padding-bottom: 5px;
+    color: #935b45;
+    font-weight: 600;
+    float: left;
+    width: 100%;
+}
+.rowmain1 {
+    width: 100%;
+}
+.csscdc {
+    width: 30%;
+    float: left;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px 0px 10px 0px;
+    margin-left: 5%;
+    background: #ffeb99;
+    margin-right: 2%;
+    height: 70px;
+}
+.cssasq {
+    width: 28%;
+    float: left;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    padding: 7px 0px 10px 0px;
+    text-align: center;
+    background: #b9ddff;
+    margin-right: 2%;
+    height: 70px;
+}
+.cssmchatrf {
+    width: 30%;
+    float: left;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    padding: 12px 0px 10px 0px;
+    text-align: center;
+    background: #ffcfc2;
+    height: 70px;
+}

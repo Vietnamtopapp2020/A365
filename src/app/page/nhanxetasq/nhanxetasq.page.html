@@ -1,0 +1,42 @@
+<ion-content class="pagebackgroundimage">
+    <div class="container">
+        <div class="iconBack">
+            <ion-icon (click)="backpage()" style="padding: 7px;" name="close"></ion-icon>
+        </div>
+        <div class="cssbang">
+            <div class="imghead">
+                <img style="width: 20%;" src="assets/icon/iconnhanxet.png">
+            </div>
+            <div class="texthead">
+                Nhận xét chung
+            </div>
+        </div>
+        <div class="containertext">
+            <!-- <div class="cssResult"> -->
+            <div class="cssResult {{TitletNormalShow}}">
+                Trẻ <span class="color" style="font-weight: bold;">{{name}}</span> có sự phát triển bình thường ở các lĩnh vực <span
+                    class="color" style="font-weight: bold;">{{ TitletNormal.join(', ') }}</span>. Điều này có nghĩa là
+                trẻ phát triển
+                tương đương với trẻ khác ở cùng độ tuổi trong các
+                lĩnh vực này.
+            </div>
+            <!-- <div class="cssResult"> -->
+            <div class="cssResult {{TitleFollowShow}}" >
+                Các lĩnh vực như <span class="color" style="font-weight: bold;">{{ TitleFollow.join(', ') }}</span> có
+                điểm nằm trong vùng
+                màu vàng. Điều đó có nghĩa có một số các kỹ năng trong các lĩnh vực này trẻ chưa thực hiện được, hoặc đã
+                thực
+                hiện được nhưng chưa thường xuyên.
+            </div>
+            <!-- <div  class="cssResult"> -->
+            <div class="cssResult {{TitletHardShow}}">
+                Các lĩnh vực như <span class="color" style="font-weight: bold;">{{ TitletHard.join(', ') }}</span> có
+                điểm nằm
+                trong vùng màu hồng. Điều đó có nghĩa có một số các kỹ năng trong các lĩnh vực này trẻ chưa thực hiện
+                được,
+                hoặc đã thực hiện được nhưng chưa thường
+                xuyên tức là trẻ chậm so với các trẻ khác cùng tuổi ở lĩnh vực này.
+            </div>
+        </div>
+    </div>
+</ion-content>

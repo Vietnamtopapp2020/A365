@@ -1,0 +1,111 @@
+<ion-content>
+  <div class="container">
+    <img src="assets/imgs/bgdash.jpg">
+    <!-- <img (click)="backpage()" style="position: absolute;    left: 10px;top: 10px;" src="assets/icon/backicon.png"> -->
+    <div class="ketquahead">
+      Phiếu thông tin người làm
+    </div>
+  </div>
+
+  <div class="loginform">
+    <img class="center" src="assets/icon/loginsun.png">
+    <ion-grid class="iongrid">
+      <ion-row justify-content-center>
+        <ion-col>
+          <!-- Năm sinh -->
+          <div class="txtsignin">
+            <img src="assets/icon/iconlich.png" style="margin-top: 10px;" class="icontxt">
+            <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView" [(ngModel)]="txtbirthYear" placeholder="Năm sinh*" type="number">
+            </ion-input>
+          </div>
+
+          <!-- Giới tính -->
+          <div class="viewHeadSearch">
+            <img class="iconSelect" src="assets/icon/iconnam.png">
+            <ion-item class="dateGeneral">
+              <ion-label class="displayNone">Giới tính
+              </ion-label>
+              <ionic-selectable [(ngModel)]="txtgender" [items]="listgender" itemValueField="id" itemTextField="text"
+                placeholder="Giới tính*"  (onChange)="GenderChange($event)">
+              </ionic-selectable>
+            </ion-item>
+          </div>
+          <!-- Dân tộc -->
+          <div class="viewHeadSearch">
+            <img class="iconSelect" src="assets/icon/icondantoc.png">
+            <ion-item class="dateGeneral">
+              <ion-label class="displayNone">Dân tộc
+              </ion-label>
+              <ionic-selectable [(ngModel)]="txtethnic" [items]="listethnic" itemValueField="Ma" itemTextField="text"
+                placeholder="Dân tộc*"  (onChange)="EthnicChange($event)">
+              </ionic-selectable>
+            </ion-item>
+          </div>
+          <!-- Quan he -->
+          <div class="viewHeadSearch">
+            <img class="iconSelect" src="assets/icon/iconparen.png">
+            <ion-item class="dateGeneral">
+              <ion-label class="displayNone">Mối quan hệ với trẻ
+              </ion-label>
+              <ionic-selectable [(ngModel)]="txtchildRelation" [items]="listchildRelation" itemValueField="text"
+                itemTextField="text" placeholder="Mối quan hệ với trẻ*" 
+                (onChange)="ChildRelationChange($event)">
+              </ionic-selectable>
+            </ion-item>
+          </div>
+          <div class="txtsignin" *ngIf="txtchildRelation != null && txtchildRelation.id == 4">
+            <img src="assets/icon/iconparen.png" style="margin-top: 10px;" class="icontxt">
+            <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView"
+              [(ngModel)]="txtRelation" placeholder="Nhập mối quan hệ với trẻ*" type="text">
+            </ion-input>
+          </div>
+          <!-- Địa chỉ -->
+          <div class="txtsignin">
+            <img src="assets/icon/icondiachi.png" style="margin-top: 10px;" class="icontxt">
+            <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView" [(ngModel)]="txtaddress"
+              placeholder="Địa chỉ" type="text">
+            </ion-input>
+          </div>
+          <!-- SDT -->
+          <div class="txtsignin">
+            <img style="width: 7%;margin-top: 2%;" src="assets/icon/iconsdt.png" class="icontxt">
+            <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView"
+              [(ngModel)]="txtphoneNumber" placeholder="Số điện thoại" type="text">
+            </ion-input>
+          </div>
+          <!-- Nơi sàng lọc -->
+          <div class="viewHeadSearch">
+            <img class="iconSelect" src="assets/icon/iconkhuvuc.png">
+            <ion-item class="dateGeneral">
+              <ion-label class="displayNone">Nơi làm sàng lọc
+              </ion-label>
+              <ionic-selectable [(ngModel)]="txtscreeningPlace" [items]="listscreeningPlace" itemValueField="id"
+                itemTextField="text" placeholder="Nơi làm sàng lọc" 
+                (onChange)="ScreeningPlaceChange($event)">
+              </ionic-selectable>
+            </ion-item>
+          </div>
+
+           <!-- Nơi sàng lọc -->
+           <div class="viewHeadSearch">
+            <img class="iconSelect" src="assets/icon/iconkhuvuc.png">
+            <ion-item class="dateGeneral">
+              <ion-label class="displayNone">Anh chị biết đến A365 từ nguồn nào?
+              </ion-label>
+              <ionic-selectable [(ngModel)]="sltRefercource" [items]="listREFERSOURCE" itemValueField="id"
+                itemTextField="text" placeholder="Anh chị biết đến A365 từ nguồn nào?"
+                (onChange)="REFERSOURCEChange($event)">
+              </ionic-selectable>
+            </ion-item>
+          </div>
+          <div class="truef">
+            <!-- <div class="huybo" (click)="backpage()">Hủy bỏ</div> -->
+            <div class="containerbt">
+              <button tappable (click)="CreatprofileGuest()" class="login-buttontaomoi">Tiếp tục</button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

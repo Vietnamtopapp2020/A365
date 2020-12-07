@@ -1,0 +1,83 @@
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="container" style="position: fixed;z-index: 999;">
+    <ion-buttons style="position: absolute;margin-top: 15px;" slot="start">
+      <ion-menu-button style="font-size: 25px;background: none;color: black;"></ion-menu-button>
+    </ion-buttons>
+    <img src="assets/imgs/bgdash.jpg">
+    <ion-buttons (click)="OpenHistory()"
+      style="position: absolute;width: 35px;right: 25%;top: 25px;border-radius: 5px;background: #ffffff;height: 35px;font-size: 11px;color: black;text-align: center;border: 1px solid #d2d2d2;">
+      <img style="width: 80%;margin-left: 10%;" src="assets/icon/13_1.png">
+    </ion-buttons>
+    <div
+      style="position: absolute;right: 25%;top: 63px;border-radius: 5px;font-size: 11px;color: black;text-align: center;">
+      Lịch sử</div>
+    <ion-buttons (click)="Addchilren()"
+      style="position: absolute;width: 35px;right: 10%;top: 25px;border-radius: 5px;background: #ffffff;height: 35px;font-size: 11px;color: black;text-align: center;border: 1px solid #d2d2d2;">
+      <img style="width: 80%;margin-left: 10%;" src="assets/icon/26_1.png">
+    </ion-buttons>
+    <div
+      style="position: absolute;right: 9%;top: 63px;border-radius: 5px;height: 35px;font-size: 11px;color: black;text-align: center;">
+      Thêm trẻ</div>
+
+    <div class="cssviewsearch">
+      <input class="viewButtonSearch" autocomplete="off" (keyup.enter)="Searchchildren()" [(ngModel)]="txtname"
+        placeholder=" Nhập tên trẻ..." type="text">
+      <ion-icon *ngIf="txtname != ''" (click)="DeleteSearch()" style="position: absolute;right: 10px;margin-top: 10px;"
+        name="close"></ion-icon>
+      <button class="btnSearch" (click)="Searchchildren()">
+        <ion-icon style="margin-top: 10%;" name="search"></ion-icon>
+      </button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let data of childrenlist" class="btn-chat-and-notifications"
+        [ngClass]="{ 'line': data.checkSelect }">
+        <div class="div-items-icons" [ngClass]="{ 'line': data.checkSelect }" (click)="SelectChild(data)">
+          <img class="icons-40 " src="{{data.imgIcon}}" />
+        </div>
+        <div class="div-items-text" (click)="SelectChild(data)">
+          <div>
+            <div><span style="font-weight: bold;font-size: 16px;color: #F46262;">{{data.name}}</span></div>
+            <div><span style="font-size: 11px;color: #ce857a;"> {{data.genderName}} -
+                {{data.dob | date:'dd/MM/yyyy'}}</span></div>
+          </div>
+          <div class="csspadding2px" style="font-size: 10px;">
+            <div style="float: left;width: 50%;border-right: 1px solid #f2f2f2;">
+              <span style="color: #78B9F6;">Chẩn đoán trẻ</span><br>
+              <span style="font-size: 10px;">{{data.diagnosticConclusionText}}</span> </div>
+            <!-- <div style="float: left;width: 50%;height: 50px;padding-left: 16px;">
+              <span style="color: #ce857a;">M_CHATR_F</span><br>
+              <span style="font-size: 10px;color: #E56363;">Chưa làm bài Test</span></div> -->
+          </div>
+        </div>
+        <div *ngIf='data.diagnosticConclusionText != "" && data.diagnosticConclusion != "DC-6"'
+          style="float: left;position: absolute;right: 10%;width: 30px;height: 30px;margin-top: 7px;background: #FFEB99;text-align: center;border-radius: 100px;padding: 6px;">
+          <img src="assets/icon/danger.png" style="width: 40%;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <ion-infinite-scroll threshold="50px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+<ion-footer>
+  <div class="posttest" *ngIf="!CheckControl" (click)="onSwipeRight()" style="padding: 0px;">
+  <!-- <div class="posttest" *ngIf="!CheckControl" appSwipe (swipeDown)="onSwipeRight($event)" style="padding: 0px;"> -->
+    <ion-icon style="text-align: center;width: 100%;font-size: 30px;" name="reorder-two">
+    </ion-icon>
+  </div>
+  <div class="divMenuTabs" *ngFor="let p of service.menuLinks;">
+    <div class="btnMenuTabs" (click)="openMenuPage(p)">
+      <img class="iconMenuTabs" src="{{p.uri}}" />
+      <br>{{p.name}}
+    </div>
+  </div>
+</ion-footer>

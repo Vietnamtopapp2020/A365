@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" style="width: 15%;">
+      <ion-back-button text=""  aria-label="chevron back outline" style="text-align: center;">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="texttitle">
+      Đổi mật khẩu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="cssRowInput">
+    <div class="rowform">
+      <ion-label class="fontsize14" position="floating">Mật khẩu cũ*:</ion-label>
+      <ion-input class="cssInput" [(ngModel)]="pass_old" type="password"></ion-input>
+    </div>
+    <div class="rowform">
+      <ion-label class="fontsize14" position="floating">Mật khẩu mới*:</ion-label>
+      <ion-input class="cssInput" [(ngModel)]="pass_new1" type="password"></ion-input>
+    </div>
+    <div class="rowform">
+      <ion-label class="fontsize14" position="floating">Xác nhận mật khẩu mới:</ion-label>
+      <ion-input class="cssInput" [(ngModel)]="pass_new2" type="password"></ion-input>
+    </div>
+    </div>
+
+    <button (click)="ChangPass()" class="login-button">Đổi mật khẩu</button>
+</ion-content>

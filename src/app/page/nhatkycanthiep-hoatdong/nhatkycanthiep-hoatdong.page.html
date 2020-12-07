@@ -1,0 +1,26 @@
+<ion-content >
+  <div class="container1">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backpage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">
+      <div class="textstep">
+        <span>Hoạt động can thiệp trẻ đã hoàn thành</span><br />
+        <span>Trẻ {{data.name}}</span>
+      </div>
+    </div>
+  </div>
+  <div style="width: 100%;float: left;height: auto;border-bottom: dotted 1px gray;margin-bottom: 0px;padding-bottom: 7px;">
+    <div class="cssHeaderWork">
+      <div style="background-color: #fff4c8;color: #935B45;" class="HeaderWorkGeneral width15">STT</div>
+      <div style="background-color: #d9edff;color: #935B45;" class="HeaderWorkGeneral width60">Hoạt động</div>
+      <div style="background-color: #e5f1e0;color: #935B45;" class="HeaderWorkGeneral width25">Ngày hoàn thành</div>
+    </div>
+    <div class="cssContent">
+      <div *ngFor="let data of listWorkChild;let i = index">
+        <div class="contentGeneral width15">{{i+1}}</div>
+        <div class="contentGeneral textalignleft width60">{{data.interventionPost.title}}</div>
+        <div class="contentGeneral width25">{{data.completedDate | date:'dd/MM/yyyy'}}</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

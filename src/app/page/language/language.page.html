@@ -1,0 +1,23 @@
+<ion-header  [ngClass]="{ 'filterbrightness': !!service.showList }" 
+ (click)="service.CloseMenu()">
+  <ion-toolbar>
+    <ion-buttons style="margin-left: 2%;" slot="start" (click)=backPage()>
+        <ion-icon name="chevron-back-outline" style="zoom: 2;"></ion-icon>
+      </ion-buttons>
+      <ion-title>Ngôn ngữ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding [ngClass]="{ 'filterbrightness': !!service.showList }" 
+ (click)="service.CloseMenu()">
+  <div class="content_grid2">
+      <div *ngFor="let z of ListLanguage">
+          <div tappable class="wp_code" (click)="SetLanguageDefault(z)">
+              <div><img class="imageLanguage" src="{{z.src}}" />{{z.Valuse}}</div>
+          </div>
+          <div class="checkbox">
+              <img [ngClass]="{ 'hidden': z.DefaultPayment } " class="imgdelete" src="assets/imgs/iconcheck.png" />
+          </div>
+      </div>
+  </div>
+</ion-content>

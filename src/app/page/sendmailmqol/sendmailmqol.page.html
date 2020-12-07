@@ -1,0 +1,16 @@
+<ion-content class="pagebackgroundimage ">
+  <div class="overlay" (click)="backPage()"></div>
+  <div class="modalmessscc">
+    <img class="iconsun" src="assets/icon/loginsun.png">
+    <div class="ipt_email">
+      <img class="iconMail" src="assets/icon/loginuser.png">
+      <input type="email" [(ngModel)]="email" placeholder="Nhập Email" class="ipt_email1" tappable>
+    </div>
+    <div style="width: 100%;">
+      <div class="huybo" (click)="backPage()">
+        Hủy bỏ
+      </div>
+      <button class="btn_forgot" tappable (click)="Sendemail()">Tiếp tục</button>
+    </div>
+  </div>
+</ion-content>

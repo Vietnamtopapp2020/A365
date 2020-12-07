@@ -1,0 +1,19 @@
+<ion-content class="pagebackgroundimage" style=" font-family: NunitoBold ;">
+  <div class="overlay" (click)="btnCannel()"></div>
+  <div class="modalmesssc">
+    <div class="iconBack">
+      <ion-icon (click)="btnCannel()" style="padding: 7px;" name="close"></ion-icon>
+    </div>
+    <div class="header_title">Xác nhận</div>
+    <div>
+      <img style="width: 30%;margin: 10px 35% 0px 35%;" src="assets/imgs/icon_Check_notifi.png" />
+    </div>
+    <div class="title_message">
+      <div class="content_messager">{{message}}</div>
+    </div>
+    <!-- <button class="btn_cannel" tappable (click)="btnCannel()">Hủy</button> -->
+    <button class="btn_ok" tappable (click)="btnOk()"> Đồng ý</button>
+
+  </div>
+
+</ion-content>

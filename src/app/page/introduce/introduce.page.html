@@ -1,0 +1,82 @@
+<ion-content>
+  <div class="container">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backPage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">
+      Giới thiệu A365
+    </div>
+    <div style="padding: 10px 20px;text-align: justify;font-size: 15px;">
+      <div sstyle="font-size: 20px;font-weight: bold;font-family: 'NunitoExtraBold';">A365, chúng tôi là ai <span style="color: #b71c1c;">?</span></div>
+      <p><span style="color: #b71c1c;">A365</span> (viết tắt của Ability 365) hỗ trợ cha mẹ và các thành viên khác trong
+        gia đình, cán bộ y tế,
+        giáo viên và cán bộ chuyên môn khác làm việc với trẻ nhỏ thực hiện các chức năng sau: </p>
+      <p>
+        <span style="color:#b71c1c ; font-family: 'NunitoExtraBold';">SÀNG LỌC:</span> Bao gồm các bộ công cụ đánh giá
+        trực tuyến nhằm theo dõi sự phát
+        triển của trẻ và phát hiện sớm trẻ có nguy cơ rối loạn phát triển và rối loạn phổ tự kỷ.
+      </p>
+      <p>
+        <span style="color:#b71c1c ; font-family: 'NunitoExtraBold';">CAN THIỆP:</span> Các nguyên tắc, chiến lược chung
+        giúp cha mẹ có thể can thiệp cho
+        con tại nhà, các bài tập can thiệp và các bộ câu hỏi giúp cha mẹ tự đánh giá tình trạng chung của trẻ và các kỹ
+        năng cụ thể khi thực hiện can thiệp cho trẻ. Tính hiệu quả của việc cha mẹ can thiệp cho con đã được khoa học
+        kiểm
+        chứng.
+      </p>
+      <p>
+        <span style="color:#b71c1c ; font-family: 'NunitoExtraBold';">KIẾN THỨC:</span> Kiến thức tổng hợp và cập nhật
+        về
+        các mốc phát triển, vai trò của
+        sàng lọc phát hiện sớm, rối loạn phổ tự kỷ và những khó khăn của cha mẹ khi biết con tự kỷ.
+      </p>
+      <p style="font-size: 20px;font-weight: bold;">Ứng dụng A365</p>
+      <iframe width="100%" height="50%" frameborder="0" style="width: 100%" allowfullscreen
+        [src]="transform(Data.video)"></iframe>
+      <div style="margin: 0px;" class="textquest" [innerHTML]=getSafehtml(Data.introduction)></div>
+      <p style="font-size: 20px;font-weight: bold;">Đội ngũ phát triển và triển khai A365</p>
+      <ion-slides class="slideimg" [options]="slideOptsImg">
+        <ion-slide *ngFor="let team of Data.coreTeam">
+          <div>
+            <img class="imgBanner" src="{{team.profileImage}}" />
+            <div>{{team.name}}</div>
+            <div style="color: #b71c1c;font-size: 12px;">{{team.role}}</div>
+            <div style="font-size: 14px;" [innerHTML]=getSafehtml(team.content)></div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+
+      <p style="font-size: 20px;font-weight: bold;font-family: 'NunitoExtraBold';">Các chuyên gia đồng hành cùng A365</p>
+      <ion-slides class="slideimg" [options]="slideOptsImg">
+        <ion-slide *ngFor="let team of Data.experts">
+          <div>
+            <div>{{team.name}}</div>
+            <div style="font-size: 14px;" [innerHTML]=getSafehtml(team.content)></div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+
+      <p style="font-size: 20px;font-weight: bold;font-family: 'NunitoExtraBold';">Đội ngũ cố vấn</p>
+      <ion-slides class="slideimg" [options]="slideOptsImg">
+        <ion-slide *ngFor="let team of Data.consultants">
+          <div>
+            <div>{{team.name}}</div>
+            <div style="font-size: 14px;" [innerHTML]=getSafehtml(team.content)></div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+
+      <p style="font-size: 20px;font-weight: bold;font-family: 'NunitoExtraBold';">Các thành viên đã cùng tham gia</p>
+      <ion-slides class="slideimg" [options]="slideOptsImg">
+        <ion-slide *ngFor="let team of Data.fellowship">
+          <div>
+            <div>{{team.name}}</div>
+            <div style="font-size: 14px;" [innerHTML]=getSafehtml(team.content)></div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+
+      <p style="font-size: 20px;font-weight: bold;font-family: 'NunitoExtraBold';">Các đối tác đang và/hoặc đã đồng hành cùng A365</p>
+      <div style="font-size: 14px;" [innerHTML]=getSafehtml(Data.supportTeam)></div>
+    </div>
+  </div>
+</ion-content>
