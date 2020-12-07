@@ -25,6 +25,12 @@ npm-debug.log*
 /.vscode
 /coverage
 /dist
+<<<<<<< HEAD
 /platforms
+=======
+/node_modules
+/platforms
+/plugins
+>>>>>>> 2ce639062f4c51af29ae1cb87b71cc6a2865431a
 /www
 browserslist
