@@ -1,0 +1,71 @@
+<ion-content>
+    <div class="container">
+        <img src="assets/imgs/bgdash.jpg">
+        <img (click)="backpage()" style="position: absolute;    left: 10px;
+      top: 10px;" src="assets/icon/backicon.png">
+        <div class="ketquahead">
+            Kết quả bài Đánh giá can thiệp tự kỷ ATEC
+        </div>
+    </div>
+    <div class="css" (click)="opendanhgia()">
+        <img class="cssimg" [src]="imgChilder">
+        <div class="textstep">
+            <div class="namechil"><span>{{name}}</span></div>
+            <div class="csspadding2px ">Mã trẻ: <span style="color: #774839;padding-right: 10px;">{{childid}}</span>
+            </div>
+            <div class="csspadding2px ">Ngày sinh: <span style="color: #774839;"> {{dob}}</span></div>
+            <div class=" csspadding2px">Người trả lời: <span style="color: #774839;"> {{nameanwser}}</span></div>
+            <div class=" csspadding2px">Ngày trả lời: <span style="color: #774839;"> {{createat}}</span></div>
+        </div>
+    </div>
+    <div class="btn-chat-and-notifications" (click)="opendanhgia1()">
+        <div class="div-items-icons">
+            <img class="icons-40" src="assets/icon/hoctap.png" />
+        </div>
+        <div class="textstep1"> Kết quả
+        </div>
+    </div>
+    <div class="containerketqua" *ngIf="checkopen1">
+        <div class="">Kết quả đánh giá <span>{{score}}</span></div>
+        <div class="">
+            Cám ơn bạn đã dành thời gian trả lời các câu hỏi.
+        </div>
+        <div class="" style="font-weight: bold;">
+            Bảng kiểm đánh giá can thiệp tự kỷ (ATEC)
+        </div>
+        <div class="">
+            không phải là bảng kiểm để chẩn đoán, mà giúp người chăm sóc trẻ và các cán bộ chuyên môn theo dõi tình
+            trạng của trẻ trong quá trình can thiệp.
+        </div>
+        <div class="">
+            Điểm càng thấp thì có nghĩa trẻ càng ít vấn đề. Điểm lần đánh giá sau thấp hơn so với lần trước có nghĩa là
+            trẻ đang có sự cải thiện.
+        </div>
+        <div class="">
+            Hãy lưu lại kết quả các lần đánh giá bằng cách gửi kết quả này vào email của bạn để tiện theo dõi.
+        </div>
+        <div class="" style="color: #0d82b7;">Lĩnh vực 1: Lời nói/ ngôn ngữ/ giao tiếp </div>
+        <div class="" style="padding-left: 10px;">Kết quả đánh giá: <span>{{speech}}</span></div>
+        <div class=" " style="color: #0d82b7;">Lĩnh vực 2: Kỹ năng xã hội</div>
+        <div class="" style="padding-left: 10px;">Kết quả đánh giá: <span>{{sociability}}</span></div>
+        <div class=" " style="color: #0d82b7;">Lĩnh vực 3: Nhận thức</div>
+        <div class="" style="padding-left: 10px;">Kết quả đánh giá: <span>{{sensoryCognitiveAwareness}}</span></div>
+        <div class=" " style="color: #0d82b7;">Lĩnh vực 4: Sức khỏe/thể chất/hành vi</div>
+        <div class="" style="padding-left: 10px;">Kết quả đánh giá: <span>{{healthPhysicalBehavior}}</span></div>
+    </div>
+    <div class="btn-chat-and-notifications" (click)="History()">
+        <div class="div-items-icons">
+            <img class="icons-40" src="assets/icon/icondanhgia.png" />
+        </div>
+        <div class="textstep2"> Xem lại bài làm
+        </div>
+    </div>
+    <div class="containermail" (click)="sendmail()">
+        <div class="mail">
+            <div class="csspadding2px ">
+                <img style="width: 59%; text-align: center;" src="/assets/icon/iconsendmail.png">
+                <div>Gửi về mail</div>
+            </div>
+        </div>
+    </div>
+</ion-content>

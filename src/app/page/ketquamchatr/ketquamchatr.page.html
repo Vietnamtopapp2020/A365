@@ -1,0 +1,116 @@
+<!-- <ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" (click)="backpage()">
+            <ion-back-button text="" aria-label="chevron back outline" style="text-align: center;;"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Kết quả M-CHAT-R™</ion-title>
+        <div class="btnHeader">
+        </div>
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+    <div class="container">
+        <img src="assets/imgs/bgdash.jpg">
+        <img (click)="backpage()" style="position: absolute;    left: 10px;
+      top: 10px;" src="assets/icon/backicon.png">
+        <div class="ketquahead">
+            Kết quả bài sàng lọc tự kỷ M-CHAT-R™
+        </div>
+    </div>
+
+
+    <div class="css" (click)="opendanhgia()">
+        <img class="cssimg" [src]="imgChilder">
+        <div class="textstep">
+            <div class="namechil"><span>{{name}}</span></div>
+            <div class="csspadding2px ">Mã trẻ: <span style="color: #774839;padding-right: 10px;">{{cid}}</span></div>
+            <div class="csspadding2px ">Ngày sinh: <span style="color: #774839;"> {{dob}}</span></div>
+            <div class=" csspadding2px">Người trả lời: <span style="color: #774839;"> {{nameanwser}}</span></div>
+            <div class=" csspadding2px">Ngày trả lời: <span style="color: #774839;"> {{createat}}</span></div>
+        </div>
+    </div>
+    <!-- <div *ngIf="checkopen" class="containerprofile">
+        <div class=" ">Tên trẻ: <span>{{name}}</span></div>
+        <div class=" ">Mã trẻ: <span>{{cid}}</span></div>
+        <div class=" ">Ngày sinh: <span> {{dob }}</span></div>
+        <div class=" ">Người trả lời: <span> {{nameanwser}}</span></div>
+        <div class=" ">Ngày trả lời: <span> {{createat}}</span></div>
+    </div> -->
+
+
+    <!-- 
+    <div class="css1" (click)="opendanhgia1()">
+             
+        <img class="cssimg1" src="assets/icon/rsicon.png">
+  
+        <div  class="textstep1"> Kết quả
+        </div>
+</div>  -->
+
+    <div class="btn-chat-and-notifications" (click)="opendanhgia1()">
+        <div class="div-items-icons">
+            <img class="icons-40" src="assets/icon/hoctap.png" />
+        </div>
+        <div class="textstep1"> Kết quả
+        </div>
+    </div>
+
+
+
+    <div class="containerketqua" *ngIf="checkopen1">
+        <div class="">Số điểm đạt được: <span>{{score}}</span></div>
+        <div class="">Kết quả: <span style="font-weight: bold;">{{ketqua}}</span></div>
+        <div class="">
+            {{text}}
+        </div>
+        <span class="link" (click)="OpenLink()">{{desciptions}}</span>
+        <div class="">
+            {{detail}}
+        </div>
+        <div class="">
+            Lưu ý rằng M-CHAT-R™ chỉ là bộ công cụ sàng lọc để phát hiện trẻ có nguy cơ tự kỷ hoặc các rối loạn phát
+            triển khác.
+        </div>
+        <div class="" style="font-weight: bold;">
+            Kết quả M-CHAT-R™ không phải là kết quả chẩn đoán.
+        </div>
+
+    </div>
+
+
+
+
+    <div class="btn-chat-and-notifications" (click)="History()">
+        <div class="div-items-icons">
+            <img class="icons-40" src="assets/icon/icondanhgia.png" />
+        </div>
+        <div class="textstep2"> Xem lại bài làm
+        </div>
+    </div>
+
+    <div class="containermail" (click)="sendmail()">
+        <div class="mail">
+            <div class="csspadding2px ">
+                <img style="width: 59%; text-align: center;" src="/assets/icon/iconsendmail.png">
+                <div>Gửi về mail</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="containerxemlai">
+        <div class="textdetail">
+            © 2009 Diana Robins, Deborah Fein, & Marianne Barton Translated by Center for Creative Initiatives in Health
+            and Population (CCIHP), June 2015
+        </div>
+        <div class="textdetail" *ngIf="checkopen3">
+            © Bản quyền đã đăng ký bởi tác giả Diana Robins, Deborah Fein, & Marianne Barton Dịch bởi Trung tâm Sáng
+            Kiến Sức Khỏe và Dân Số (CCIHP) và chỉnh sửa bởi Nguyễn Thị Nha Trang, tháng 6 năm 2015
+        </div>
+        <div class="xt" *ngIf="!checkopen3" (click)="opendanhgia3()">Xem thêm</div>
+        <div class="xt" *ngIf="checkopen3" (click)="opendanhgia3()">Rút gọn</div>
+    </div>
+
+</ion-content>

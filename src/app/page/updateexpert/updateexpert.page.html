@@ -1,0 +1,198 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button text="" icon="close-circle-outline" style="color:#c90848;width: 100%;margin-left: 86%;"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="container">
+      <div>
+        <!-- email -->
+        <ion-grid>
+          <ion-row>
+            <ion-col >
+              <div class="rowform">
+                <ion-input type="text" class="Formtext" [(ngModel)]="txtEmail" disabled></ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      <!-- số điện thoại -->
+        <ion-grid>
+          <ion-row>
+            <ion-col >
+              <div class="rowform">
+                <ion-input type="text" style="margin-left: 6px;" placeholder="Số điện thoại" [(ngModel)]="txtSDT" ></ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <!-- Họ tên -->
+        <ion-grid>
+          <ion-row>
+            <ion-col >
+              <div class="rowform">
+                <ion-input type="text" style="margin-left: 6px;" placeholder="Họ và Tên" [(ngModel)]="txtHoten" ></ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <!-- địa chỉ -->
+        <ion-grid>
+          <ion-row>
+            <ion-col >
+              <div class="rowform">
+                <ion-input type="text" style="margin-left: 6px;" placeholder="Địa chỉ" [(ngModel)]="txtDiachi"  ></ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <!-- giới tính -->
+      <ion-grid>
+        <ion-row>
+          <ion-col  style="text-align: left; font-size: 14px;">
+            <div>
+              <label>Giới Tính:</label>
+            </div>
+          </ion-col>
+          <ion-col >
+            <div>
+              <ion-list *ngFor= "let p of listgenders" style="float: left;width: 45%;">
+                <input type="radio"  [(ngModel)]="txtGioitinh" value="{{p.genders}}" style="margin-right: 5px;">
+                <label >{{p.text}}</label>
+              </ion-list>
+            </div>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+      <ion-grid>
+          <ion-row>
+            <ion-col  style="margin-top: 3%;text-align: left; font-size: 14px;">
+              <div>
+                <label>Dân Tộc:</label>
+              </div>
+            </ion-col>
+            <ion-col size="8" offset-md="2" style="border-radius: 5px; background-color: #CCCCCC;;margin-right: 10px;">
+              <div>
+                <ion-select [(ngModel)]="txtDantoc" placeholder="---Chọn---">
+                  <ion-select-option  *ngFor="let p of listethnic"  value="{{p.Ma}}">{{p.text}}</ion-select-option>
+                </ion-select>
+              </div>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+  
+
+
+      <ion-grid>
+        <ion-row>
+          <ion-col  style="margin-top: 3%;text-align: left;font-size: 14px;">
+            <div>
+              <label>Năm sinh:</label>
+            </div>
+          </ion-col>
+          <ion-col size="8" offset-md="2" style="border-radius: 5px; background-color: #CCCCCC; margin-right: 10px;">
+            <div >
+              <ion-item style=" background-color: #CCCCCC" >
+                <!-- <ion-datetime [(ngModel)]="txtNamsinh" placeholder="---Chọn---" displayFormat="YYYY" min="1950" max="2002" ></ion-datetime> -->
+                <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView" [(ngModel)]="txtNamsinh" placeholder="Năm sinh*" type="number">
+                </ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+      <!-- Khu vực -->
+      
+     
+      <ion-grid>
+        <ion-row>  
+          <ion-col  style="margin-top: 3%;text-align: left;font-size: 14px;">
+            <div>
+              <label>Khu Vực:</label>
+            </div>
+          </ion-col>      
+          <ion-col size="8" offset-md="2" style="border-radius: 5px;background-color: #CCCCCC;margin-right: 10px;">
+            <div>
+              <ion-select  placeholder="---Chọn---" [(ngModel)]="txtKhuvuc" >
+                <ion-select-option  *ngFor="let p of listarea" value ="{{p.id}}" >{{p.text}}</ion-select-option>
+              </ion-select>
+               
+            </div>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+    <!-- Nghề nghiệp -->
+    <ion-grid>
+      <ion-row>
+        <ion-col  style="margin-top: 3%;text-align: left; font-size: 14px;">
+          <div>
+            <label>Nghề Nghiệp:</label>
+          </div>
+        </ion-col>
+        <ion-col size="8" offset-md="2" style="border-radius: 5px; background-color: #CCCCCC;margin-right: 10px;">
+          <div>
+            <ion-select  placeholder="---Chọn---" [(ngModel)]="txtNghenghiep">
+              <ion-select-option  *ngFor="let p of listJOB" value ="{{p.Ma}}">{{p.text}}</ion-select-option>
+            </ion-select>
+          </div>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+  <!-- Nơi công tác -->
+  <ion-grid>
+    <ion-row>
+      <ion-col  style="margin-top: 3%;text-align: left; font-size: 14px;">
+        <div>
+          <label>Nơi Công Tác:</label>
+        </div>
+      </ion-col>
+      <ion-col size="8" offset-md="2" style="border-radius: 5px; background-color: #CCCCCC;margin-right: 10px;">
+        <div>
+          <ion-select  placeholder="---Chọn---" >
+            <ion-select-option  *ngFor="let p of listwordplace" value ="{{p.id}}">{{p.text}}</ion-select-option>
+          </ion-select>
+        </div>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+  
+    <!-- giới thiệu -->
+  <ion-grid>
+    <ion-row>
+      <ion-col style="margin-top: 3%;text-align: left;font-size: 14px;">
+        <div>
+          <label>Anh chị biết đến A365 từ nguồn nào:</label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col style="border-radius: 5px; background-color: #CCCCCC;margin-right: 10px;">
+        <div>
+            <ion-select  placeholder="---Chọn---" [(ngModel)]="txtGioithieu">
+              <ion-select-option   *ngFor="let p of listREFERSOURCE" value ="{{p.Ma}}">{{p.text}}</ion-select-option>
+            </ion-select>
+        </div>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+
+
+
+    </div>
+    <div class="dangkyupdate">
+      <button tappable (click)="updateprofile()" name="submit" class="login-button">HOÀN TẤT</button>
+    </div>
+</ion-content>

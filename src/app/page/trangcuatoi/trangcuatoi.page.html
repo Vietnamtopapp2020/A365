@@ -1,0 +1,129 @@
+<ion-content>
+  <div class="container">
+    <ion-buttons style="position: absolute;margin-top: 15px;" slot="start">
+      <ion-menu-button style="font-size: 25px;background: none;color: black;"></ion-menu-button>
+    </ion-buttons>
+    <img _ngcontent-cmb-c286="" src="assets/imgs/bgdash50.png" style="height: 80px;">
+    <div class="ketquahead">
+      Trang của tôi
+    </div>
+  </div>
+  <div class="row">
+    <div *ngIf="listNotification.length != 0">
+      <div class="kienthuc">
+        <div class="iconView">
+          <ion-icon name="notifications"></ion-icon>
+        </div>
+        <div>Thông báo của tôi</div>
+      </div>
+      <div *ngFor="let noti of listNotification" class="detailNoti">
+        <ion-icon name="ellipse" style="float: left;font-size: 8px;padding-right: 7px;margin-top: 3px;width: 10px;">
+        </ion-icon>
+        <div style="float: left;width: 90%;" [innerHTML]="noti.message" (click)="OpenMchart()"></div>
+      </div>
+    </div>
+    <div>
+      <div class="kienthuc">
+        <div class="iconView">
+          <ion-icon name="apps"></ion-icon>
+        </div>
+        <div>Chức năng</div>
+      </div>
+      <div>
+        <div>
+          <div class="btn btn-control-menu " (click)="OpenHosoTre()">
+            <img class="icons-40" src="assets/icon/Group 856.png" />
+            <p class="text-button-control"> Hồ sơ trẻ</p>
+          </div>
+          <div class="btn btn-control-menu " style="background: #FFCFC2;margin: 11% 15% 5% 5%;"
+            (click)="OpenTheodoiphattrien()">
+            <img class="icons-40" src="assets/icon/hoctap.png" />
+            <p class="text-button-control">Theo dõi phát triển</p>
+          </div>
+          <div class="btn btn-control-menu " style="background: #FFDE55;margin: 5% 5% 5% 15%;"
+            (click)="Openthuchanhcanthiep()">
+            <img class="icons-40" src="assets/imgs/intervention2.png" />
+            <p class="text-button-control">Thực hành can thiệp</p>
+          </div>
+          <div class="btn btn-control-menu " style="background: #4CAF50;margin: 5% 15% 5% 5%;"
+            (click)="Openlichsubailam()">
+            <img class="icons-40" src="assets/icon/icon_Calendar.png" />
+            <p class="text-button-control">Lịch sử bài làm</p>
+          </div>
+          <div *ngIf="service.Role == 1 || service.Role == 3" class="btn btn-control-menu "
+            style=" background: pink;    margin: 3.5% 35% 2% 35%;" (click)="OpenQOL()">
+            <img class="icons-40" src="assets/icon/3.png" />
+            <p class="text-button-control">Khảo sát QOL</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="posttest " *ngIf="CheckControl" (click)="onSwipeLeft()">
+    <ion-icon style="text-align: center;width: 100%;font-size: 23px;" name="reorder-two">
+    </ion-icon>
+    <div class="textconten">
+      Theo dõi phát triển
+    </div>
+    <div class="rowmain1" *ngIf="service.Role == 2">
+      <div class="csscdc">
+        <img style="text-align: center;width:29%;" src="assets/icon/3.png" (click)="ListchildrenCDC()">
+        <div style="font-size: 10px;">
+          Làm CDC
+        </div>
+      </div>
+      <div class="cssasq">
+        <img style="text-align: center;width:29%;" src="assets/icon/4.png" (click)="ListchildrenASQ()">
+        <div style="font-size: 10px;">
+          Làm ASQ®-3
+        </div>
+      </div>
+      <div class="cssmchatrf">
+        <img style="text-align: center; width:29%;" src="assets/icon/8.png" (click)=" ListchildrenMCHATRF()">
+        <div style="font-size: 10px;">
+          Làm M-CHAT-R/F™
+        </div>
+      </div>
+    </div>
+    <div class="rowmain1" *ngIf="service.Role == 1">
+      <div class="csscdc" style="margin-left: 18%;">
+        <img style="text-align: center;width:29%;" src="assets/icon/4.png" (click)="ListchildrenASQ()" class="img1">
+        <div style="font-size: 10px;">
+          Làm ASQ®-3
+        </div>
+      </div>
+      <div class="cssasq">
+        <img style="text-align: center;width:29%;" src="assets/icon/8.png" (click)="ListchildrenMCHATR()" class="img2">
+        <div style="font-size: 10px;">
+          Làm M-CHAT-R™
+        </div>
+      </div>
+    </div>
+    <div class="rowmain1" *ngIf="service.Role == 3">
+      <div class="csscdc" style="margin-left: 18%;">
+        <img style="text-align: center;width:29%;" src="assets/icon/4.png" (click)="ListchildrenASQ()" class="img1">
+        <div style="font-size: 10px;">
+          Làm ASQ®-3
+        </div>
+      </div>
+      <div class="cssasq">
+        <img style="text-align: center;width:29%;" src="assets/icon/8.png" (click)="ListchildrenMCHATR()" class="img2">
+        <div style="font-size: 10px;">
+          Làm M-CHAT-R™
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="posttest" *ngIf="!CheckControl" (click)="onSwipeRight()" style="padding: 0px;">
+    <ion-icon style="text-align: center;width: 100%;font-size: 30px;" name="reorder-two">
+    </ion-icon>
+  </div>
+  <div class="divMenuTabs" *ngFor="let p of service.menuLinks;">
+    <div class="btnMenuTabs" (click)="openMenuPage(p)">
+      <img class="iconMenuTabs" src="{{p.uri}}" />
+      <br>{{p.name}}
+    </div>
+  </div>
+</ion-footer>

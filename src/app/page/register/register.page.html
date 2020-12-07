@@ -1,0 +1,120 @@
+<ion-content>
+    <div class="container">
+        <img (click)="backPage()" style="position: absolute;    left: 10px;
+  top: 10px;" src="assets/icon/backicon.png">
+        <img src="assets/imgs/bgdash50.png" style="height: 80px;">
+        <!-- <ion-buttons (click)="Dangky()"
+            style="position: absolute;width: 35%;right: 10%;top: 45px;border-radius: 53px;background: #ce857a;height: 30px;font-size: 11px;color: white;text-align: center;">
+            <img style="width: 18px;margin-left: 12px;margin-right: 10px;" src="assets/icon/26.png">
+            Đăng ký ngay
+        </ion-buttons> -->
+        <div style="position: absolute;top: 15px;z-index: 10;right: 11px;text-align: center;">
+            <button class="btn_openSearc" (click)="Dangky()">
+                <img src="assets/icon/Register.png">
+            </button>
+            <div style="font-size: 8px;">Đăng ký</div>
+        </div>
+        <!-- <button class="btn_openSearc" (click)="Dangky()">
+            <ion-icon style="font-size: 25px;" name="person-add"></ion-icon>
+        </button> -->
+        <div class="texthead">
+            Trải nghiệm
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <div class="kienthuc">
+                <div class="iconView">
+                    <ion-icon name="newspaper"></ion-icon>
+                </div>
+                <div>Kiến thức</div>
+            </div>
+            <ion-slides class="slideimg" [options]="slideOptsImg">
+                <ion-slide>
+                    <img class="imgBanner" src="assets/slide/slider-1.jpg" (click)="OpenIntroduce()" />
+                    <div class="textBanner1">Giới thiệu về a365</div>
+                    <ion-icon class="iconbanner" name="chevron-forward-outline"></ion-icon>
+                </ion-slide>
+                <ion-slide>
+                    <img class="imgBanner" src="assets/slide/slider-2.jpg" (click)="OpenPagePhatTrien()" />
+                    <div class="textBanner1">Tìm hiểu trẻ chậm phát triển</div>
+                    <ion-icon class="iconbanner" name="chevron-forward-outline"></ion-icon>
+                </ion-slide>
+                <ion-slide>
+                    <img class="imgBanner" src="assets/slide/slider-3.jpg" (click)="OpenPageTuky()" />
+                    <div class="textBanner1">Tìm hiểu trẻ tự kỷ</div>
+                    <ion-icon class="iconbanner" name="chevron-forward-outline"></ion-icon>
+                </ion-slide>
+                <!-- <ion-slide>
+                    <img class="imgBanner" src="assets/slide/slider-4.jpg" />
+                    <div class="textBanner1">Hội thảo</div>
+                    <ion-icon class="iconbanner" name="chevron-forward-outline"></ion-icon>
+                </ion-slide> -->
+            </ion-slides>
+        </div>
+        <div>
+            <div class="kienthuc">
+                <div class="iconView">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </div>
+                <div>Video tham khảo</div>
+            </div>
+            <ion-slides [options]="slideOptsUrl">
+                <ion-slide>
+                    <div style="width: 100%;" (click)="ViewVideo('https://www.youtube.com/embed/SCAjymekGoM')">
+                        <iframe class="imgBanner" 
+                            allow="accelerometer; ; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="allowfullscreen" frameborder="0"
+                            src="https://www.youtube.com/embed/SCAjymekGoM"></iframe>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div style="width: 100%;" (click)="ViewVideo('https://www.youtube.com/embed/jFR0vmAVOrc')">
+                        <iframe class="imgBanner" 
+                            allow="accelerometer; ; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="allowfullscreen" frameborder="0"
+                            src="https://www.youtube.com/embed/jFR0vmAVOrc"></iframe>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div style="width: 100%;" (click)="ViewVideo('https://www.youtube.com/embed/EbvyRl5fjZg')">
+                        <iframe class="imgBanner" 
+                            allow="accelerometer; ; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="allowfullscreen" frameborder="0"
+                            src="https://www.youtube.com/embed/EbvyRl5fjZg"></iframe>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div style="width: 100%;" (click)="ViewVideo('https://www.youtube.com/embed/dFmhnOMVpfw')">
+                        <iframe class="imgBanner" 
+                            allow="accelerometer; ; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen="allowfullscreen" frameborder="0"
+                            src="https://www.youtube.com/embed/dFmhnOMVpfw"></iframe>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </div>
+    </div>
+    
+</ion-content>
+<ion-footer>
+    <div class="posttest">
+        <div class="textconten">
+            Theo dõi phát triển
+        </div>
+        <div class="rowmain1">
+            <div class="cssasq" (click)="ListchildrenASQguest()">
+                <img style="text-align: center;width:29%;" src="assets/icon/4.png">
+                <div style="font-size: 12px;">
+                    Làm ASQ®-3
+                </div>
+            </div>
+            <div class="cssmchatrf" (click)="listchildrenMchatrguest()">
+                <img style="text-align: center; width:29%;" src="assets/icon/8.png">
+                <div style="font-size: 12px;">
+                    Làm M-CHAT-R™
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-footer>

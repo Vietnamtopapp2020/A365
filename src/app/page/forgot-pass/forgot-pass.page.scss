@@ -1,0 +1,96 @@
+.container1 {
+    width: 90%;
+    margin: 0% 5%;
+}
+.loginform {
+    width: 94%;
+    box-shadow: 4px 4px 9px 4px #ededed;
+    border-radius: 10px;
+    margin-left: 2%;
+    float: left;
+}
+.center {
+    display: block;
+    margin-left: 40%;
+    width: 20%;
+    position: relative;
+    top: -30px;
+}
+.btn_forgot {
+    width: 37%;
+    border-radius: 6px;
+    background: #f46262;
+    color: white;
+    font-size: 18px;
+    margin-right: 10%;
+    font-weight: bold;
+    padding: 9px;
+    float: right;
+}
+.loginConfig {
+    .imglogo {
+        width: 90%;
+        margin-left: 10px;
+    }
+    .logintext{
+        text-align: center;
+        color: white;
+        h2{
+            font-size: 20px;
+        }
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+ion-title {
+    color: #c92534;
+    padding-top: 4px;
+}
+.ipt_email {
+    height: 50px;
+    width: 95%;
+    border: 1px solid #e66a6a;
+    border-radius: 21px;
+    margin: 4% 2% 8% 2%;
+}
+
+.ttl {
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 2%;
+}
+
+.iconMail {
+    float: left;
+    margin-left: 22px;
+    margin-right: 9px;
+    height: 40%;
+    width: 8%;
+    margin-top: 5%;
+}
+
+.ipt_email1 {
+    height: 100%;
+    border: none;
+    float: left;
+    font-size: 14px;
+    width: 65%;
+}
+
+.fixed-content {
+    margin-bottom: 55px !important;
+}
+.huybo {
+    float: left;
+    width: 31%;
+    border-radius: 6px;
+    color: #9e9e9e;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 9px;
+    margin-left: 14%;
+    margin-bottom: 10px;
+}
+.iconsun {
+    margin-left: 38%;
+}

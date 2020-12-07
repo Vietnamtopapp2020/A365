@@ -1,0 +1,65 @@
+<=<ion-content>
+  <div class="container">
+    <img src="assets/imgs/bgdash50.png">
+    <div class="ketquahead">
+      Câu hỏi số {{ QUESTION_NUMBER }}
+    </div>
+  </div>
+  <div class="viewFollowup">
+    <div class="quote">
+      <!-- <p class="mb-0">Chúng ta vừa mới nói về dùng ngón tay trỏ để yêu cầu vật gì đó.</p> -->
+      <p>Trẻ có dùng một ngón tay để chỉ cho bạn thứ gì đó thú vị không?</p>
+    </div>
+    <p class="mt-2">
+      Bạn đã trả lời: <strong class="text-info">Không</strong>
+    </p>
+    <hr>
+    <small class="font-italic text-danger d-block mb-3">Bạn cần trả lời tất cả các câu hỏi dưới đây</small>
+
+    <div class="first-depth">
+      <div>Có bao giờ trẻ muốn bạn nhìn thấy những thứ thú vị như...</div>
+      <div class="mb-3" *ngFor="let question of firstDepthQuestions">
+        <p>{{question.content}}</p>
+        <div>
+
+          <ion-list *ngFor="let p of question.options" class="viewReply">
+            <input type="radio" (click)="QuestionReply(question,p.hasInput)" name="{{p.id}}" value="{{p.hasInput}}"
+              style="margin-right: 5px;">
+            <label>{{p.content}}</label>
+          </ion-list>
+        </div>
+      </div>
+    </div>
+
+    <div class="second-depth" *ngIf="secondDepthCheck">
+      <div class="mb-3">
+        <p>{{secondDepthQuestion.content}}</p>
+        <div>
+
+          <ion-list *ngFor="let p of secondDepthQuestion.options" class="viewReply">
+            <input type="radio" (click)="QuestionReply(secondDepthQuestion,p.hasInput)" name="{{p.id}}"
+              value="{{p.hasInput}}" style="margin-right: 5px;">
+            <label>{{p.content}}</label>
+          </ion-list>
+        </div>
+      </div>
+    </div>
+
+    <div class="third-depth" *ngIf="thirdDepthCheck">
+      <div class="mb-3">
+        <p>{{thirdDepthQuestion.content}}</p>
+        <div>
+
+          <ion-list *ngFor="let p of thirdDepthQuestion.options" class="viewReply">
+            <input type="radio" (click)="QuestionReply(thirdDepthQuestion,p.hasInput)" name="{{p.id}}"
+              value="{{p.hasInput}}" style="margin-right: 5px;">
+            <label>{{p.content}}</label>
+          </ion-list>
+        </div>
+      </div>
+    </div>
+    <button class="cssbutton" (click)="next()">Tiếp tục</button>
+    <!-- <button class="cssbutton" (click)="nextpage()">NextPage</button>
+  <button class="cssbutton" (click)="nextpage()">Previous</button> -->
+  </div>
+  </ion-content>

@@ -1,0 +1,118 @@
+<ion-content>
+  <div class="container-login">
+    <img src="assets/imgs/backgroudlogin.jpg">
+  </div>
+  <div class="loginform">
+    <img class="center" src="assets/icon/loginsun.png">
+
+    <div class="txtsignin">
+      <img src="assets/icon/loginuser.png" style="margin-top: 17px;" class="icontxt">
+      <ion-input [disabled]="true"  class="inputView" [(ngModel)]="txtEmail" type="email">
+      </ion-input>
+    </div>
+
+    <div class="txtsignin">
+      <img src="assets/icon/iconhoten.png" style="margin-top: 15px;" class="icontxt">
+      <ion-input  class="inputView" [(ngModel)]="txtHoten" placeholder="Họ và tên" type="text">
+      </ion-input>
+    </div>
+    <div class="txtsignin">
+      <img src="assets/icon/iconsdt.png" style="margin-top: 15px;" class="icontxt">
+      <ion-input  class="inputView" [(ngModel)]="txtSDT" placeholder="Số điện thoại"
+        type="text">
+      </ion-input>
+    </div>
+    <div class="txtsignin" >
+      <img src="assets/icon/icondiachi.png" src="assets/icon/icondiachi.png" style="margin-top: 10px;" class="icontxt">
+      <ion-input  class="inputView" [(ngModel)]="txtDiachi" placeholder="Địa chỉ" type="text">
+      </ion-input>
+    </div>
+    <div class="rowform" style="margin-bottom: 0px;">
+      <ion-item class="cssSelect padding0px">
+        <ion-label class="displayNone">Khu vực</ion-label>
+        <ionic-selectable [(ngModel)]="sltArea" [items]="listarea" itemValueField="code" itemTextField="title"
+          placeholder="---Chọn khu vực---" [canSearch]="true" (onChange)="AreaChange($event)">
+        </ionic-selectable>
+      </ion-item>
+    </div>
+    <div class="rowform" *ngIf="checkArea">
+      <ion-item class="cssSelect padding0px">
+        <ion-label class="displayNone">Quận / Huyện</ion-label>
+        <ionic-selectable [(ngModel)]="sltDistrict" [items]="listDistrict" itemValueField="code" itemTextField="title"
+          placeholder="---Quận/huyện---" [canSearch]="true" (onChange)="DistrictChange($event)">
+        </ionic-selectable>
+      </ion-item>
+    </div>
+
+    <div class="rowform" *ngIf="checkArea">
+      <ion-item class="cssSelect padding0px">
+        <ion-label class="displayNone">Xã / Phường / Thị trấn</ion-label>
+        <ionic-selectable [(ngModel)]="sltTown" [items]="listTown" itemValueField="code" itemTextField="title"
+          placeholder="---Phường/xã/thị trấn---" [canSearch]="true" (onChange)="TownChange($event)">
+        </ionic-selectable>
+      </ion-item>
+    </div>
+
+    
+    <div class="rowform">
+      <ion-list *ngFor="let p of listgenders" class="cssSelectGender">
+        <img class="icongen" src="{{p.img}}">
+        <div class="textgen" style="font-size: 17px;color: #000000b8;">{{p.text}}</div>
+        <input class="cssin" type="radio" [(ngModel)]="txtGioitinh" value="{{p.genders}}" style="margin-right: 5px;">
+      </ion-list>
+    </div>
+
+    <div class="rowform">
+      <div class="fontsize1111" position="floating">Dân tộc*:</div>
+      <ion-item class="select50 padding0px"><img class="iconkhuvuc" src="assets/icon/icondantoc.png">
+        <ion-label class="displayNone">Dân tộc</ion-label>
+        <ionic-selectable [(ngModel)]="sltEthnic" [items]="listethnic" itemValueField="id" itemTextField="text"
+          placeholder="---Chọn---" (onChange)="EthnicChange($event)">
+        </ionic-selectable>
+      </ion-item>
+    </div>
+
+    <div class="rowform">
+      <div class="fontsize1111" position="floating">Năm sinh*:</div>
+      <ion-item class="select50 padding0px"> <img class="iconkhuvuc" src="assets/icon/iconlich.png">
+        <!-- <ion-datetime class="date" [(ngModel)]="txtNamsinh" placeholder="---Chọn---" displayFormat="YYYY">
+        </ion-datetime> -->
+        <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView" [(ngModel)]="txtNamsinh" placeholder="Năm sinh*" type="number">
+        </ion-input>
+      </ion-item>
+    </div>
+
+    <div class="rowform">
+      <ion-item class="cssSelect padding0px"><img class="iconnghe" src="assets/icon/iconnghe.png">
+        <ionic-selectable [(ngModel)]="sltJob" [items]="listJOB" itemValueField="id" itemTextField="text"
+          placeholder="---Chọn nghề nghiệp---" (onChange)="JobChange($event)">
+        </ionic-selectable>
+      </ion-item>
+    </div>
+    <div class="rowform" *ngIf="service.Role == 2">
+      <ion-item class="cssSelect padding0px"><img class="iconnghe" src="assets/icon/iconnghe.png">
+        <ionic-selectable [(ngModel)]="sltWorkPlace" [items]="listWorkPlace" itemValueField="id" itemTextField="text"
+          placeholder="---Chọn nơi công tác---" (onChange)="WorkPlaceChange($event)">
+        </ionic-selectable>
+      </ion-item>
+    </div>
+    <div class="rowform">
+      <div class="fontsize14" style="color: #F46262;" position="floating">Anh chị biết đến A365 từ nguồn nào?*:</div>
+      <ion-item class="cssSelect padding0px">
+        <ion-label class="displayNone">Thông tin</ion-label>
+        <ionic-selectable [(ngModel)]="sltRefersource" [items]="listREFERSOURCE" itemValueField="id"
+          itemTextField="text" placeholder="---Chọn---" (onChange)="RefersourceChange($event)">
+        </ionic-selectable>
+      </ion-item>
+    </div>
+    <div>
+      <div class="But">
+        <div class="huy" (click)="backPage()">Hủy bỏ</div>
+        <button (click)="updateprofile()" class="login-button">HOÀN TẤT</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

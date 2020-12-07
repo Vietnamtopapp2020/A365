@@ -1,0 +1,1068 @@
+// danh cach
+ion-select {
+  /* Applies to the value and placeholder color */
+  color: #545ca7;
+  /* Set a different placeholder color */
+  --placeholder-color: #971e49;
+  /* Set full opacity on the placeholder */
+  --placeholder-opacity: 1;
+}
+ion-item {
+  --highlight-color-valid: note !important;
+  --highlight-color-invalid: note !important;
+  --highlight-color-focused: note !important;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  outline: none;
+  background: white !important;
+}
+
+ion-content {
+  --background: white !important;
+  color: black;
+}
+
+.containerxemlai {
+  width: 94%;
+  border: 1px solid #03a9f47d;
+  background-color: white;
+  padding: 3px;
+  float: left;
+  text-align: justify;
+  font-family: Nunito;
+}
+
+.info {
+  font-size: 12px;
+}
+
+.infor_sos1 {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 3%;
+}
+
+.title_more1 {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  float: left;
+}
+
+.pa {
+  padding: 0px;
+}
+
+.iconViewMright5 {
+  color: darkgreen;
+}
+
+.data_more5 {
+  color: #005f27;
+}
+
+.width90 {
+  width: 90% !important;
+}
+
+.data_more4 {
+  color: #337ab7;
+}
+
+.extend {
+  float: right;
+  width: 8%;
+  background: green;
+  color: white;
+  height: 15px;
+  border-radius: 5px;
+}
+
+//
+.phoneNumber {
+  color: blue !important;
+  text-decoration: underline !important;
+}
+
+.bodyGeneral {
+  width: 100%;
+  line-height: 1.5;
+  border: 1px dotted #d2d2d2;
+  overflow: auto;
+  border-radius: 15px;
+  margin-top: 2%;
+}
+
+input[type="file"] {
+  line-height: 0px;
+}
+
+.viewLable {
+  font-size: 10px;
+  margin-left: 5px;
+  color: green;
+}
+
+.ionic-selectable-inner {
+  margin-top: -5px !important;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+.ionic-selectable-value {
+  padding-top: 0px !important;
+  padding-left: 0px !important;
+}
+
+.ionic-selectable-icon {
+  top: -13px;
+}
+
+.title-default {
+  width: 85%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ionic-selectable {
+  display: block !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.button {
+  border-color: #d7ebff;
+  background-color: #ffffff;
+  color: #444;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0px;
+  min-width: 52px;
+  min-height: 47px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  vertical-align: top;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 42px;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "NunitoSemiBold";
+  src: url("../assets/fonts/Nunito-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoBlack";
+  src: url("../assets/fonts/Nunito-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoBlackItalic";
+  src: url("../assets/fonts/Nunito-BlackItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoBold";
+  src: url("../assets/fonts/Nunito-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoBoldItalic";
+  src: url("../assets/fonts/Nunito-BoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoExtraBold";
+  src: url("../assets/fonts/Nunito-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoExtraBoldItalic";
+  src: url("../assets/fonts/Nunito-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoExtraLight";
+  src: url("../assets/fonts/Nunito-ExtraLight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoExtraLightItalic";
+  src: url("../assets/fonts/Nunito-ExtraLightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoItalic";
+  src: url("../assets/fonts/Nunito-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoLightItalic";
+  src: url("../assets/fonts/Nunito-LightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoRegular";
+  src: url("../assets/fonts/Nunito-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoSemiBoldItalic";
+  src: url("../assets/fonts/Nunito-SemiBoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NunitoLight";
+  src: url("../assets/fonts/Nunito-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ion-infinite-scroll-content {
+  min-height: 10px !important;
+}
+
+.filterbrightness {
+  filter: brightness(0.3);
+}
+
+.iconViewMright5 {
+  margin-right: 5px !important;
+}
+
+.header-md::after {
+  background-position: left 0 top -5px !important;
+}
+
+/*------------------
+    Style
+------------------*/
+
+.text-color-green {
+  color: #114e01;
+  text-decoration: underline;
+}
+
+/*----------------*/
+
+.iconMenuTabs {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+}
+
+.footer-md::before {
+  background-image: none !important;
+}
+.divMenuTabs {
+  height: 50px !important;
+  float: left;
+  width: 50%;
+  font-family: NunitoBold;
+}
+.posttest {
+  width: 100%;
+  background: white;
+  float: left;
+  border-radius: 35px 35px 0px 0px;
+  box-shadow: 0px -2px 7px 0px #d2d2d2;
+}
+.viewMenu {
+  position: absolute;
+  height: 58px;
+  bottom: 0;
+  padding: 0px 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.list_code2 {
+  position: absolute;
+  overflow: scroll;
+  right: 0px;
+  bottom: 60px;
+  text-align: left;
+  line-height: 2;
+  width: 170px;
+  height: 240px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.icon_geo {
+  width: 40px;
+}
+
+.imgmenu {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+#textMenu1 {
+  background-color: #c26000;
+  padding: 4px;
+  border-radius: 8px;
+  margin-left: 3%;
+  color: white;
+  font-size: 11px;
+  float: right;
+  width: 100px;
+  padding-left: 6px;
+}
+
+#textMenu2 {
+  background-color: #009f00;
+  padding: 4px;
+  border-radius: 8px;
+  margin-left: 3%;
+  color: white;
+  font-size: 11px;
+  float: right;
+  width: 100px;
+  padding-left: 6px;
+}
+
+#textMenu3 {
+  background-color: #f04a6e;
+  padding: 4px;
+  border-radius: 8px;
+  margin-left: 3%;
+  color: white;
+  font-size: 11px;
+  float: right;
+  width: 100px;
+  padding-left: 6px;
+}
+
+#textMenu4 {
+  background-color: #0094d1;
+  padding: 4px;
+  border-radius: 8px;
+  margin-left: 3%;
+  color: white;
+  font-size: 11px;
+  float: right;
+  width: 100px;
+  padding-left: 6px;
+}
+
+.text_menu0 {
+  font-size: 12px;
+  margin-top: 5px;
+  background: #0094d1;
+  color: white;
+  border-radius: 5px;
+  width: 70%;
+  float: left;
+  height: 30px;
+  padding: 2px;
+}
+
+.backgroundc26000 {
+  background: #c26000 !important;
+}
+
+.backgroundc009f00 {
+  background: #009f00 !important;
+}
+
+.backgroundcf04a6e {
+  background: #f04a6e !important;
+}
+
+.paramMenu {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.btnMenuTabs {
+  font-weight: normal;
+  color: #151515;
+  float: left;
+  width: 100%;
+  height: 50px !important;
+  font-size: 9px;
+  text-align: center;
+  font-family: "NunitoBold";
+}
+
+.padding0px {
+  padding: 0px !important;
+}
+
+.btnHeader {
+  width: 28%;
+  float: right;
+  text-align: center;
+}
+
+.btnHeaderSave {
+  width: 16%;
+  float: right;
+  text-align: center;
+}
+
+.textbtnheader {
+  position: absolute;
+  font-size: 9px;
+  top: 43px;
+  text-decoration: underline;
+}
+
+.item-radio.item-md ion-label {
+  font-size: 11px;
+}
+
+.radio-md .radio-icon {
+  opacity: 0;
+}
+
+.card-md p {
+  margin: 0 0 2px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #222;
+}
+
+.header_grid1 {
+  height: 40px;
+  color: #00591e;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.content_grid1 {
+  font-size: 13px;
+  color: #505050;
+  text-align: center;
+}
+
+.header_grid2 {
+  height: 40px;
+  color: #14662f;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.sc-ion-modal-md-h:first-of-type {
+  --backdrop-opacity: var(--ion-backdrop-opacity, 0) !important;
+}
+
+.modalMeetingZoom {
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.modal-wrapper,
+.inner-scroll {
+  background: transparent !important;
+}
+
+.modalShiftLog {
+  left: 4%;
+  top: 13%;
+  width: 92%;
+  height: 25em;
+  border-radius: 5px;
+  border: 0.5px solid #dadada;
+}
+
+.modalGuideQLIn {
+  left: 2%;
+  top: 20%;
+  position: absolute;
+  display: block;
+  width: 25rem;
+  height: 11rem;
+  border-radius: 8px;
+  contain: strict;
+  border: 0.5px solid #dadada;
+}
+
+.modalGuide {
+  left: 2%;
+  top: 27%;
+  position: absolute;
+  display: block;
+  width: 25rem;
+  height: 11rem;
+  border-radius: 8px;
+  contain: strict;
+  border: 0.5px solid #dadada;
+}
+
+.btn_add_on_header {
+  width: 31px;
+  position: absolute;
+  height: 31px;
+  top: 14px !important;
+  right: 2% !important;
+  text-transform: none !important;
+  border-radius: 40px !important;
+  -webkit-box-shadow: 0px 0px 10px #009432;
+  box-shadow: 0px 0px 10px #009432;
+  background: #009432;
+  color: white;
+}
+
+.btn_openSearch {
+  width: 33px;
+  position: absolute;
+  height: 33px;
+  top: 11px !important;
+  right: 2% !important;
+  text-transform: none !important;
+  border-radius: 40px !important;
+  box-shadow: 1px 1px 5px 0px #ffffff;
+  background: #e6e6e6;
+  color: #c92534;
+}
+
+.ic_add_on_header {
+  margin-top: 0% !important;
+  padding-right: 2px !important;
+  zoom: 1.7 !important;
+}
+
+.search_on_header {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.searchbar-md .searchbar-input {
+  border-radius: 8px !important;
+}
+
+.icon_backmenu {
+  z-index: 999;
+  position: absolute;
+  top: 13px !important;
+  color: #5091ff !important;
+  text-transform: capitalize;
+  left: 10px;
+}
+
+.toolbar-background-md {
+  background: #fdfdfd !important;
+}
+
+.tb_header {
+  height: 40px;
+  background: #337af8;
+  color: #ffffff !important;
+  font-size: 14px;
+  text-align: center;
+}
+
+.list_menu {
+  left: 0;
+  right: 0;
+  top: 95px;
+  bottom: 20px;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  will-change: scroll-position;
+  contain: size style layout;
+}
+
+.version_row {
+  position: absolute;
+  bottom: 4px;
+  right: 0px;
+}
+
+.bar-button-menutoggle-ios ion-icon {
+  padding: 0 6px;
+  font-size: 4.5rem !important;
+}
+
+.icon {
+  margin-right: 0%;
+  margin-top: -10%;
+}
+
+.icontxt1 {
+  margin-top: 14%;
+  color: white;
+  float: left;
+  padding-right: 7px;
+}
+
+.icontxtphone {
+  margin-top: 5%;
+  color: white;
+  float: left;
+  padding-right: 7px;
+}
+
+.iconsetting {
+  width: 25px;
+  height: 25px;
+  float: right;
+  margin-top: -11%;
+  margin-right: 3%;
+}
+
+[col-9] {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+[col-12] {
+  color: #798896;
+}
+
+.item-md.item-block .item-inner {
+  padding-right: 8px;
+  border-bottom: 0px solid #dedede !important;
+}
+
+.list-ios .item-block .item-inner {
+  border-bottom: 0.55px dotted #c8c7cc;
+}
+
+.tabs-ios .tab-button-icon {
+  margin-right: 0%;
+  margin-top: 15%;
+}
+
+.hidden {
+  padding-left: 0;
+  display: block !important;
+}
+
+.avatar {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.width55 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.width10 {
+  width: 10%;
+  float: left;
+  margin-top: 40px;
+}
+
+.iconmenu {
+  width: 17%;
+  float: left;
+}
+
+.iconmenu1 {
+  width: 10%;
+  float: left;
+  margin-top: -1%;
+  margin-right: -15%;
+}
+
+.submenu1 {
+  max-height: 370px;
+}
+
+.submenu2 {
+  max-height: 150px;
+}
+
+.submenu3 {
+  max-height: 150px;
+}
+
+.submenu4 {
+  max-height: 100px;
+}
+
+.list-md[no-lines] .item-block,
+.list-md[no-lines] ion-item-options,
+.list-md[no-lines] .item .item-inner {
+  border-width: 0;
+  width: 330px;
+}
+
+.list-ios[no-lines] ion-list-header,
+.list-ios[no-lines] ion-item-options,
+.list-ios[no-lines] .item,
+.list-ios[no-lines] .item .item-inner {
+  border-width: 0;
+  width: 290px;
+}
+
+.item-md.item-block .item-inner {
+  padding-right: 8px;
+  border-bottom: none;
+}
+
+.item-ios p {
+  color: black;
+  zoom: 1.2;
+}
+
+.alert-md .alert-button-group {
+  flex-wrap: wrap-reverse;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  padding: 8px 8px 8px 24px;
+}
+
+.alert-wrapper {
+  z-index: 10;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  max-height: 90%;
+  contain: content;
+}
+
+.alert-md .alert-wrapper {
+  height: 16%;
+  max-width: 280px;
+  background-color: #fafafa;
+  box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
+}
+
+.alert-title {
+  color: white;
+  font-size: 16px !important;
+}
+
+.alert-md .alert-button {
+  text-align: end;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  margin: 0 8px 0 0;
+  line-height: 0px !important;
+  background-color: #068406;
+}
+
+.alert-md .alert-message {
+  max-height: 240px;
+  font-size: 14px;
+  padding: 7px 0px 0px 4px !important;
+}
+
+ul {
+  list-style-type: circle;
+}
+.ul-menu {
+  padding-left: 0;
+  display: none;
+}
+
+.menu_information {
+  position: relative;
+  background: azure;
+  // background: url(assets/imgs/Cool-Digital-Wallpaper.jpg);
+  // background-image: url("/assets/imgs/logoa365.PNG") !important;
+  width: 100%;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+[col-4] {
+  padding-top: 1px;
+}
+
+[col-8] {
+  text-align: left;
+}
+
+#id1 {
+  font-family: "NunitoBold";
+  color: #000000;
+  font-size: 14px;
+}
+
+#id11 {
+  font-family: "NunitoBold";
+  color: #5da83f;
+  font-size: 14px;
+}
+
+#id2 {
+  float: left;
+}
+
+.div1 {
+  margin-left: 23%;
+  margin-top: 5%;
+}
+
+#account {
+  height: 70px !important;
+  width: 70px !important;
+  border-radius: 100px;
+}
+
+.active {
+  padding-left: 2%;
+  background: #aff3ff !important;
+  border-left: 10px solid yellow;
+  color: white;
+}
+
+.col-2 {
+  float: left;
+  width: 55%;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.col-3 {
+  float: left;
+  width: 25%;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.tabs-md .tabbar {
+  background: #387ef5 !important;
+  height: 11% !important;
+  bottom: -14px !important;
+  margin-left: 2% !important;
+}
+
+.tabs-md .tab-button[aria-selected="true"] {
+  color: white;
+  background: #2e64bf;
+}
+
+.tabs-md .tab-button {
+  padding: 0;
+  min-height: 5.6rem;
+  font-weight: normal;
+  color: white;
+  background: #387ef5;
+  height: 82%;
+}
+
+.tabs-md .tab-button[aria-selected="true"] .tab-button-icon {
+  color: white !important;
+}
+
+.tabs-md .tab-button-icon {
+  color: white !important;
+  margin-right: 0%;
+}
+
+.fixed-content {
+  margin-bottom: 55px !important;
+}
+
+.toolbar-title {
+  font-size: 1.5rem !important;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.alert-head {
+  display: contents;
+}
+
+.alert-radio-icon.sc-ion-alert-md {
+  display: contents;
+}
+
+.alert-radio-icon.sc-ion-alert-ios {
+  display: contents;
+}
+
+.alert-wrapper {
+  border-radius: 8px !important;
+}
+
+.alert-title {
+  color: white;
+  font-size: 17px !important;
+}
+
+.alert-message {
+  text-align: center;
+  color: black !important;
+}
+
+.alert-tappable {
+  border-bottom: 1px ridge;
+}
+
+.alert-tappable:last-child {
+  border-bottom: none;
+}
+
+.menu-inner {
+  width: 274px !important;
+}
+
+.version {
+  font-size: 70%;
+  color: #043d9e;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  margin-top: 2%;
+  margin-right: 13px;
+}
+
+.item-md ion-icon[item-left] {
+  color: #2e64bf;
+}
+li {
+  list-style-type: disc;
+}
+.oneBtn {
+  width: 100% !important;
+  text-align: center !important;
+  padding-right: 47% !important;
+  border: none !important;
+}
+
+.modalmessscc {
+  left: 5%;
+  top: 17%;
+  width: 90%;
+  height: 250px;
+  border-radius: 26px;
+  border: 0.5px solid #dadada;
+  position: fixed;
+  z-index: 1;
+  background: white;
+}
+
+.modalmessscStaff {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 0.5px solid #dadada;
+}
+
+/** Ionic CSS Variables **/
+
+:root {
+  --background-checked: #f46262;
+  --border-color-checked: #f46262;
+  /** primary **/
+  //  --ion-default-font: unset !important;
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
+  /** secondary **/
+  --ion-color-secondary: #3dc2ff;
+  --ion-color-secondary-rgb: 61, 194, 255;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #36abe0;
+  --ion-color-secondary-tint: #50c8ff;
+  /** tertiary **/
+  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary-rgb: 82, 96, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #4854e0;
+  --ion-color-tertiary-tint: #6370ff;
+  /** success **/
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45, 211, 111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+  /** warning **/
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+  /** danger **/
+  --ion-color-danger: #eb445a;
+  --ion-color-danger-rgb: 235, 68, 90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+  /** medium **/
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+}
+
+@media (prefers-color-scheme: dark) {
+}

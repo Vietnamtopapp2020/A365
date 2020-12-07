@@ -1,0 +1,480 @@
+.popup {
+  height: 100%;
+  width: 100%;
+}
+
+.ketquahead {
+  background-color: #ffffff;
+  padding: 10px;
+  position: absolute;
+  left: 16%;
+  top: 7%;
+  border-radius: 9px;
+  font-size: 17px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  text-align: center;
+  font-family: NunitoExtraBold;
+}
+.containertop {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.texthead {
+  text-align: center;
+  color: #c92534;
+  font-size: 16px;
+  margin: 9px 5%;
+}
+
+.cardcheck {
+  margin-left: 15px;
+}
+
+ion-title {
+  width: 100%;
+}
+
+.loginConfig {
+  // margin-top: 25% !important;
+  // height: 60%;
+  background-color: white;
+  border-radius: 6px;
+  .imglogo {
+    width: 75%;
+    margin-left: 11%;
+    padding-top: 33px;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+
+.container-fluid {
+  max-width: 100%;
+  background-color: #d6d6d630;
+}
+
+.textdk {
+  border-bottom: solid 1px black;
+  padding-top: 20px;
+}
+
+.containerdk {
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: #d6d6d654;
+}
+
+/* The container */
+
+.containerbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 13px;
+  width: 13px;
+  background-color: black;
+  border-radius: 20px;
+  border: solid 1px black;
+}
+
+/* On mouse-over, add a grey background color */
+
+// .container:hover input ~ .checkmark {
+//   background-color: #ccc;
+// }
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked ~ .checkmark {
+  background-color: black;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {
+  // left: 9px;
+  // top: 5px;
+  width: 9px;
+  height: 9px;
+  border: solid 1px white;
+  border-radius: 30px;
+  // border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.texdk {
+  font-size: 15px;
+  color: red;
+}
+
+.login-buttondk {
+  width: 100%;
+  height: 40px;
+  background: #b8151a !important;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  // margin-left: 30%;
+  background-color: #ccc;
+  box-shadow: 2px 3px #666;
+}
+
+.loginform {
+  width: 94%;
+  box-shadow: 0px 4px 8px 4px #80808054;
+  border-radius: 10px;
+  margin-left: 3%;
+  background: #e8f0fe00;
+  padding-bottom: 10px;
+}
+.txtsignin {
+  width: 90%;
+  font-size: 17px;
+  height: 45px;
+  background: content-box;
+  margin-bottom: 5px;
+  border: 1px solid #f2b5b5 !important;
+  float: left;
+  border-radius: 24px;
+  margin-left: 5%;
+}
+.icontxt {
+  width: 9%;
+  float: left;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+.inputView {
+  width: 85%;
+  float: left;
+  font-size: 15px;
+  height: 40px;
+}
+.cssTitle {
+  margin-left: 4%;
+  color: #595959;
+  margin-bottom: 5px;
+  font-weight: bolder;
+  float: left;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.center {
+  display: block;
+  margin-left: 40%;
+  width: 20%;
+  position: relative;
+  top: -30px;
+}
+.iconkv {
+  margin-top: 3px;
+  position: absolute;
+  right: 11px;
+}
+.rowform {
+  margin-bottom: 10px;
+  width: 100%;
+  float: left;
+  padding-bottom: 10px;
+}
+.cssdiv {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.cssgric {
+  width: 100%;
+  float: left;
+  padding: 7px 0px 7px 0px;
+}
+.iconkhuvuc {
+  position: absolute;
+  right: 16px;
+  top: 6px;
+}
+.iconkhuvuc1 {
+  position: absolute;
+  right: 16px;
+  top: 6px;
+  padding-top: 3px;
+}
+.cssSelect {
+  border-radius: 37px;
+  font-size: 16px;
+  height: 35px;
+  box-shadow: 0px 0px 4px 1px #e66a6a8f;
+}
+.loginConfig {
+  .imglogo {
+    width: 90%;
+    margin-left: 10px;
+  }
+  .logintext {
+    text-align: center;
+    color: white;
+    h2 {
+      font-size: 20px;
+    }
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .iongrid {
+    width: 100%;
+    height: 100%;
+    background: #e8f0fe00;
+    border-radius: 10px;
+    position: relative;
+    top: -33px;
+  }
+}
+.select50 {
+  width: 60%;
+  float: left;
+  border-radius: 22px;
+  font-size: 16px;
+  height: 35px;
+  box-shadow: 0px 0px 4px 1px #e66a6ab5;
+}
+.date {
+  padding: 0px;
+  margin-bottom: 11px;
+}
+.cardchild {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.gendertext {
+  width: 30%;
+}
+
+.icongen {
+  width: 18%;
+  float: left;
+  margin-left: 16%;
+}
+.textgen {
+  width: 34%;
+  float: left;
+  font-size: 17px;
+  color: #000000b8;
+  margin-top: 2px;
+}
+.cssin {
+  width: 18%;
+  float: left;
+  padding-top: 5px;
+  margin-top: 1px;
+  margin-right: 5px;
+  zoom: 1.5;
+}
+.male {
+  width: 45%;
+  float: left;
+  text-align: center;
+}
+.zo13 {
+  zoom: 1.3;
+}
+.female {
+  width: 45%;
+  float: right;
+  text-align: center;
+}
+
+.login-buttonhuy {
+  width: 47%;
+  height: 40px;
+  background: #ff3f61 !important;
+  border-radius: 16px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  // margin-left: 30%;
+  background-color: #ccc;
+  box-shadow: 2px 3px #666;
+  margin-top: 7px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+.login-buttontaomoi {
+  background: #f46262 !important;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+  float: right;
+  padding: 10px;
+  width: 100%;
+}
+
+.containerbt {
+  width: 50%;
+  float: right;
+}
+
+.huybo {
+  width: 30%;
+  float: left;
+  font-size: 19px;
+  color: #0000009e;
+  font-weight: bold;
+  padding-top: 7px;
+}
+.truef {
+  width: 80%;
+  float: left;
+  margin-left: 10%;
+  padding-top: 17px;
+}
+/* Hide the browser's default checkbox */
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.viewHeadSearch {
+  float: left;
+  border: 1px solid #f2b5b5 !important;
+  margin-bottom: 5px;
+  height: 45px;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 20px;
+}
+.iconSelect {
+  width: 9%;
+  float: left;
+  margin-left: 1%;
+}
+.dateGeneral {
+  width: 85%;
+  float: left;
+  height: 30px;
+  font-size: 16px;
+  padding: 0px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.texthe {
+  text-align: center;
+  font-size: 18px;
+  color: #f46262;
+  padding: 2px;
+}
+.imghead {
+  display: block;
+  margin-left: 43%;
+  width: 16%;
+  position: relative;
+  top: -21px;
+}
+.matop5px {
+  margin-top: 5px !important;
+}
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+
+}

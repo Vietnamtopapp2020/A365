@@ -1,0 +1,54 @@
+<ion-content>
+  <div class="container">
+    <img src="assets/imgs/bgdash50.png">
+    <div class="ketquahead">
+      Câu hỏi số {{ QUESTION_NUMBER }}
+    </div>
+  </div>
+  <div class="viewFollowup">
+    <div class="quote">
+      <p>Trẻ có khoe bạn những đồ vật bằng cách mang hay ôm chúng đến cho bạn xem, không phải để được bạn giúp đỡ, chỉ
+        để
+        chia sẻ với bạn không?</p>
+    </div>
+    <p class="mt-2">
+      Bạn đã trả lời: <strong class="text-info">Không</strong>
+    </p>
+    <hr>
+    <small class="font-italic text-danger d-block mb-3">Bạn cần trả lời tất cả các câu hỏi dưới đây</small>
+
+    <div class="first-depth">
+      <div>Trẻ có thỉnh thoảng mang tới cho bạn...</div>
+      <div class="mb-3" *ngFor="let question of firstDepthQuestions">
+        <p>{{question.content}}</p>
+        <div>
+
+          <ion-list *ngFor="let p of question.options" class="viewReply">
+            <input type="radio" (click)="QuestionReply(question,p.hasInput)" name="{{p.id}}" value="{{p.hasInput}}"
+              style="margin-right: 5px;">
+            <label>{{p.content}}</label>
+          </ion-list>
+        </div>
+      </div>
+    </div>
+
+    <div class="second-depth" *ngIf="secondDepthCheck">
+      <div class="mb-3">
+        <p>{{secondDepthQuestion.content}}</p>
+        <div>
+
+          <ion-list *ngFor="let p of secondDepthQuestion.options" class="viewReply">
+            <input type="radio" (click)="QuestionReply(secondDepthQuestion,p.hasInput)" name="{{p.id}}"
+              value="{{p.hasInput}}" style="margin-right: 5px;">
+            <label>{{p.content}}</label>
+          </ion-list>
+        </div>
+      </div>
+    </div>
+
+
+    <button class="cssbutton" (click)="next()">Tiếp tục</button>
+    <!-- <button class="cssbutton" (click)="nextpage()">NextPage</button>
+  <button class="cssbutton" (click)="nextpage()">Previous</button> -->
+  </div>
+</ion-content>

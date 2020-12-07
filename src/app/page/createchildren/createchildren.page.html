@@ -1,0 +1,175 @@
+<ion-content>
+  <img src="assets/imgs/bgdash.jpg">
+  <img (click)="backPage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+  <div
+    style="left: 10%;position: absolute;width: 12%;top: 61px;border-radius: 53px;padding: 5px 8px;background: white;box-shadow: 1px 1px 1px 1px #8080805c;">
+    <img src="assets/icon/iconchuyengia.png">
+  </div>
+  <div style="left: 22%;position: absolute;width: 80%;top: 61px;border-radius: 53px;padding: 5px 8px;">
+    <label style="color: #5da83f;">
+      <span *ngIf="service.Role == 1">Phụ huynh</span>
+      <span *ngIf="service.Role == 2">Chuyên gia</span>
+      <span *ngIf="service.Role == 3">Giáo viên</span>
+    </label>
+    {{service.profile.name}}
+  </div>
+  <ion-buttons style="position: absolute;width: 8%;right: 10px;top: 6px;border-radius: 53px;">
+    <img src="assets/icon/Screenshot_1.png">
+  </ion-buttons>
+  <div class=" loginConfig">
+    <div class="loginform">
+      <img class="imghead" src="assets/icon/icontaotre.png">
+      <div class="texthe">
+        Thông tin trẻ
+      </div>
+      <ion-row justify-content-center>
+        <ion-col>
+          <div class="cssTitle">Họ và tên trẻ<span style="color:red;">*</span></div>
+          <div class="txtsignin">
+            <img src="assets/icon/loginuser.png" class="icontxt">
+            <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView" [(ngModel)]="txtname"
+              type="text">
+            </ion-input>
+          </div>
+
+          <div class="cssTitle">Ngày sinh(dd/mm/yyyy)<span style="color:red;">*</span></div>
+          <div class="txtsignin">
+            <img src="assets/icon/iconlich.png" class="icontxt matop5px">
+            <!-- <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView" [(ngModel)]="txtdob"
+              type="text">
+            </ion-input> -->
+            <ion-datetime displayFormat="DD/MM/YYYY" style="font-weight: 700;padding-left: 8px !important;"
+              class="inputView" [(ngModel)]="txtdob">
+            </ion-datetime>
+          </div>
+
+          <div class="cssTitle">Giới tính<span style="color:red;">*</span></div>
+          <div class="viewHeadSearch">
+            <img class="icontxt" style="margin-top: 6px;margin-left: 10px;" src="assets/icon/iconnam.png">
+            <ion-item class="dateGeneral">
+              <ion-label class="displayNone">Giới tính
+              </ion-label>
+              <ionic-selectable [(ngModel)]="sltGender" [items]="listgender" itemValueField="id" itemTextField="text"
+                (onChange)="GenderChange($event)">
+              </ionic-selectable>
+            </ion-item>
+          </div>
+          <!-- 
+          <div class="cardchild">
+            <div class="male">
+              <img src="assets/icon/male.png">
+              <label style="margin-left: 6px;font-size: 13px;">Nam</label>
+              <input style="zoom: 1.2;" name="gender" [(ngModel)]="txtgender" value="male" id="gender-male"
+                type="radio">
+            </div>
+
+            <div class="female">
+              <img src="assets/icon/female.png">
+              <label style="margin-left: 6px;font-size: 13px;">Nữ</label>
+              <input style="zoom: 1.2;" name="gender" [(ngModel)]="txtgender" value="female" id="gender-female"
+                type="radio">
+            </div>
+          </div> -->
+
+          <div class="cssTitle">Nhập họ tên bố/mẹ</div>
+          <div class="txtsignin">
+            <img src="assets/icon/nameparent.png" class="icontxt matop5px">
+            <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView"
+              [(ngModel)]="txtparentName" type="text">
+            </ion-input>
+          </div>
+
+          <div class="cssTitle">Trẻ được sinh vào tuần thứ mấy của thai kỳ <span style="color:red;">*</span></div>
+          <div class="txtsignin">
+            <img src="assets/icon/week.png" class="icontxt matop5px">
+            <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView"
+              [(ngModel)]="txtpregnantWeeks" type="number">
+            </ion-input>
+          </div>
+
+          <div class="cssTitle">Trẻ đã từng được chẩn đoán tự kỷ/chậm phát triển trí tuệ/rối loạn phát triển
+            chưa?<span style="color:red;">*</span></div>
+          <div class="viewHeadSearch">
+            <img class="icontxt" style="width: 30px;margin-top: 10px;margin-left: 5px;" src="assets/icon/Diagnosed.png">
+            <ion-item class="dateGeneral">
+              <ion-label class="displayNone">Trẻ đã từng được chẩn đoán tự kỷ chưa?
+              </ion-label>
+              <ionic-selectable [(ngModel)]="sltIsDiagnosed" [items]="form" itemValueField="isDiagnosed"
+                itemTextField="text" (onChange)="IsDiagnosedChange($event)">
+              </ionic-selectable>
+            </ion-item>
+          </div>
+
+
+          <div class="role" *ngIf="Check">
+            <div class="cssTitle">Kết quả chẩn đoán của trẻ<span style="color:red;">*</span></div>
+            <div class="viewHeadSearch">
+              <img class="icontxt matop5px" src="assets/icon/luu.png">
+              <ion-item class="dateGeneral">
+                <ion-label class="displayNone">Kết quả chẩn đoán
+                </ion-label>
+                <ionic-selectable [(ngModel)]="sltDiagnosticConclusion" [items]="dc" itemValueField="id"
+                  itemTextField="text" (onChange)="DiagnosticConclusionChange($event)">
+                </ionic-selectable>
+              </ion-item>
+            </div>
+
+            <div class="cssTitle">Số tháng tuổi của trẻ tại thời điểm chẩn đoán<span style="color:red;">*</span></div>
+
+            <div class="txtsignin">
+              <img src="assets/icon/iconlich.png" class="icontxt matop5px">
+              <ion-input style="font-weight: 700;padding-left: 8px !important;" class="inputView"
+                [(ngModel)]="txtageWhenDiagnosed" type="number">
+              </ion-input>
+            </div>
+
+            <div class="cssTitle">Nơi chẩn đoán<span style="color:red;">*</span></div>
+            <div class="viewHeadSearch">
+              <img class="icontxt matop5px" src="assets/icon/iconkhuvuc.png">
+              <ion-item class="dateGeneral">
+                <ion-label class="displayNone">Nơi chẩn đoán
+                </ion-label>
+                <ionic-selectable [(ngModel)]="sltDiagnosticPlace" [items]="dp" itemValueField="id" itemTextField="text"
+                  (onChange)="DiagnosticPlaceChange($event)">
+                </ionic-selectable>
+              </ion-item>
+            </div>
+
+            <div class="cssTitle">Người chẩn đoán<span style="color:red;">*</span></div>
+            <div class="viewHeadSearch">
+              <img class="icontxt matop5px" src="assets/icon/iconparen.png">
+              <ion-item class="dateGeneral">
+                <ion-label class="displayNone">Người chẩn đoán
+                </ion-label>
+                <ionic-selectable [(ngModel)]="sltDiagnosticStaff" [items]="ds" itemValueField="id" itemTextField="text"
+                  (onChange)="DiagnosticStaffChange($event)">
+                </ionic-selectable>
+              </ion-item>
+            </div>
+            <!-- Trẻ đã được sàng lọc tự kỷ chư-->
+            <div class="cssTitle">Trẻ đã được sàng lọc trước đó bằng các bộ CDC/ASQ®-3/M-CHAT-R™ trên A365 chưa?<span
+                style="color:red;">*</span> </div>
+            <div class="viewHeadSearch">
+              <img class="icontxt matop5px" src="assets/icon/Diagnosed.png"
+                style="width: 30px; margin-top: 10px; margin-left: 5px;">
+              <ion-item class="dateGeneral">
+                <ion-label class="displayNone">Trẻ đã được sàng lọc trước đó bằng các bộ CDC/ASQ®-3/M-CHAT-R™ trên A365
+                  chưa?
+                </ion-label>
+                <ionic-selectable [(ngModel)]="sltScreenedOnA365" [items]="form1" itemValueField="screenedOnA365"
+                  itemTextField="text" (onChange)="ScreenedOnA365Change($event)">
+                </ionic-selectable>
+              </ion-item>
+            </div>
+          </div>
+          <div class="truef">
+            <div class="huybo" (click)="backPage()">Hủy bỏ</div>
+            <div class="containerbt">
+              <button tappable (click)="Creatchildren()" class="login-buttontaomoi">Đăng ký</button>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

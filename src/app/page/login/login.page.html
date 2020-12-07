@@ -1,0 +1,57 @@
+<ion-content class="loginBg background">
+    <div class="container-login">
+        <img src="assets/imgs/backgroudlogin.jpg">
+
+    </div>
+
+    <div class="container1">
+
+        <div class="loginConfig">
+            <div class="loginform">
+                <img class="center" src="assets/icon/loginsun.png">
+                <ion-grid class="iongrid">
+                    <ion-row justify-content-center>
+                        <ion-col>
+                            <div class="txtsignin">
+                                <img src="assets/icon/loginuser.png" style="margin-top: 17px;" class="icontxt">
+                                <input style="font-weight: 700;" class="inputView" [(ngModel)]="txtEmail"
+                                    placeholder="Địa chỉ Email" type="text" tappable>
+                            </div>
+                            <div class="txtsignin">
+                                <img src="assets/icon/loginpass.png" class="icontxt">
+                                <input style="font-weight: 700;width: 80%;" class="inputView" [(ngModel)]="txtPassword"
+                                    placeholder="{{LOGINPAGE_PASSWORD}}" [type]="password_type" tappable>
+                                <img src="assets/icon/view.png" style="margin-top: 10px;" class="icontxt"
+                                    *ngIf="password_type == 'password'" (click)="toggleTextPassword()">
+                                <img src="assets/icon/viewClose.png" style="margin-top: 10px;" class="icontxt"
+                                    *ngIf="password_type == 'text'" (click)="toggleTextPassword()">
+                            </div>
+                            <label class="container">Lưu mật khẩu
+                                <ion-checkbox mode="md" class="paddingitem checkmark" [(ngModel)]="checkpass" tappable>
+                                </ion-checkbox>
+                            </label>
+                            <label class="container11" (click)="ForgotPassword()">Quên mật khẩu?</label>
+                            <div class="loginpass">
+
+                                <button tappable (click)="LoginNoCheckOnline()" class="login-button">Đăng Nhập
+                                    Ngay</button>
+                                <button tappable (click)="register()" class="login-buttontn">Trải Nghiệm Thử</button>
+                            </div>
+                        </ion-col>
+
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </div>
+
+    </div>
+    <div class="textdkhead">
+        Bạn chưa có tài khoản?
+    </div>
+    <div class="cssfoder">
+        <span style="padding-top: 5px;color: #676767;font-size: 15px;">Dùng Tài Khoản</span>
+        <span style="width: 50px;"><img (click)="fbLogin()" class="loginfb" src="assets/icon/facebook-icon.png"></span>
+        <span style="padding-top: 5px;  color: #676767;font-size: 15px;  margin-left: 40px;"> hoặc </span>
+        <span (click)="Dangky()" style="font-size: 16px;color: #e56363;padding-top: 5px;font-family: NunitoExtrabold;"> Đăng Ký Ngay</span>
+    </div>
+</ion-content>

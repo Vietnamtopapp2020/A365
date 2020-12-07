@@ -1,0 +1,129 @@
+<ion-content class="pagebackgroundimage">
+  <div class="overlay" (click)="CloseModal()"></div>
+  <div class="cssTitle {{result.data.slug}}">
+    <span class="">{{result.data.title}}</span>
+  </div>
+  <div class="modalView">
+    <div class="iconBack">
+      <ion-icon (click)="CloseModal()" style="padding: 7px;" name="close"></ion-icon>
+    </div>
+    <div class=" cssHeader">
+      <span class="h{{result.data.id}}">Chọn hoạt động can thiệp</span>
+    </div>
+    <div style="overflow: scroll;height: 17em;">
+      <div>
+        <div *ngIf="listQuery.length != 0">
+          <div class="cssQuery">Bài {{index+1}}/{{listQuery.length}}: {{query.title}}</div>
+          <div class="cssSelectRadio" style="color: #f46262;" *ngIf="query.interveningLevel == 'true'">
+            <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 10%;">
+              <ion-icon name="radio-button-on"></ion-icon>
+            </div>
+            <div style="float: left;"> <span> Trẻ đã làm được</span> </div>
+          </div>
+          <div class="cssSelectRadio " *ngIf="query.interveningLevel == 'false'" (click)="CheckinterveningLevel(true)">
+            <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 10%;">
+              <ion-icon name="radio-button-off"></ion-icon>
+            </div>
+            <div style="float: left;"> <span> Trẻ đã làm được</span> </div>
+          </div>
+          <div class="cssSelectRadio " style="color: #f46262;" *ngIf="query.interveningLevel == 'false'">
+            <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 10%;">
+              <ion-icon name="radio-button-on"></ion-icon>
+            </div>
+            <div style="float: left;"> <span> Trẻ chưa làm được</span> </div>
+          </div>
+          <div class="cssSelectRadio " *ngIf="query.interveningLevel == 'true'" (click)="CheckinterveningLevel(false)">
+            <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 10%;">
+              <ion-icon name="radio-button-off"></ion-icon>
+            </div>
+            <div style="float: left;"> <span> Trẻ chưa làm được</span> </div>
+          </div>
+          <div class="cssSelectRadio " *ngIf="query.interveningLevel == null" (click)="CheckinterveningLevel(true)">
+            <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 10%;">
+              <ion-icon name="radio-button-off"></ion-icon>
+            </div>
+            <div style="float: left;"> <span> Trẻ đã làm được</span> </div>
+          </div>
+          <div class="cssSelectRadio " *ngIf="query.interveningLevel == null" (click)="CheckinterveningLevel(false)">
+            <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 10%;">
+              <ion-icon name="radio-button-off"></ion-icon>
+            </div>
+            <div style="float: left;"> <span> Trẻ chưa làm được</span> </div>
+          </div>
+          <div class="cssSelectRadio " style="color: #5DA83F;" *ngIf="targetCheck" (click)="ChangtargetCheck()">
+            <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 10%;">
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div style="float: left;"> <span> Chọn làm mục tiêu can thiệp</span> </div>
+          </div>
+          <div class="cssSelectRadio" *ngIf="!targetCheck" (click)="ChangtargetCheck()">
+            <div style="float: left;padding: 2px 5px 0px 2px;margin-left: 10%;">
+              <ion-icon name="radio-button-off"></ion-icon>
+            </div>
+            <div style="float: left;"> <span> Chọn làm mục tiêu can thiệp</span> </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="result.data.InterventionData != null && targetCheck">
+        <div class="cssQuery">Lý do đổi mục tiêu <span style="color: red;">*</span></div>
+
+        <div class="cssSelectRadio" style="color: #f46262;" *ngIf="doimuctieu == 1">
+          <div style="float: left;padding: 2px 5px 0px 2px;width: 7%;">
+            <ion-icon name="radio-button-on"></ion-icon>
+          </div>
+          <div style="float: left;width: 90%;"><span> Hoạt động không phù hợp</span> </div>
+        </div>
+        <div class="cssSelectRadio " *ngIf="doimuctieu != 1" (click)="ChangeReason(1)">
+          <div style="float: left;padding: 2px 5px 0px 2px;width: 7%;">
+            <ion-icon name="radio-button-off"></ion-icon>
+          </div>
+          <div style="float: left;width: 90%;"><span> Hoạt động không phù hợp</span> </div>
+        </div>
+
+        <div class="cssSelectRadio" style="color: #f46262;" *ngIf="doimuctieu == 2">
+          <div style="float: left;padding: 2px 5px 0px 2px;width: 7%;">
+            <ion-icon name="radio-button-on"></ion-icon>
+          </div>
+          <div style="float: left;width: 90%;"><span> Không phải hoạt động ưu tiên</span> </div>
+        </div>
+        <div class="cssSelectRadio " *ngIf="doimuctieu != 2" (click)="ChangeReason(2)">
+          <div style="float: left;padding: 2px 5px 0px 2px;width: 7%;">
+            <ion-icon name="radio-button-off"></ion-icon>
+          </div>
+          <div style="float: left;width: 90%;"><span> Không phải hoạt động ưu tiên</span> </div>
+        </div>
+
+        <div class="cssSelectRadio" style="color: #f46262;" *ngIf="doimuctieu == 3">
+          <div style="float: left;padding: 2px 5px 0px 2px;width: 7%;">
+            <ion-icon name="radio-button-on"></ion-icon>
+          </div>
+          <div style="float: left;width: 90%;"> <span> Đã thử nhiều lần nhưng trẻ không làm được</span> </div>
+        </div>
+        <div class="cssSelectRadio " *ngIf="doimuctieu != 3" (click)="ChangeReason(3)">
+          <div style="float: left;padding: 2px 5px 0px 2px;width: 7%;">
+            <ion-icon name="radio-button-off"></ion-icon>
+          </div>
+          <div style="float: left;width: 90%;"><span> Đã thử nhiều lần nhưng trẻ không làm được</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="float: left;margin-left: 10%;margin-top: 10%;">
+          <img style="width: 50px;" [src]="result.imgage" />
+        </div>
+        <div class="cssbuttonBack" (click)="BackQuery()">
+          <img style="width: 25px;" src="assets/icon/back.png" />
+          <div style="font-size: 12px;">Câu trước </div>
+        </div>
+        <div (click)="NextQuery()" class="cssbuttonNext" *ngIf="!targetCheck">
+          <img style="width: 25px;" src="assets/icon/next.png" />
+          <div style="font-size: 12px;">Lưu & Tiếp </div>
+        </div>
+        <div (click)="NextQuery()" class="cssbuttonNext" *ngIf="targetCheck">
+          <img style="width: 25px;" src="assets/icon/next.png" />
+          <div style="font-size: 12px;">Xong </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,75 @@
+<ion-content>
+  <div class="container">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backpage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">
+      Chủ đề kiến thức
+    </div>
+  </div>
+  <div *ngFor="let Postschildren of listPostschildren;let i = index">
+    <div style="width: 100%;float: left;">
+      <div class="cauhoi1">
+        <ion-icon class="iconReader" name="reader"></ion-icon>
+        <span> {{Postschildren.title}}</span>
+      </div>
+    </div>
+    <div class="botton10">
+      <div  *ngFor="let data of Postschildren.listPosts" (click)="getdetailPost(data)">
+      <!-- <div class="textlist" *ngFor="let data of Postschildren.listPosts" (click)="getdetailPost(data)"> -->
+        <!-- <div style="text-align: center;">
+          <img class="width25" src="{{data.backgroundImages}}" />
+        </div>
+        <div class="width70">
+          <div style="height: 30px;"></div>
+          <div style="height: 170px;overflow: scroll;">
+            <div class="csstitleDetail">{{data.title}}</div>
+            <div class="csstitledescription">{{data.description}}</div>
+          </div>
+        </div> -->
+
+        <div class="contentCss">
+          <img class="imgconten" src="{{data.backgroundImages}}">
+          <div class="videotab">
+            {{data.title}}
+          </div>
+          <div class="videotab" style="color: black;font-size: 12px;">
+            {{data.description}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (onclick)="backPage()" style="width: 15%;">
+      <ion-back-button text="" aria-label="chevron back outline"
+        style="color:black;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>KIẾN THỨC CHỦ ĐỀ</ion-title>
+    <div style="width: 15%;"></div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container-fluid">
+    <div class="cauhoi1" *ngFor="let Postschildren of listPostschildren;let i = index" (click)='ViewListPost(Postschildren)'>
+      <div class="text">
+       {{i+1}}. {{Postschildren.title}}
+      </div>
+      <div *ngIf="Postschildren.checkViewPost == true">
+        <div class="textlist" *ngFor="let data of Postschildren.listPosts" (click)="getdetailPost(data)" >
+          <div class="width25">
+            <img src="{{data.backgroundImages}}" />
+          </div>
+          <div class="width70">
+            <div class="csstitleDetail">{{data.title}}</div>
+            <div class="csstitledescription">{{data.description}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content> -->

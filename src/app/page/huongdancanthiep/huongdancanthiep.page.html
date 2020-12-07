@@ -1,0 +1,51 @@
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="container">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backPage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">Hướng dẫn can thiệp</div>
+  </div>
+  <div>
+    <div (click)="ViewVideoData('https://www.youtube.com/embed/3bNYYQOLGEE')">
+      <iframe style="height: 33%;margin: 0% 8%;width: 84%;" width="100%" height="50%" frameborder="0" allowfullscreen
+        src="https://www.youtube.com/embed/3bNYYQOLGEE"></iframe>
+    </div>
+    <div style="color: #17a2b8!important;text-align: center;font-size: 10px;margin-bottom: 20px;">
+      Video hướng dẫn sử dụng nội dung can thiệp trên A365
+    </div>
+    <div *ngFor="let p of list" (click)="getdetail(p)">
+      <ion-icon style="position: relative;float: right;top: 14px;right: 3%;font-size: 28px;color: #5DA83F;"
+        name="arrow-forward-circle"></ion-icon>
+      <div class="cauhoi1 {{p.hexCode}}">
+        <div class="text">
+          <div class="width10css">
+            <img [src]="p.icon" />
+          </div>
+          <div class="width85">{{p.title}}</div>
+        </div>
+        <div class="text1">{{p.description}}</div>
+      </div>
+    </div>
+    <div class="csstitle">VÍ DỤ MỘT SỐ VIDEO CAN THIỆP MẪU TRÊN A365</div>
+    <div *ngFor="let data of listvideo">
+      <div class="contentCss" (click)="ViewVideo(data)">
+        <img class="imgconten" src="{{data.backgroundImages[0]}}">
+        <div class="videotab" *ngIf='!data.videos[0].check'>
+          {{data.title}}
+        </div>
+      </div>
+      <div *ngIf="data.videos[0].url !=''" class="ViewVideo" (click)="ViewVideo(data)">
+        <span class="textView">Xem bài </span>
+        <div class="iconView">
+          <ion-icon name="caret-forward-circle"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll threshold="50px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

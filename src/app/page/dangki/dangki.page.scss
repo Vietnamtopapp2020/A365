@@ -1,0 +1,270 @@
+.cssRowInput {
+    width: 90%;
+    float: left;
+    margin: 5%;
+}
+.rowform {
+    margin-bottom: 10px;
+}
+.fontsize14 {
+    font-size: 14px;
+    color: #760000;
+    font-weight: bold;
+}
+.loginConfig {
+    .imglogo {
+        width: 90%;
+        margin-left: 10px;
+    }
+    .logintext{
+        text-align: center;
+        color: white;
+        h2{
+            font-size: 20px;
+        }
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    
+    .iongrid {
+        width: 100%;
+        height: 100%;
+        background: #e8f0fe00;
+        border-radius: 10px;
+        position: relative;
+        top: -33px;
+     }   
+}
+.center {
+    display: block;
+    margin-left: 40%;
+    width: 20%;
+    position: relative;
+    top: -30px;
+  }
+  .container1{
+    width: 90%;
+    margin: 0% 5%;
+    padding-bottom: 20px;
+}
+.checkbox-md {
+    zoom: 1.2;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 17px;
+    cursor: pointer;
+    font-size: 13px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: gray;
+    margin-left: 0%;
+    padding-bottom: 17px;
+  }
+  .containerfooter {
+    width: 90%;
+    margin: 0% 5%;
+    float: left;
+  }
+   /* Hide the browser's default checkbox */
+   .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    padding-top: 13px;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    border-radius: 4px;
+    position: absolute;
+    top: -7px;
+    left: 9px;
+    height: 25px;
+    width: 25px;
+    zoom: 0.8;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #e56363;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #e56363;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+.checkbox-md+.item-inner ion-label {
+    margin-left: 20px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.loginform {
+    width: 94%;
+    box-shadow: 0px 4px 8px 4px #80808054;
+    border-radius: 10px;
+    margin-left: 3%;
+    background: #e8f0fe00;
+    padding-bottom: 10px;
+    float: left;
+    .txtsignin {
+        width: 100%;
+        font-size: 17px;
+        height: 50px;
+        background: content-box;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #f2b5b5 !important;
+        .icontxt {
+            width: 8%;
+            float: left;
+        }
+        .inputView {
+            width: 85%;
+            float: right;
+            font-size: 13px;
+            height: 50px;
+            margin-left: 3%;
+        }
+    }
+}
+.cssInput {
+    border: solid 1px #00000042;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 35px;
+    background: white;
+}
+.containerbox {
+    color: #F46262;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.cssIonList {
+    width: 30%;
+    float: left;
+    box-shadow: 2px 2px 2px 2px gainsboro;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 3%;
+    height: 71px;
+}
+.cssText {
+    padding: 6px 2px 2px 2px;
+    font-size: 13px;
+    text-align: center
+}
+.login-button{
+    width: 100%;
+    background: green !important;
+    // background: #f46262 !important;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+}
+.huy-button{
+    width: 100%;
+    height: 42px;
+    background: #e8f0fe00!important;
+    border-radius: 7px;
+    color: #333131a6;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #ccc;
+}
+.loginpass{
+    width: 40%;
+    float: right;
+    margin-right: 10%;
+}
+.cssRules{
+    margin: 5% 6%;
+    text-align: justify;
+    margin-top: 15px;
+}
+.huybo{
+    
+    width: 30%;
+    float: left;
+}
+.textfooter{
+    text-align: center;
+    font-size: 16px;
+    color: #00000091;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: 600;
+}
+.textfooter1{
+    text-align: center;
+    font-size: 18px;
+    color: #f46262;
+    font-weight: 600;
+    padding-bottom: 20px;
+
+}
+.cssrole{
+    width: 97%;
+    padding-bottom: 20px;
+    margin-left: 3%;
+    float: left;
+}
+.inp{
+    zoom: 1.5;
+    margin-right: 5px;
+}
+.width50{
+    width: 50%;
+    float: left;
+}
+.width50top25{
+    width: 50%;
+    float: left;
+    margin-top: 25%;
+}
+.loginpass1{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.Blink{
+    border: 1px solid green;
+}
+.imgRole{
+    box-shadow: 4px 4px 5px 0px #d2d2d2;
+    width: 90%;
+    margin: 5%;
+}
+

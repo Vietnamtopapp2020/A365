@@ -1,0 +1,26 @@
+<ion-content>
+  <div class="container">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backPage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">
+     Điều khoản sử dụng
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div style="font-size: 14px;width: 100%;float: left;border-bottom: 1px solid #d2d2d2;"
+      *ngFor="let dieukhoan of Listdieukhoan;let i = index ">
+      <div style="width: 100%;float: left;margin-top: 10px;" (click)="openQuest(dieukhoan)">
+        <div style="font-family: 'NUNITOEXTRABOLD';width: 90%;float: left;" >
+          <span style="color :#5DA83F">Câu {{i+1}}: </span> {{dieukhoan.Chap}}
+        </div>
+        <ion-icon style="width: 10%;margin-top: 5px;zoom: 1.5;color: #5DA83F;" *ngIf="!dieukhoan.checkOpen"
+          name="caret-down-circle"></ion-icon>
+        <ion-icon style="width: 10%;margin-top: 5px;zoom: 1.5;color: #5DA83F;" *ngIf="dieukhoan.checkOpen"
+          name="caret-up-circle"></ion-icon>
+      </div>
+      <div *ngIf="dieukhoan.checkOpen"
+        style="font-family: 'NunitoSemiBold';padding-top: 10px;padding-bottom: 8px;width: 100%;float: left;font-size: 12px;">
+        <span style="color :#5DA83F">Trả lời: </span>{{dieukhoan.text}}</div>
+    </div>
+  </div>
+</ion-content>

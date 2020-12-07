@@ -1,0 +1,45 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <div class="menu_information">
+          <div>
+            <img style="position: absolute;width: 80px;right: 10px;top: 5px;" src="assets/icon/a365-logo.png">
+          </div>
+          <div class="avatar">
+            <img id="account" *ngIf="service.Role == 1" src="assets/icon/iconteacher.png" (click)="moveToFirst()">
+            <img id="account" *ngIf="service.Role == 2" src="assets/icon/iconexpert.png" (click)="moveToFirst()">
+            <img id="account" *ngIf="service.Role == 3" src="assets/icon/iconparen.png" (click)="moveToFirst()">
+          </div>
+          <div class="width55">
+            <span id="id11" *ngIf="service.Role == 1">Phụ huynh</span>
+            <span id="id11" *ngIf="service.Role == 2">Chuyên gia</span>
+            <span id="id11" *ngIf="service.Role == 3">Giáo viên</span>
+            <span id="id1"> {{service.name}}</span>
+          </div>
+        </div>
+        <div style="width: 100%; float: left;">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item *ngIf="p.url != '/login'" (click)="selectedIndex = i" routerDirection="root"
+              [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+              <img style="  width: 35px;margin-right: 25px;" slot="start" src="{{p.icon}}" />
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="logout()" lines="none">
+              <img style="  width: 35px;margin-right: 25px;" slot="start" src="assets/imgs/logout.png" />
+              <ion-label>ĐĂNG XUẤT</ion-label>
+            </ion-item>
+
+          </ion-menu-toggle>
+
+        </div>
+        <ion-row class="version_row">
+          <div class="version">Phiên bản:1.6.4 Copyright by ©3i 2020</div>
+        </ion-row>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

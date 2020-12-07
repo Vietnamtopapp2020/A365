@@ -1,0 +1,22 @@
+
+<ion-content>
+  <div class="container">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backPage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">
+     Câu hỏi thường gặp
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div *ngFor="let p of Ch" (click)="listcauhoi(p)">
+      <div class="cauhoi1 {{p.hexCode}}">
+        <div class="text">
+          <div class="width10css"><img [src]="p.img" />
+          </div>
+          <div class="width85">{{p.bo}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+

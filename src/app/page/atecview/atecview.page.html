@@ -1,0 +1,96 @@
+<ion-content>
+  <div class="container-fluid" style="margin-bottom: 10px;">
+    <div class="container1">
+      <img src="assets/imgs/bgdash.jpg">
+      <img (click)="backpage()" style="position: absolute;    left: 10px;
+    top: 10px;" src="assets/icon/backicon.png">
+      <div class="ketquahead">
+        Bài đánh giá can thiệp tự kỷ ATEC
+      </div>
+    </div>
+    <div class="container" *ngIf="getlistquestion.length != 0">
+      <div style="float: right;margin-top: -15px;">
+        <div style="width: 50%;margin-left: 25%;" (click)="PutanswersheetATEC()">
+          <img src="/assets/icon/luu.png">
+        </div>
+        <p style="text-align: center;font-size: 11px;margin: 1px;width: 100%;color: #E56363;font-weight: bold;">Lưu và
+          thoát
+        </p>
+      </div>
+      <div class="cauhoi">Câu hỏi số {{Dataquestion.index}}/ {{getlistquestion.length}} </div>
+      <div class="cauhoi" style="font-size: 15px;">Lĩnh vực: {{Dataquestion.NamePost}} </div>
+      <div class="tab">
+        <div class="tab1">
+          <div class="imgquest"> <img src="assets/icon/Question.jpg"></div>
+          <div class="textquest">
+            <p style="padding-top: 10px;margin: 0px;" [innerHTML]=Dataquestion.content></p>
+          </div>
+          <div *ngFor="let data of Dataquestion.options">
+            <div class="answer">
+              <div class="tab2" color="Secondary" (click)="ResultAtec(Dataquestion,data)"
+                [ngClass]="{ 'viewTrue': Dataquestion.selectedOptionId == data.id}">
+                <div style="width: 100%;height: auto;    text-align: center;padding: 1px;" [innerHTML]=data.content>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu"
+            *ngIf="getlistquestion.length != healthPhysicalBehaviorAnswers.length + sensoryCognitiveAwarenessAnswers.length + sociabilityAnswers.length + speechAnswers.length">
+            <div class="img1" (click)="BackQuestion()" *ngIf="Dataquestion.index != '1'">
+              <div class="icon1">
+                <img src="/assets/icon/back.png">
+              </div>
+              <p class="textmenub">Câu trước</p>
+            </div>
+            <div class="img2" (click)="KETQUA()"
+              *ngIf="getlistquestion.length == healthPhysicalBehaviorAnswers.length + sensoryCognitiveAwarenessAnswers.length + sociabilityAnswers.length + speechAnswers.length">
+              <div class="icon1">
+                <img src="/assets/icon/next.png">
+              </div>
+              <p class="textmenun">Kết quả</p>
+            </div>
+            <div *ngFor="let data of Dataquestion.options">
+              <div class="img2" (click)="NextQuestion()"
+                *ngIf="Dataquestion.selectedOptionId == data.id && (getlistquestion.length != healthPhysicalBehaviorAnswers.length + sensoryCognitiveAwarenessAnswers.length + sociabilityAnswers.length + speechAnswers.length)">
+                <div class="icon1">
+                  <img src="/assets/icon/next.png">
+                </div>
+                <p class="textmenun">Câu sau</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu"
+            *ngIf="getlistquestion.length == healthPhysicalBehaviorAnswers.length + sensoryCognitiveAwarenessAnswers.length + sociabilityAnswers.length + speechAnswers.length">
+            <div class="img1" (click)="BackQuestion()" *ngIf="Dataquestion.index != '1'">
+              <div class="icon1">
+                <img src="/assets/icon/back.png">
+              </div>
+              <p class="textmenub">Câu trước</p>
+            </div>
+            <div style="width: 50%;float: left;" (click)="KETQUA()"
+              *ngIf="Dataquestion.index != '1' && getlistquestion.length == healthPhysicalBehaviorAnswers.length + sensoryCognitiveAwarenessAnswers.length + sociabilityAnswers.length + speechAnswers.length">
+              <div class="icon1">
+                <img src="/assets/icon/luu.png">
+              </div>
+              <p class="textmenun">Kết quả</p>
+            </div>
+            <div style="margin-left: 25%;width: 50%;float: left;" (click)="KETQUA()"
+              *ngIf="Dataquestion.index == '1' && getlistquestion.length == healthPhysicalBehaviorAnswers.length + sensoryCognitiveAwarenessAnswers.length + sociabilityAnswers.length + speechAnswers.length">
+              <div class="icon1">
+                <img src="/assets/icon/luu.png">
+              </div>
+              <p class="textmenun">Kết quả</p>
+            </div>
+            <div class="img2" (click)="NextQuestion()" *ngIf="Dataquestion.index != getlistquestion.length.toString()">
+              <div class="icon1">
+                <img src="/assets/icon/next.png">
+              </div>
+              <p class="textmenun">Câu sau</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

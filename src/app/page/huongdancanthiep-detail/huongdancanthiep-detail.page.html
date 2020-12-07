@@ -1,0 +1,30 @@
+<ion-content>
+  <div class="container">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backpage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">
+      Chủ đề kiến thức
+    </div>
+  </div>
+  <div *ngFor="let Postschildren of listPostschildren;let i = index">
+    <div style="width: 100%;float: left;">
+      <div class="cauhoi1">
+        <ion-icon class="iconReader" name="reader"></ion-icon>
+        <span> {{Postschildren.title}}</span>
+      </div>
+    </div>
+    <div class="botton10">
+      <div  *ngFor="let data of Postschildren.listPosts" (click)="getdetailPost(data)">
+        <div class="contentCss">
+          <img class="imgconten" src="{{data.backgroundImages}}">
+          <div class="videotab">
+            {{data.title}}
+          </div>
+          <div class="videotab" style="color: black;font-size: 12px;">
+            {{data.description}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

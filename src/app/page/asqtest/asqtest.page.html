@@ -1,0 +1,113 @@
+<ion-content>
+  <div class="container-fluid" style="margin-bottom: 10px;">
+    <div class="container1">
+      <img src="assets/imgs/bgdash.jpg">
+      <img (click)="backpage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+      <div class="ketquahead">
+        <div class="textstep">
+          Bộ công cụ theo dõi sự phát triển của trẻ ASQ®-3
+        </div>
+        <div class="contenasqdetail">
+          ({{bocauhoi}})
+        </div>
+      </div>
+    </div>
+    <div class="container" *ngIf="getlistquestion.length != 0">
+      <div style="float: right;margin-top: -15px;">
+        <div style="width: 50%;margin-left: 25%;" (click)="PutanswersheetASQ()">
+          <img src="/assets/icon/luu.png">
+        </div>
+        <p style="text-align: center;font-size: 11px;margin: 1px;width: 100%;color: #E56363;font-weight: bold;">Lưu và
+          thoát
+        </p>
+      </div>
+      <div class="cauhoi">Câu hỏi số {{Dataquestion.index}}/ {{getlistquestion.length}} </div>
+      <div class="cauhoi" style="font-size: 15px;">Lĩnh vực: {{Dataquestion.NamePost}} </div>
+      <div class="tab">
+        <div class="tab1">
+          <div class="imgquest"> <img src="assets/icon/Question.jpg"></div>
+          <div style="margin: 0px;">
+            <p style="margin: 0px;" class="textquest" [innerHTML]=Dataquestion.content></p>
+          </div>
+          <div *ngFor="let data of Dataquestion.options">
+            <div class="answer">
+              <ion-button class="tab2" color="Secondary" (click)="resutl(Dataquestion,data)"
+                [ngClass]="{ 'viewTrue': Dataquestion.selectedOptionId == data.id}">
+                <span style="text-align: center;" [innerHTML]=data.content></span>
+              </ion-button>
+            </div>
+          </div>
+          <div *ngIf="Dataquestion.options.length == 2">
+            <textarea class="cssTextarea" type="text" [(ngModel)]="Dataquestion.customInput"
+              placeholder="Vui lòng giải thích lý do"></textarea>
+          </div>
+          <div class="menu"
+            *ngIf="getlistquestion.length != (communicationAnswers.length + grossMotorAnswers.length + fineMotorAnswers.length + problemSolvingAnswers.length + personalSocialAnswers.length + overallAnswers.length)">
+            <div class="img1" (click)="BackQuestion()" *ngIf="Dataquestion.index != '1'">
+              <div class="icon1">
+                <img src="/assets/icon/back.png">
+              </div>
+              <p class="textmenub">Câu trước</p>
+            </div>
+            <div class="img2" (click)="KETQUA()"
+              *ngIf="getlistquestion.length == (communicationAnswers.length + grossMotorAnswers.length + fineMotorAnswers.length + problemSolvingAnswers.length + personalSocialAnswers.length + overallAnswers.length)">
+              <div class="icon1">
+                <img src="/assets/icon/next.png">
+              </div>
+              <p class="textmenun">Kết quả</p>
+            </div>
+            <div class="img2"
+              *ngIf="Dataquestion.options.length == 2 && (getlistquestion.length != (communicationAnswers.length + grossMotorAnswers.length + fineMotorAnswers.length + problemSolvingAnswers.length + personalSocialAnswers.length + overallAnswers.length))"
+              (click)="NextQuestion1()">
+              <div class="icon1">
+                <img src="/assets/icon/next.png">
+              </div>
+              <p class="textmenun">Câu tiếp</p>
+            </div>
+            <div *ngFor="let data of Dataquestion.options">
+              <div class="img2" (click)="NextQuestion()"
+                *ngIf="(Dataquestion.selectedOptionId == data.id && Dataquestion.options.length != 2) && getlistquestion.length != (communicationAnswers.length + grossMotorAnswers.length + fineMotorAnswers.length + problemSolvingAnswers.length + personalSocialAnswers.length + overallAnswers.length)">
+                <div class="icon1">
+                  <img src="/assets/icon/next.png">
+                </div>
+                <p class="textmenun">Câu sau</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu"
+            *ngIf="getlistquestion.length == (communicationAnswers.length + grossMotorAnswers.length + fineMotorAnswers.length + problemSolvingAnswers.length + personalSocialAnswers.length + overallAnswers.length)">
+            <div class="img1" (click)="BackQuestion()" *ngIf="Dataquestion.index != '1'">
+              <div class="icon1">
+                <img src="/assets/icon/back.png">
+              </div>
+              <p class="textmenub">Câu trước</p>
+            </div>
+            <div style="width: 50%;float: left;" (click)="KETQUA()"
+              *ngIf="Dataquestion.index != '1' && getlistquestion.length == (communicationAnswers.length + grossMotorAnswers.length + fineMotorAnswers.length + problemSolvingAnswers.length + personalSocialAnswers.length + overallAnswers.length)">
+              <div class="icon1">
+                <img src="/assets/icon/luu.png">
+              </div>
+              <p class="textmenun">Kết quả</p>
+            </div>
+            <div style="margin-left: 25%;width: 50%;float: left;" (click)="KETQUA()"
+              *ngIf="Dataquestion.index == '1' && getlistquestion.length == (communicationAnswers.length + grossMotorAnswers.length + fineMotorAnswers.length + problemSolvingAnswers.length + personalSocialAnswers.length + overallAnswers.length)">
+              <div class="icon1">
+                <img src="/assets/icon/luu.png">
+              </div>
+              <p class="textmenun">Kết quả</p>
+            </div>
+            <div>
+              <div class="img2" (click)="NextQuestion()"
+                *ngIf="Dataquestion.index != getlistquestion.length.toString()">
+                <div class="icon1">
+                  <img src="/assets/icon/next.png">
+                </div>
+                <p class="textmenun">Câu sau</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

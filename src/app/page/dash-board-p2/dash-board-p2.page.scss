@@ -1,0 +1,182 @@
+.pagebackgroundimage {
+    --background: #ffffff00 !important;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    outline: none;
+}
+.container {
+    width: 100%;
+}
+.icons-40 {
+    width: 67px;
+    height: 67px;
+}
+.row {
+    width: 100%;
+    margin-top: 170px;
+    overflow: scroll;
+    margin-bottom: 120px;
+}
+.csspadding2px {
+    padding: 2px;
+}
+.csscdc {
+    width: 30%;
+    float: left;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px 0px 10px 0px;
+    margin-left: 5%;
+    background: #ffeb99;
+    margin-right: 2%;
+    height: 70px;
+}
+.cssasq {
+    width: 28%;
+    float: left;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    padding: 7px 0px 10px 0px;
+    text-align: center;
+    background: #b9ddff;
+    margin-right: 2%;
+    height: 70px;
+}
+.cssmchatrf {
+    width: 30%;
+    float: left;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    padding: 12px 0px 10px 0px;
+    text-align: center;
+    background: #ffcfc2;
+    height: 70px;
+}
+
+.rowmain1 {
+    width: 100%;
+}
+.btn-chat-and-notifications {
+    width: 80%;
+    background: #ffffff;
+    padding: 2px;
+    margin: 2%;
+    height: 100px;
+    box-shadow: 3px 3px 5px 0px #e3e3e3;
+    margin-left: 15%;
+    border-radius: 12px;
+    font-family: NunitoBold;
+}
+.div-items-icons {
+    float: left;
+    border: 1px solid #80808000;
+    position: relative;
+    left: -39px;
+    top: 10px;
+    box-shadow: 2px 2px 7px 2px #e8e8e8;
+    border-radius: 11px;
+    background: white;
+}
+.div-items-text {
+    float: left;
+    padding: 6px 0px 2px 4px;
+    height: 100%;
+    overflow: auto;
+    font-size: 14px;
+    padding-left: 8px;
+    position: relative;
+    left: -32px;
+    width: 75%;
+}
+.posttest {
+    width: 100%;
+    background: #eef5ff;
+    float: left;
+    border-radius: 35px 35px 0px 0px;
+    padding: 7px;
+    box-shadow: 0px -1px 6px 1px #d2d2d2;
+    position: fixed;
+    bottom: 50px;
+    font-family: "NunitoBold";
+}
+.textconten {
+    font-size: 17px;
+    margin-left: 2%;
+    text-align: center;
+    padding-bottom: 5px;
+    color: #935b45;
+    font-weight: 600;
+    float: left;
+    width: 100%;
+}
+.textconteniven {
+    font-size: 13px;
+    padding-top: 10px;
+    text-align: center;
+    width: 80%;
+    float: left;
+}
+.intervention {
+    width: 88%;
+    padding: 3px;
+    background-color: white;
+    border: 1px solid #d2d2d2;
+    height: auto;
+    float: left;
+    margin: 0% 6% 0% 6%;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.iven {
+    width: 12%;
+    float: left;
+    margin-left: 6%;
+}
+.line {
+    border: 1px solid #5da83f !important;
+}
+.viewButtonSearch {
+    width: 85%;
+    height: 35px;
+    float: right;
+    font-size: 13px;
+    border-radius: 0px 20px 20px 0px;
+    color: gray;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+    border-left: 0px;
+}
+.btnSearch {
+    width: 15%;
+    height: 35px;
+    color: #7f7f7f;
+    border-radius: 20px 0px 0px 20px;
+    background: white;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+    border-left: 1px solid #d2d2d2;
+    border-right: 0px;
+}
+.cssviewsearch {
+    position: absolute;
+    margin-left: 10%;
+    top: 85px;
+    color: gray;
+    width: 80%;
+}
+.opacity05 {
+    opacity: 0.5;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

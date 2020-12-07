@@ -1,0 +1,52 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (onclick)="backPage()" style="width: 15%;">
+      <ion-back-button text="" aria-label="chevron back outline" style="color:  black;text-align: center;">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>CÂU HỎI THƯỜNG GẶP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="container-fluid">
+    <div class="cauhoi1" *ngFor="let Quest of data.ListQuest">
+      <div class="text">
+        {{Quest.tencauhoi}}
+      </div>
+      <div class="reply">Trả lời: {{Quest.traloi}}</div>
+    </div>
+  </div>
+
+</ion-content> -->
+
+
+
+
+<ion-content>
+  <div class="container">
+    <img src="assets/imgs/bgdash.jpg">
+    <img (click)="backPage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+    <div class="ketquahead">
+      Câu hỏi thường gặp
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div style="font-size: 14px;width: 100%;float: left;border-bottom: 1px solid #d2d2d2;"
+      *ngFor="let Quest of data.ListQuest;let i = index ">
+      <div style="width: 100%;float: left;margin-top: 10px;"  (click)="openQuest(Quest)">
+        <div style="font-family: 'NUNITOEXTRABOLD';width: 90%;float: left;">
+          <span style="color :#5DA83F">Câu {{i+1}}: </span> {{Quest.tencauhoi}}
+        </div>
+        <ion-icon style="width: 10%;margin-top: 5px;zoom: 1.5;color: #5DA83F;" *ngIf="!Quest.checkOpen"
+          name="caret-down-circle"></ion-icon>
+        <ion-icon style="width: 10%;margin-top: 5px;zoom: 1.5;color: #5DA83F;" *ngIf="Quest.checkOpen"
+          name="caret-up-circle"></ion-icon>
+      </div>
+      <div *ngIf="Quest.checkOpen"
+        style="font-family: 'NunitoSemiBold';padding-top: 10px;padding-bottom: 8px;width: 100%;float: left;font-size: 12px;">
+        <span style="color :#5DA83F">Trả lời: </span>{{Quest.traloi}}</div>
+    </div>
+  </div>
+</ion-content>

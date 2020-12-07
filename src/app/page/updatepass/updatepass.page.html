@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="backPage()" style="width: 15%;">
+      <ion-back-button text="" aria-label="chevron back outline" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Đổi mật khẩu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-col>
+    
+    <div class="cardchild">
+      <div class="text">Mật khẩu cũ</div>
+      <div class="txtsignin">
+        <ion-input class="inputView" [(ngModel)]="txtpassword" type="password" tappable></ion-input>
+      </div>
+    </div>
+     
+    <div class="cardchild">
+      <div class="text">Mật khẩu mới</div>
+      <div class="txtsignin">
+        <ion-input class="inputView" [(ngModel)]="txtnewPassword" type="password" tappable></ion-input>
+      </div>
+    </div>
+      
+    <div class="cardchild">
+      <div class="text">Nhập lại mật khẩu</div>
+      <div class="txtsignin">
+        <ion-input class="inputView" [(ngModel)]="txtconfirmNewPassword" type="password" tappable></ion-input>
+      </div>
+    </div>
+    <button class="btn_forgot" tappable (click)="UpdatePass()">Lưu</button>
+</ion-col>
+</ion-content>

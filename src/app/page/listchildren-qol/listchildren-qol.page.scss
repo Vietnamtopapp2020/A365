@@ -1,0 +1,202 @@
+ion-content {
+  --background: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 240px;
+  max-width: 768px;
+}
+ion-title {
+  --background: #c92534;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #c92534;
+}
+ion-header {
+  border-bottom: 1px solid gray;
+}
+.btn-chat-and-notification {
+  width: 80%;
+  border: 1px solid #d2d2d200;
+  background: #ffffff;
+  padding: 2px;
+  margin: 2%;
+  height: 85px;
+  box-shadow: 3px 3px 3px 3px #e0e0e096;
+  margin-left: 15%;
+  border-radius: 12px;
+}
+.btn-chat-and-notifications {
+  width: 85%;
+  border: 1px solid #d2d2d200;
+  background: #ffffff;
+  padding: 2px;
+  margin: 2%;
+  height: 85px;
+  box-shadow: 3px 3px 3px 3px #e0e0e096;
+  margin-left: 10%;
+  border-radius: 12px;
+  float: left;
+}
+.div-items-icons {
+  float: left;
+  border: 1px solid #80808000;
+  position: relative;
+  left: -15px;
+  top: 3px;
+  box-shadow: 2px 2px 2px 2px #80808091;
+  border-radius: 11px;
+  background-color: white;
+}
+.csspadding3px {
+  padding: 1px;
+}
+.textstep {
+  text-align: center;
+  color: #935b45;
+  font-size: 17px;
+}
+.css {
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 2px 2px 2px 2px gainsboro;
+  border-radius: 14px;
+  float: left;
+  position: absolute;
+  top: 19%;
+  background: white;
+  display: block;
+  padding: 21px;
+}
+.ketquahead {
+  background-color: #ffffff;
+  padding: 8px;
+  position: absolute;
+  left: 15%;
+  top: 7%;
+  color: black;
+  border-radius: 9px;
+  font-size: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  text-align: center;
+  font-family: NunitoExtraBold;
+}
+.container {
+  width: 100%;
+}
+.icons-50 {
+  padding: 6px;
+  width: 70px;
+  height: 70px;
+  float: left;
+}
+.div-items-text1 {
+  padding: 5px 0px 6px 8px;
+  height: 100%;
+  overflow: auto;
+  font-size: 12px;
+  padding-left: 8px;
+  width: 100%;
+  float: left;
+}
+.icons-40 {
+  width: 60px;
+  height: 60px;
+}
+.div-items-text {
+  float: left;
+  padding: 4px 0px 2px 4px;
+  height: 100%;
+  overflow: auto;
+  font-size: 14px;
+  width: 60%;
+}
+.cssBtn {
+  float: right;
+  width: 22%;
+  margin-right: 3px;
+}
+.CssBtndelete {
+  float: right;
+  background: #f00;
+  color: white;
+  height: 26px;
+  margin: 2%;
+  right: auto;
+  margin-top: 5px;
+  border-radius: 7px;
+  box-shadow: 2px 3px #afafaf;
+}
+.btn_openSearc {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 40px;
+  width: 40px;
+  background: #d7ecff;
+}
+.CssBtnUpdate {
+  color: #ffffff;
+  background: #f67f7f;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 16px;
+}
+.csspadding2px {
+  padding: 2px;
+}
+.zox {
+  zoom: 2;
+}
+.cssSearch {
+  width: 100%;
+  float: left;
+  padding-top: 15px;
+}
+
+.viewButtonSearch {
+  width: 85%;
+  height: 35px;
+  float: right;
+  font-size: 13px;
+  border-radius: 0px 20px 20px 0px;
+  color: gray;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+  border-left: 0px;
+}
+.btnSearch {
+  width: 15%;
+  height: 35px;
+  color: #7f7f7f;
+  border-radius: 20px 0px 0px 20px;
+  background: white;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  border-left: 1px solid #d2d2d2;
+  border-right: 0px;
+}
+
+.icon1 {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #19929b;
+  border-radius: 10px;
+  font-size: 13px;
+  top: 85px;
+  margin-left: 26%;
+  text-align: center;
+  color: white;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #0000006b;
+}
+.cssviewsearch {
+  position: relative;
+  margin-left: 10%;
+  top: -18px;
+  color: gray;
+  width: 80%;
+}

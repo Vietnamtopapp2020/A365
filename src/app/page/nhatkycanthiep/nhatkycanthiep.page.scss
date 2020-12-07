@@ -1,0 +1,446 @@
+// @font-face {
+//   font-family: "Goldeye";
+//   font-style: normal;
+//   font-weight: normal;
+//   src: url("../../../assets/fonts/SVN-Goldeye\ Type.ttf");
+// }
+iframe {
+  pointer-events: none; /* Disable any user interaction at all */
+}
+ion-title {
+  font-size: 15px;
+  font-family: Bahnschrift;
+  color: #000000d6 !important;
+}
+.csschontre{
+  margin: 0% 0% 1% 10%;
+  font-size: 15px;
+  color: #F46262;
+  padding: 2px;
+  width: 80%;
+  float: left;
+  font-family: NunitoBold;
+}
+.csshoatdong {
+  margin: 1% 0% 1% 8%;
+  font-weight: bold;
+  font-size: 16px;
+  color: #935B45;
+  padding: 12px;
+  width: 40%;
+  float: left;
+  margin-top: 16px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px 2px #80808045;
+}
+
+.cssdanhgia {
+  margin: 0% 0% 0% 8%;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 7px;
+  width: 40%;
+  float: left;
+  color: #935B45;
+  background: #d9edff;
+  margin-top: 22%;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px 2px #80808045;
+}
+.csshoanthanh {
+  margin: -7% 0% 6% 8%;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6px;
+  width: 40%;
+  float: left;
+  color: #935B45;
+  background: #e5f1e0;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px 2px #80808045;
+}
+.HeaderGeneral {
+  height: 30px;
+  width: 82%;
+  border-radius: 17px;
+  color: black;
+  font-size: 14px;
+  background: white;
+  margin-left: 9%;
+  font-weight: bold;
+  box-shadow: 3px 3px 6px 3px #efefef;
+}
+.cssButtonPractice {
+  width: 80%;
+  font-size: 0.8rem;
+  padding: 12px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  margin-left: 10%;
+  font-family: Bahnschrift;
+}
+.hoc-tap-be90b48c9f {
+  background-image: linear-gradient(to right, #5DA83F 0%, #5DA83F 50%, #5DA83F 100%);
+  border-radius: 25px;
+   float: left;    
+}
+.h5e69afb1856b56171c37181a{
+  color:#5DA83F ;
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+.i5e69afb1856b56171c37181a{
+  background-image: url(/assets/icon/hoctap.png) !important;
+  background-repeat: no-repeat;
+  zoom: 1;
+  height: 52px;
+  text-align: center;
+}
+
+.choi-dua-4253a0d4ff {
+  background-image: linear-gradient(to right, #4D99E1 0%, #4D99E1 50%, #4D99E1 100%);
+  border-radius: 25px;
+  float: left;  
+}
+.h5e69af9c856b56666a371818{
+  color: #4D99E1;
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+.i5e69af9c856b56666a371818{
+  background-image: url(/assets/icon/choidua.png) !important;
+  background-repeat: no-repeat;
+  zoom: 1;
+  height: 52px;
+  text-align: center;
+}
+.giao-tiep-8fa4036691 {
+  background-image: linear-gradient(to right, #F46262 0%, #F46262 50%, #F46262 100%);
+  border-radius: 25px;
+  float: left;  
+}
+.h5e69b00b856b56b57d371826{
+  color: #F46262;
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+.i5e69b00b856b56b57d371826{
+  background-image: url(/assets/icon/giaotiep.png) !important;
+  background-repeat: no-repeat;
+  zoom: 1;
+  height: 52px;
+  text-align: center;
+}
+.tu-cham-soc-ban-than-va-lam-viec-nha-54a8c7ddde {
+  background-image: linear-gradient(to right, #26B7AB 0%, #26B7AB 50%, #26B7AB 100%);
+  border-radius: 25px;
+  width: 80%;
+  margin-left: 10%;
+  float: left;  
+
+}
+.h5e69afe8856b560221371822{
+  color: #26B7AB;
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+.i5e69afe8856b560221371822{
+  background-image: url(/assets/icon/chamsocbanthan.png) !important;
+  background-repeat: no-repeat;
+  zoom: 1;
+  height: 52px;
+  text-align: center;
+}
+.tham-gia-hoat-dong-cong-dong-0451bca37e {
+  background-image: linear-gradient(to right, #F8AF4F 0%, #F8AF4F 50%, #F8AF4F 100%);
+  border-radius: 25px;
+  float: left;  
+}
+.h5e69affa856b563bed371824{
+  color: #F8AF4F;
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+.i5e69affa856b563bed371824{
+  background-image: url(/assets/icon/hdcd.png) !important;
+  background-repeat: no-repeat;
+  zoom: 1;
+  height: 52px;
+  text-align: center;
+}
+.xay-dung-moi-quan-he-xa-hoi-304adfea43 {
+  background-image: linear-gradient(to right, #C53510 0%, #C53510 50%, #C53510 100%);
+    border-radius: 25px;
+    float: left;  
+}
+.h5e69afbe856b5698f037181c{
+  color: #C53510;
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+.i5e69afbe856b5698f037181c{
+  background-image: url(/assets/icon/xahoi.png) !important;
+  background-repeat: no-repeat;
+  zoom: 1;
+  height: 52px;
+  text-align: center;
+}
+.van-dong-va-the-thao-f4c914391e {
+  background-image: linear-gradient(to right, #DB2D84 1%, #DB2D84 50%, #DB2D84 100%);
+  border-radius: 25px;
+  float: left;  
+}
+.h5e69afdb856b56b8bf371820{
+  color: #DB2D84;
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+.i5e69afdb856b56b8bf371820{
+  background-image: url(/assets/icon/thethao.png) !important;
+  background-repeat: no-repeat;
+  zoom: 1;
+  height: 52px;
+}
+.hieu-cam-xuc-va-dieu-tiet-hanh-vi-d48557d162 {
+  background-image: linear-gradient(to right, #FB7964 1% ,#FB7964 50%, #FB7964 100%);
+  border-radius: 25px;
+  float: left;  
+}
+.h5e69afcd856b56ae8d37181e{
+  color: #FB7964;
+  border-bottom: 1px solid;
+  padding: 5px;
+}
+.i5e69afcd856b56ae8d37181e{
+  background-image: url(/assets/icon/hanhvi.png) !important;
+  background-repeat: no-repeat;
+  zoom: 1;
+  height: 52px;
+}
+
+.cssTextNotWork {
+  color: #6c757d !important;
+  margin: 0px;
+  font-style: italic !important;
+  font-size: 16px;
+}
+.cssButtonAdd {
+  color: #935B45 !important;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  font-size: 16px;
+  padding: 3px;
+ float: left;
+}
+.textaligncenter {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 5px;
+  box-shadow: 0px 0px 6px 6px #8080808a;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 8px;
+  margin-top: 12px;
+  float: left;
+}
+.textalignleft {
+  text-align: left !important;
+}
+.cssHeaderWork {
+  border-bottom: 1px solid #d2d2d2;
+  border-top: 1px solid #d2d2d2;
+  width: 96%;
+  margin-left: 2%;
+  height: 30px;
+  float: left;
+}
+.cssContent {
+  width: 96%;
+  margin-left: 2%;
+  height: 450px;
+  overflow: scroll;
+}
+.HeaderWorkGeneral {
+  width: 30%;
+  float: left;
+  font-size: 13px;
+  text-align: center;
+  height: 30px;
+  font-weight: bold;
+  padding-top: 7px;
+}
+.contentGeneral {
+  float: left;
+  font-size: 13px;
+  text-align: center;
+  height: 50px;
+  padding-top: 18px;
+  overflow: scroll;
+  padding-left: 5px;
+  padding-right: 3px;
+}
+.width15 {
+  width: 15%;
+}
+.width60 {
+  width: 60%;
+}
+.width25 {
+  width: 25%;
+}
+.cssTextWork {
+  color: #b71c1c ;
+  font-size: 17px;
+  margin: 5px;
+
+}
+.cssLink {
+  font-size: 14px;
+  width: 80%;
+  margin-left: 10%;
+  float: left;
+  margin-bottom: 6px;
+  
+}
+.cssRadioCheck {
+  float: right;
+  font-size: 14px;
+  width: 60%;
+  margin-right: 1%;
+}
+.cssSelectRadio {
+  width: 50%;
+  font-size: 17px;
+  height: auto;
+  padding-bottom: 8px;
+  float: left;
+  text-align: left;
+}
+.cssSelectRadio1 {
+  width: 50%;
+  font-size: 17px;
+  height: auto;
+  padding-bottom: 8px;
+  float: right;
+  text-align: left;
+}
+.cssSelectRadio2 {
+  width: 100%;
+  font-size: 17px;
+  height: auto;
+  padding-bottom: 8px;
+  float: left;
+  text-align: left;
+}
+.xemthem {
+  font-size: 13px;
+  color: #ca2535;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.atecview {
+  font-size: 13px;
+  color: #ca2535;
+  width: 75%;
+  float: left;
+}
+.cssdanhgiahiuequa {
+  font-size: 12px;
+  padding: 8px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.cssxembai {
+ 
+  background: white;
+}
+.cssmuctieu {
+  background: white;
+}
+.line {
+  background-image: url("/assets/icon/icon_Check.png");
+}
+.noline{
+  background-image: url("/assets/icon/iconNotCheck.png");
+}
+.css-1 {
+  --background: none;
+  // background-image: url("/assets/imgs/trehoc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+}
+.css-2 {
+  --background: none;
+  // background-image: url("/assets/imgs/dayconchoidua.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.css-3 {
+  --background: none;
+  // background-image: url("/assets/imgs/chao-hoi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.css-4 {
+  --background: none;
+  // background-image: url("/assets/imgs/giupviecnha.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.css-5 {
+  --background: none;
+  // background-image: url("/assets/imgs/hdxh.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.css-6 {
+  --background: none;
+  // background-image: url("/assets/imgs/qhxh.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.css-7 {
+  --background: none;
+  // background-image: url("/assets/imgs/hdtt.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.css-8 {
+  --background: none;
+  // background-image: url("/assets/imgs/dthv.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btncheck{
+  background-image: url("/assets/icon/icon_Check.png") !important;
+  --background: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btnnonecheck{
+  background-image: url("/assets/icon/iconNotCheck.png") !important;
+  --background: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hd{
+  float: left;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 27px;
+}
+
+.csxembai{
+  width: 45%;
+  float: left;
+}
+.csmucdich{
+  width: 55%;
+  border-radius: 4px;
+  color: black;
+  float: right;
+}

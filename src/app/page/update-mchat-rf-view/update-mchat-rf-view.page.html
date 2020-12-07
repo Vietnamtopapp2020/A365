@@ -1,0 +1,56 @@
+<ion-content>
+  <div class="container-fluid" style="margin-bottom: 10px;">
+    <div class="container1">
+      <img src="assets/imgs/bgdash.jpg">
+      <img (click)="backpage()" style="position: absolute;left: 10px;top: 10px;" src="assets/icon/backicon.png">
+      <div class="ketquahead">
+        Bộ công cụ sàng lọc nguy cơ tự kỷ M-CHAT-R/F™
+      </div>
+    </div>
+    <div class="container" *ngIf="getlistquestion.length != 0">
+      <div class="cauhoi">Câu hỏi số {{Dataquestion.index}}/ {{getlistquestion.length}}</div>
+      <div class="tab">
+        <div class="tab1">
+          <div class="imgquest"> <img src="assets/icon/Question.jpg"></div>
+          <div class="textquest">
+            <p style="padding-top: 10px;margin: 0px;" [innerHTML]=Dataquestion.content> </p>
+          </div>
+          <!-- <div *ngFor="let data of Dataquestion.options"> -->
+          <div class="answer">
+            <ion-button class="tab2" color="Secondary"
+              [ngClass]="{ 'viewTrue': Dataquestion.selectedOptionId == Dataquestion.options[0].id}">
+              <span style="margin-right: 10px;"><img style="width: 15px" src="assets/icon/icon_yes.png"></span>
+              <span style="text-align: center;" [innerHTML]=Dataquestion.options[0].content> </span>
+            </ion-button>
+          </div>
+          <div class="answer">
+            <ion-button class="tab2" color="Secondary"
+              [ngClass]="{ 'viewTrue': Dataquestion.selectedOptionId == Dataquestion.options[1].id}">
+              <span style="margin-right: 10px;"><img style="width: 15px" src="assets/icon/icon_no.png"></span>
+              <span style="text-align: center;" [innerHTML]=Dataquestion.options[1].content> </span>
+            </ion-button>
+          </div>
+          <!-- </div> -->
+          <div class="menu">
+
+            <div class="img1" (click)="BackQuestion()" *ngIf="Dataquestion.index != '1'">
+              <div class="icon1">
+                <img src="/assets/icon/back.png">
+              </div>
+              <p class="textmenub">Câu trước</p>
+            </div>
+            <div class="img2" (click)="NextQuestion()" *ngIf="getlistquestion.length != ParseIntData(Dataquestion.index)">
+              <div class="icon1">
+                <img src="/assets/icon/next.png">
+              </div>
+              <p class="textmenun">Câu sau</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</ion-content>

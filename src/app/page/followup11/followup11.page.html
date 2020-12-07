@@ -1,0 +1,60 @@
+<ion-content>
+  <div class="container">
+    <img src="assets/imgs/bgdash50.png">
+    <div class="ketquahead">
+      Câu hỏi số {{ QUESTION_NUMBER }}
+    </div>
+  </div>
+  <div class="viewFollowup">
+    <div class="quote">
+      <p>>Khi bạn cười với trẻ, trẻ có cười lại với bạn không?</p>
+    </div>
+    <p class="mt-2">
+      Bạn đã trả lời: <strong class="text-info">Không</strong>
+    </p>
+    <hr>
+    <small class="font-italic text-danger d-block mb-3">Bạn cần trả lời tất cả các câu hỏi dưới đây</small>
+
+    <div class="first-depth">
+      <div>Điều gì khiến trẻ cười? Trẻ có...</div>
+      <div class="mb-3" *ngFor="let question of passGroupQuestions">
+        <p>{{question.content}}</p>
+        <div>
+
+          <ion-list *ngFor="let p of question.options" class="viewReply">
+            <input type="radio" (click)="QuestionReply(question,p.hasInput)" name="{{p.id}}" value="{{p.hasInput}}"
+              style="margin-right: 5px;">
+            <label>{{p.content}}</label>
+          </ion-list>
+        </div>
+      </div>
+
+      <div class="mb-3" *ngFor="let question of failGroupQuestions">
+        <p>{{question.content}}</p>
+        <div>
+
+          <ion-list *ngFor="let p of question.options" class="viewReply">
+            <input type="radio" (click)="QuestionReply(question,p.hasInput)" name="{{p.id}}" value="{{p.hasInput}}"
+              style="margin-right: 5px;">
+            <label>{{p.content}}</label>
+          </ion-list>
+        </div>
+      </div>
+    </div>
+
+    <div class="second-depth" *ngIf="currentDepthFrequency">
+      <div class="mb-3">
+        <p>{{frequencyQuestion.content}}</p>
+        <div>
+
+          <ion-list *ngFor="let p of frequencyQuestion.options" class="viewReply">
+            <input type="radio" (click)="QuestionReply(frequencyQuestion,p.hasInput)" name="{{p.id}}"
+              value="{{p.hasInput}}" style="margin-right: 5px;">
+            <label>{{p.content}}</label>
+          </ion-list>
+        </div>
+      </div>
+    </div>
+    <button class="cssbutton" (click)="next()">Tiếp tục</button>
+  </div>
+</ion-content>
